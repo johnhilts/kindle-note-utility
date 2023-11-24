@@ -1,0 +1,2808 @@
+﻿続々・コロナ禍の厄年　還暦のRaspberryPi　〜還暦のxfce4/emacs/vim〜 (さかぐち)
+- 39ページ|位置No. 134-134のハイライト |作成日: 2023年3月2日木曜日 12:55:31
+
+「zenity」
+==========
+﻿続々・コロナ禍の厄年　還暦のRaspberryPi　〜還暦のxfce4/emacs/vim〜 (さかぐち)
+- 44ページ|位置No. 151-151のハイライト |作成日: 2023年3月2日木曜日 13:01:51
+
+解説
+==========
+﻿続々・コロナ禍の厄年　還暦のRaspberryPi　〜還暦のxfce4/emacs/vim〜 (さかぐち)
+- 44ページ|位置No. 151のメモ |作成日: 2023年3月2日木曜日 13:02:24
+
+wiki擬き
+==========
+﻿続々・コロナ禍の厄年　還暦のRaspberryPi　〜還暦のxfce4/emacs/vim〜 (さかぐち)
+- 76ページ|位置No. 301-301のハイライト |作成日: 2023年3月2日木曜日 20:34:49
+
+(with-eval-after-load
+==========
+﻿続々・コロナ禍の厄年　還暦のRaspberryPi　〜還暦のxfce4/emacs/vim〜 (さかぐち)
+- 76ページ|位置No. 301のメモ |作成日: 2023年3月2日木曜日 20:35:53
+
+with-eval-after-load
+==========
+﻿続々・コロナ禍の厄年　還暦のRaspberryPi　〜還暦のxfce4/emacs/vim〜 (さかぐち)
+- 78ページ|位置No. 306-306のハイライト |作成日: 2023年3月2日木曜日 20:36:35
+
+iim-modeは画像ファイルのインライン表示で
+==========
+﻿続々・コロナ禍の厄年　還暦のRaspberryPi　〜還暦のxfce4/emacs/vim〜 (さかぐち)
+- 78ページ|位置No. 306のメモ |作成日: 2023年3月2日木曜日 20:37:22
+
+絶対に試すべき
+==========
+﻿続々・コロナ禍の厄年　還暦のRaspberryPi　〜還暦のxfce4/emacs/vim〜 (さかぐち)
+- 81ページ|位置No. 318-318のハイライト |作成日: 2023年3月2日木曜日 20:40:31
+
+"chromium-browser
+==========
+﻿続々・コロナ禍の厄年　還暦のRaspberryPi　〜還暦のxfce4/emacs/vim〜 (さかぐち)
+- 81ページ|位置No. 318のメモ |作成日: 2023年3月2日木曜日 20:40:55
+
+何これ
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 1685-1685のハイライト |作成日: 2023年3月5日日曜日 21:14:28
+
+Apropos
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 1685のメモ |作成日: 2023年3月5日日曜日 21:15:07
+
+apropos expanded !!
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 1714-1714のハイライト |作成日: 2023年3月5日日曜日 21:17:59
+
+C-h C-d
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 1714のメモ |作成日: 2023年3月5日日曜日 21:18:34
+
+debugging help
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 1716-1716のハイライト |作成日: 2023年3月5日日曜日 21:18:56
+
+C-h C-f
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 1716のメモ |作成日: 2023年3月5日日曜日 21:19:33
+
+emacs FAQ
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 1736-1737のハイライト |作成日: 2023年3月5日日曜日 21:21:00
+
+C-h R (﻿info-display-manual﻿)
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 1737のメモ |作成日: 2023年3月5日日曜日 21:21:35
+
+jump to info topic
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 1738-1739のハイライト |作成日: 2023年3月5日日曜日 21:22:04
+
+C-h F (﻿Info-goto-emacs-command-node
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 1738のメモ |作成日: 2023年3月5日日曜日 21:22:37
+
+find coverage of a function in info
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 1806-1807のハイライト |作成日: 2023年3月5日日曜日 21:25:45
+
+You can also search across all sixty-plus Info documents at once with M-x ﻿info-apropos
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 1886-1888のハイライト |作成日: 2023年3月6日月曜日 13:09:34
+
+access these defaults with M-n (﻿next-history-element﻿) — use it immediately after you’ve been prompted for input by some command and it’ll offer up suggestions:
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 1907-1907のハイライト |作成日: 2023年3月6日月曜日 13:11:01
+
+(setq enable-recursive-minibuffers t)
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 1938-1940のハイライト |作成日: 2023年3月6日月曜日 13:27:16
+
+you can use C-x ESC ESC (﻿repeat-complex-command﻿). You get a Minibuffer prompt showing your previous M-x command, in its true Elisp form;
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 1948-1950のハイライト |作成日: 2023年3月6日月曜日 13:31:14
+
+You can view a buffer of the N most recent79 M-x commands with M-x ﻿list-command-history
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 1950のメモ |作成日: 2023年3月6日月曜日 13:31:40
+
+recent command list
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 6386-6389のハイライト |作成日: 2023年3月7日火曜日 20:51:58
+
+Emacs also supports 212 input methods, which are ways of entering characters that might not have keys on your keyboard, including both natural language scripts and various types of symbols (e.g. mathematical). You can see all of them via M-x ﻿list-input-methods﻿. The Package Manager has 17 additional input methods.
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 6389のメモ |作成日: 2023年3月7日火曜日 20:52:26
+
+input methods
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 2918-2920のハイライト |作成日: 2023年3月7日火曜日 20:59:32
+
+you can switch any window back and forth between continuation and truncated with M-x ﻿toggle-truncate-lines
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 2919のメモ |作成日: 2023年3月7日火曜日 21:00:02
+
+word wrap 
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 6421-6423のハイライト |作成日: 2023年3月7日火曜日 22:29:49
+
+To see the complete list of shortcuts, type C-x 8 C-h (or C-h b (﻿describe-bindings﻿) and search for “C-x 8” in that Buffer).
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 6422のメモ |作成日: 2023年3月7日火曜日 22:30:12
+
+describe bindings
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 2198-2199のハイライト |作成日: 2023年3月7日火曜日 22:34:08
+
+C-x <C-left> (﻿previous-buffer﻿)
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 2257-2257のハイライト |作成日: 2023年3月7日火曜日 22:44:58
+
+you might want to rename a given *Help* buffer to keep it around and easily accessible.
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 2257のメモ |作成日: 2023年3月7日火曜日 22:45:22
+
+rename help buffer 
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 2260-2261のハイライト |作成日: 2023年3月7日火曜日 22:46:07
+
+if you want a second shell, you can first rename the existing Shell buffer to whatever you like.99
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 2261のメモ |作成日: 2023年3月7日火曜日 22:47:20
+
+multiple shells (read the footnote too)
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 3276-3278のハイライト |作成日: 2023年3月8日水曜日 20:17:16
+
+any updates, but you can also put a Buffer into ﻿auto-revert-mode﻿, and it will watch the file and automatically revert the Buffer whenever there’s a change.
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 3276-3278のハイライト |作成日: 2023年3月8日水曜日 20:17:26
+
+see any updates, but you can also put a Buffer into ﻿auto-revert-mode﻿, and it will watch the file and automatically revert the Buffer whenever there’s a change.
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 3278のメモ |作成日: 2023年3月8日水曜日 20:18:01
+
+auto-revert-mode
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 2348-2348のハイライト |作成日: 2023年3月8日水曜日 20:36:02
+
+Table 6: buffer-menu-mode Commands
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 2348のメモ |作成日: 2023年3月8日水曜日 20:36:40
+
+buffer list key bindings - review !
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 2334-2336のハイライト |作成日: 2023年3月8日水曜日 20:39:26
+
+list-buffers﻿, ﻿bs-show﻿, and ﻿ibuffer﻿.
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 2482-2483のハイライト |作成日: 2023年3月9日木曜日 20:34:12
+
+normal-mode is not a Major Mode, but rather just a function that instructs Emacs to go through the entire Major Mode-choosing process again.
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 2482のメモ |作成日: 2023年3月9日木曜日 20:35:12
+
+normal-mode
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 2496-2498のハイライト |作成日: 2023年3月9日木曜日 20:42:52
+
+M-x customize-mode; this gathers all of the mode’s user options together and you can use the Customize facility to change them.
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 2498のメモ |作成日: 2023年3月9日木曜日 20:43:22
+
+customize-mode
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 2676-2677のハイライト |作成日: 2023年3月12日日曜日 21:23:21
+
+M-x delete-windows-on prompts for the name of a buffer and deletes all the windows that happen to be displaying it.
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 2695-2695のハイライト |作成日: 2023年3月12日日曜日 21:26:42
+
+ace-window,
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 2787-2788のハイライト |作成日: 2023年3月13日月曜日 13:44:35
+
+use desktop-save-mode to save and restore the state of your Emacs between sessions,
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 2751-2751のハイライト |作成日: 2023年3月13日月曜日 13:45:10
+
+The Tab Bar
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 2817-2819のハイライト |作成日: 2023年3月13日月曜日 20:15:03
+
+C-x - (﻿shrink-window-if-larger-than-buffer﻿) is very handy when you’re working in a buffer that only has a few lines in it, but whose Window eats up 50% of your screen
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 2862-2863のハイライト |作成日: 2023年3月13日月曜日 20:20:44
+
+the window only scrolls by one line if I move one line off the top or bottom.
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 2863のメモ |作成日: 2023年3月13日月曜日 20:21:19
+
+scroll-conservatively
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 2879-2880のハイライト |作成日: 2023年3月13日月曜日 20:23:28
+
+C-M-l (﻿reposition-window﻿),
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 2940-2943のハイライト |作成日: 2023年3月14日火曜日 12:56:10
+
+scroll horizontally with C-x > (﻿scroll-right﻿) and C-x < (﻿scroll-left﻿),
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 2996-2996のハイライト |作成日: 2023年3月14日火曜日 13:06:51
+
+scroll-all-mode﻿ will synchronize all the windows in the Frame as you scroll one of them.
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 2972-2973のハイライト |作成日: 2023年3月14日火曜日 13:08:31
+
+Follow Mode lets you exploit this empty space to show more lines of your Buffer.
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 3152-3152のハイライト |作成日: 2023年3月14日火曜日 21:41:32
+
+use desktop-save-mode,
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 3158-3159のハイライト |作成日: 2023年3月14日火曜日 21:43:14
+
+C-x r f (﻿frameset-to-register
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 3175-3176のハイライト |作成日: 2023年3月14日火曜日 21:47:31
+
+It’s a little-known (and by me, little used) feature of ﻿find-file﻿ that if you use wild cards in the file name, it will load all the matching files into multiple Buffers.
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 3176のメモ |作成日: 2023年3月14日火曜日 21:48:20
+
+open multiple files with wildcard
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 3228-3229のハイライト |作成日: 2023年3月15日水曜日 12:35:06
+
+If you need to edit truly large files that won’t fit in memory (say multiple gigabytes in size), you can do it with the VLF package.
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 3231-3234のハイライト |作成日: 2023年3月15日水曜日 12:37:49
+
+minified Javascript or byte-code.131 The solution to this problem is ﻿global-so-long-mode﻿; it automatically switches buffers visiting files with long lines to so-long-mode, which handles them with no problem.
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 3241-3242のハイライト |作成日: 2023年3月15日水曜日 12:40:24
+
+save an edited Buffer under a different file name with C-x C-w (﻿write-file﻿)
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 3243-3244のハイライト |作成日: 2023年3月15日水曜日 12:40:49
+
+If you want to make a modified version of an existing file, rather than copying it first to a new name, you can just do C-x C-f and then immediately do C-x C-w to save it under the new name.
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 3244-3247のハイライト |作成日: 2023年3月15日水曜日 12:50:49
+
+You can also tell Emacs to ignore any modifications you’ve made to a Buffer, so that you don’t accidentally save them to the file with a C-x s or an impulsive C-x C-s. Just use M-~ (﻿not-modified﻿);
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 3252-3254のハイライト |作成日: 2023年3月15日水曜日 12:52:09
+
+view-mode, which makes the Buffer read-only (if it isn’t already) and let’s you page through it with SPC and backwards with DEL; it also redefines many printing characters to scroll by half-screenfuls, by lines, set marks and jump back to them,
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 3287-3288のハイライト |作成日: 2023年3月15日水曜日 12:55:33
+
+arrange for the backups to go in a subdirectory, or in a completely different location, by Customizing backup-directory-alist.
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 3586-3586のハイライト |作成日: 2023年3月18日土曜日 14:24:03
+
+Basic File Operations
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 3713-3714のハイライト |作成日: 2023年3月19日日曜日 11:22:30
+
+make marking multiple files easier;
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 3852-3854のハイライト |作成日: 2023年3月19日日曜日 20:09:08
+
+If you know a little Elisp, you can mark the files more precisely than by comparing their names; you can mark them based on their sizes, modification times, owner, permission, etc. Do: C-h f dired-compare-directorie
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 3854のメモ |作成日: 2023年3月19日日曜日 20:09:50
+
+diffing directories
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 3866-3866のハイライト |作成日: 2023年3月19日日曜日 20:11:36
+
+see the ls(1) man page with M-x manual-entry.
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 3866のメモ |作成日: 2023年3月19日日曜日 20:11:56
+
+man pages
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 3886-3888のハイライト |作成日: 2023年3月19日日曜日 20:17:39
+
+If Point is on a file line in a Dired buffer, then ! ( dired-do-shell-command) prompts for a command and runs it synchronously on that file; & ( dired-do-async-shell-command) does the same thing asynchronously.
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 3888のメモ |作成日: 2023年3月19日日曜日 20:18:23
+
+run shell command on file in dired
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 3897-3898のハイライト |作成日: 2023年3月19日日曜日 20:21:17
+
+Emacs has commands to suggest for 55 possible files types and you can of course add your own via the dired-guess-shell-alist-user variable.
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 3922-3923のハイライト |作成日: 2023年3月19日日曜日 20:26:57
+
+C-t C-t ( image-dired-dired-toggle-marked-thumbs); see Figure 28. If no files are marked, C-t C-t will display the thumbnail for the file at Point.
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 3927-3931のハイライト |作成日: 2023年3月19日日曜日 20:28:03
+
+If you just want to view some images more transiently, rather than RET, use C-t i ( image-dired-dired-display-image), which will repeatedly use a single buffer called *image-dired-display-image*; within this buffer f will full-size the image and s will resize it back to the window size. C-t x ( image-dired-dired-display-external) will display the image with an external image viewer, outside of Emacs.
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 3957-3958のハイライト |作成日: 2023年3月19日日曜日 20:33:58
+
+you can also invoke it with a glob pattern: C-x d *.el will bring up a Dired Buffer with all, and only, the Elisp files in the default directory.
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 3958のメモ |作成日: 2023年3月19日日曜日 20:34:30
+
+open dired with glob
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 4042-4043のハイライト |作成日: 2023年3月22日水曜日 21:33:29
+
+put your Isearch into edit mode with M-e (equivalently, M-s e); now you can use all the usual editing features of Emacs, as you usually can in the Minibuffer,
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 4043のメモ |作成日: 2023年3月22日水曜日 21:33:59
+
+edit search 
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 4091-4091のハイライト |作成日: 2023年3月31日金曜日 21:03:39
+
+M-s ' Diacritic Folding Toggle diacritic folding
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 4096-4099のハイライト |作成日: 2023年3月31日金曜日 21:05:03
+
+M-s w Word Search Toggle word search on and off. When on, the search string will only match complete words (so “an” will match neither “any” nor “man” nor “pants”).
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 4130-4135のハイライト |作成日: 2023年3月31日金曜日 21:14:38
+
+Yanking Into the Search Table 21: Isearch Yank Commands Key Action C-w Yank next word from buffer C-M-w Yank next symbol from buffer M-s C-e Yank remainder of line from buffer C-M-z Yank string up to given character C-M-y Yank character at Point
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 4142-4144のハイライト |作成日: 2023年3月31日金曜日 21:16:52
+
+M-% Switch to query-replace M-s h r Terminate search, leave highlights
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 4143-4144のハイライト |作成日: 2023年3月31日金曜日 21:17:06
+
+M-s h r Terminate search, leave highlights
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 4148-4150のハイライト |作成日: 2023年3月31日金曜日 21:18:26
+
+I use the M-s o transition a lot: without terminating your Isearch, it pops up a Buffer of hits, search-engine style, as if you had done M-x ﻿occur﻿.
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 4156-4156のハイライト |作成日: 2023年3月31日金曜日 21:27:51
+
+C-h C-h, which will pop up a special Isearch help Buffer.
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 4156のメモ |作成日: 2023年3月31日金曜日 21:28:14
+
+isearch help
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 4168-4170のハイライト |作成日: 2023年3月31日金曜日 21:38:30
+
+jump directly from match to match with C-x ` (﻿next-error﻿) or its more mnemonic binding, M-g M-n (Go to Next hit).
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 4170のメモ |作成日: 2023年3月31日金曜日 21:39:24
+
+jump through Mx-occur hits 
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置 No. 4179のブックマーク |作成日: 2023年3月31日金曜日 21:41:30
+
+
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置 No. 4215のブックマーク |作成日: 2023年3月31日金曜日 21:41:55
+
+
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置 No. 4215のブックマーク |作成日: 2023年3月31日金曜日 21:42:17
+
+
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 4188-4189のハイライト |作成日: 2023年4月1日土曜日 13:59:34
+
+The best way to search all of your Emacs is to say C-u M-x ﻿multi-occur-in-matching-buffers
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 4272-4273のハイライト |作成日: 2023年4月1日土曜日 14:18:29
+
+instead of replacing with “emacs”, it’s going to use “Emacs”, to match the case of the “Vim”. Likewise, if there’s a “VIM” the replacement will be “EMACS”.
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 4273のメモ |作成日: 2023年4月1日土曜日 14:19:45
+
+smart casing with search / replace 
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 4272-4277のハイライト |作成日: 2023年4月1日土曜日 14:22:59
+
+instead of replacing with “emacs”, it’s going to use “Emacs”, to match the case of the “Vim”. Likewise, if there’s a “VIM” the replacement will be “EMACS”. If your search string contains any uppercase letters, the searches will be done case-sensitively, and likewise your replacement text will be used without modification. So M-% “Vim” → “emacs” will only match “Vim” and will replace it with your all-lowercase “emacs”. If your search string is all lowercase but your replacement string contains any uppercase letters, the search is case-insensitive but the replacement will be done exactly as given every time. In Table 24, we summarize the three cases:
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置 No. 4300のブックマーク |作成日: 2023年4月2日日曜日 1:39:22
+
+
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 4340-4340のハイライト |作成日: 2023年4月2日日曜日 2:03:05
+
+Table 25: query-replace-regexp Examples
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 4661-4662のハイライト |作成日: 2023年4月8日土曜日 21:34:18
+
+highlight a word with M-s h . (﻿highlight-symbol-at-point﻿),
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 4749-4752のハイライト |作成日: 2023年4月9日日曜日 0:49:19
+
+If you want to pick up your aborted Macro definition and fix it without having to redo the whole thing, see C-x C-k l (﻿kmacro-edit-lossage﻿) below in Editing Your Macro.
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 4752のメモ |作成日: 2023年4月9日日曜日 0:50:09
+
+macro-edit-lossage
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 4756-4758のハイライト |作成日: 2023年4月9日日曜日 0:51:07
+
+C-x C-k r (﻿apply-macro-to-region-lines﻿). This invokes your Macro exactly once on each line of the Region; it automatically positions Point at the beginning of each line before each repetition.
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 4758のメモ |作成日: 2023年4月9日日曜日 0:51:34
+
+run macro per line 
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 4785-4785のハイライト |作成日: 2023年4月9日日曜日 1:09:35
+
+Table 28: Keyboard Macro Commands
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 4838-4839のハイライト |作成日: 2023年4月9日日曜日 1:13:14
+
+To execute your previous Macro, do C-x C-k C-n (﻿kmacro-cycle-ring-next﻿).
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 4839のメモ |作成日: 2023年4月9日日曜日 1:13:40
+
+macro ring 
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 4849-4850のハイライト |作成日: 2023年4月9日日曜日 1:15:11
+
+review the Macros in the Ring with C-x C-k C-v (kmacro-view-macro-repeat);
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 4932-4933のハイライト |作成日: 2023年4月9日日曜日 20:58:38
+
+C-x C-k SPC (﻿kmacro-step-edit-macro﻿),
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 4933のメモ |作成日: 2023年4月9日日曜日 20:59:07
+
+macro debugger
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 4941-4941のハイライト |作成日: 2023年4月9日日曜日 21:00:12
+
+you can easily bind your latest Macro to a key with C-x C-k b
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 4945-4946のハイライト |作成日: 2023年4月9日日曜日 21:00:47
+
+As a convenience, if you type any of the digits 0-9 or the capital letters A-Z, your Macro will be bound to that key in the C-x C-k keymap. So if you type C-x C-k b and repond Q, your Macro will be bound to C-x C-k Q.
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 4947-4948のハイライト |作成日: 2023年4月9日日曜日 21:02:25
+
+With C-x C-k n (﻿kmacro-name-last-macro﻿) you can instead, or also, give your Macro a long name that you can use with M-x
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 4948のメモ |作成日: 2023年4月9日日曜日 21:02:46
+
+name macro 
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 4950-4951のハイライト |作成日: 2023年4月9日日曜日 21:03:27
+
+If you want to save your Macro permanently, pull up your Init File, jump to the end of it, and invoke M-x ﻿insert-kbd-macro
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 5039-5040のハイライト |作成日: 2023年4月9日日曜日 21:15:56
+
+“Add Comment” let’s you document your changes and saves a comment that will be displayed along with this value in future Customize sessions.
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 5040のメモ |作成日: 2023年4月9日日曜日 21:16:40
+
+add a comment when customizing a variable.
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 5075-5077のハイライト |作成日: 2023年4月10日月曜日 20:52:26
+
+M-x ﻿customize-unsaved﻿ (also known as M-x ﻿customize-customized﻿) will pull up a Customize Buffer that pulls together all the customizations you’ve made in this session but haven’t yet saved,
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 5078-5080のハイライト |作成日: 2023年4月10日月曜日 20:52:40
+
+M-x ﻿customize-saved﻿ will give you a Customize Buffer containing all the customizations you’ve ever saved,
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 5083-5086のハイライト |作成日: 2023年4月10日月曜日 20:53:59
+
+your OS package manager presents you with a fresh new Emacs in which some User Options will inevitably have been changed. M-x ﻿customize-changed﻿ (a.k.a M-x customize-changed-options) will present a Customize Buffer containing all these changed variables for you to consider.
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 5086-5088のハイライト |作成日: 2023年4月10日月曜日 20:54:09
+
+if, like me, you’ve changed some User Options directly via Elisp in your Init File, M-x customize-rogue will let you see all of these in a Customize Buffer.
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 5138-5140のハイライト |作成日: 2023年4月10日月曜日 21:00:56
+
+If you’ve got the name of a package to hand, perhaps Vertico, you can read it’s description via C-h P (﻿describe-package﻿).
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 5140のメモ |作成日: 2023年4月10日月曜日 21:01:27
+
+describe ーpackage
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 5241-5241のハイライト |作成日: 2023年4月14日金曜日 21:03:29
+
+M-x ﻿report-emacs-bug
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 5303-5306のハイライト |作成日: 2023年4月16日日曜日 13:47:05
+
+You can easily have most of your file-visiting Buffers restored each time you start up a fresh Emacs by turning on ﻿desktop-save-mode﻿ and I recommend this for your Init File
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 5306のメモ |作成日: 2023年4月16日日曜日 13:47:34
+
+desktop ーsaveーmode
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 5320-5320のハイライト |作成日: 2023年4月16日日曜日 13:58:50
+
+desktop-restore-eager in order to make the restoration of your Buffers happen lazily—that
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 5387-5387のハイライト |作成日: 2023年4月17日月曜日 20:42:57
+
+Table 33: Command-Line Options for Scripting
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 5481-5481のハイライト |作成日: 2023年4月19日水曜日 20:38:14
+
+M-TAB (complete-symbol) (which is the same as C-M-i)
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 5507-5507のハイライト |作成日: 2023年4月19日水曜日 20:47:16
+
+Register Commands and Types
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 5520-5521のハイライト |作成日: 2023年4月19日水曜日 20:49:05
+
+M-x list-registers.
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 5566-5568のハイライト |作成日: 2023年4月25日火曜日 20:50:01
+
+C-x r f (﻿frameset-to-register﻿) will save your Frame Configuration (i.e., all your Windows in all your Frames). In both cases, C-x r j will restore it.
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 5569-5574のハイライト |作成日: 2023年4月25日火曜日 20:52:25
+
+You can save the most recently defined Keyboard Macro in a Register with C-x C-k x (﻿kmacro-to-register﻿) and invoke it with C-x r j. Why would you do this when you can assign Macros to keys in the C-x C-k keymap with C-x C-k b (﻿kmacro-bind-to-key﻿)? The main advantage is that desktop-save-mode will save any Macros in Registers for future Emacs sessions without any extra work on your part,
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 5619-5620のハイライト |作成日: 2023年4月25日火曜日 20:58:24
+
+Explicit Rectangle Commands
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 5635-5636のハイライト |作成日: 2023年4月25日火曜日 21:03:52
+
+C-x r t is probably the Rectangle command I use the most: it replaces the text of the Rectangle with new text:
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 5679-5682のハイライト |作成日: 2023年4月25日火曜日 21:09:24
+
+C-o is very handy when yanking Rectangles. Rather than counting precisely, you can often give it a big numeric argument to open more lines than you’d need, say, with C-u C-u C-o to get sixteen blank lines, yank your Rectangle, and then close up the extraneous blank lines with a couple of C-x C-o (﻿delete-blank-lines﻿)’s.
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 5776-5779のハイライト |作成日: 2023年4月29日土曜日 13:21:49
+
+the easiest way to define an Abbrev is with M-x ﻿define-mode-abbrev﻿ and M-x ﻿define-global-abbrev﻿. These commands prompt you for both the expansion and the abbreviation in the Minibuffer, so there’s no counting.
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 5779のメモ |作成日: 2023年4月29日土曜日 13:22:07
+
+add abbreviations
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 5817-5819のハイライト |作成日: 2023年4月29日土曜日 13:39:15
+
+You can see all the Abbrevs that you’ve defined with M-x ﻿list-abbrevs﻿.
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 5819のメモ |作成日: 2023年4月29日土曜日 13:39:43
+
+list abbreviations
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 5884-5885のハイライト |作成日: 2023年5月6日土曜日 20:08:44
+
+of all the currently defined Faces with M-x ﻿list-faces-display
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 5885-5885のハイライト |作成日: 2023年5月6日土曜日 20:08:59
+
+list-faces-display
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 5964-5965のハイライト |作成日: 2023年5月6日土曜日 20:15:55
+
+hi-lock-mode﻿ lets you highlight text that matches certain patterns, to make occurrences of those patterns stand out
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 5967-5968のハイライト |作成日: 2023年5月6日土曜日 20:16:26
+
+Isearch highlights disappear as soon you terminate your search: Hi-Lock highlighting sticks around until you turn it off.
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 5976-5977のハイライト |作成日: 2023年5月6日土曜日 20:18:46
+
+The Hi-Lock commands all live on the M-s h prefix; see Table 39.
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 5984-5987のハイライト |作成日: 2023年5月6日土曜日 20:19:19
+
+M-s h . (﻿highlight-symbol-at-point﻿); just invoke it and the symbol249 at Point, and all other occurrences of that symbol in the Buffer, will be highlighted in yellow.
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 6135-6137のハイライト |作成日: 2023年5月13日土曜日 21:30:29
+
+The M-x ﻿untabify﻿ command will replace all the tabs in the region with one or more spaces, preserving the horizontal spacing.
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 6155-6156のハイライト |作成日: 2023年5月21日日曜日 11:16:39
+
+C-x C-o (﻿delete-blank-lines﻿) is the inverse
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 6156-6157のハイライト |作成日: 2023年5月21日日曜日 11:16:52
+
+of C-o: when Point is in the middle of a bunch of consecutive blank lines, C-x C-o reduces them to just one blank line;
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 6186-6188のハイライト |作成日: 2023年5月21日日曜日 11:22:44
+
+C-x TAB (﻿indent-rigidly﻿): just set the Region around a bunch of lines, and C-x TAB will prompt you:
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 6197-6199のハイライト |作成日: 2023年5月21日日曜日 11:23:58
+
+M-m (﻿back-to-indentation﻿) conveniently moves Point to the first non-whitespace character on the line: it’s like a C-a for indented lines.
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 6398-6400のハイライト |作成日: 2023年5月21日日曜日 21:40:24
+
+You can browse all the language environments with C-h L (﻿describe-language-environment﻿);
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 6413-6414のハイライト |作成日: 2023年5月21日日曜日 21:43:10
+
+C-x 8 RET (﻿insert-char﻿),
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 6434-6434のハイライト |作成日: 2023年5月21日日曜日 21:48:38
+
+C-x RET C-\.
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 6434のメモ |作成日: 2023年5月21日日曜日 21:49:30
+
+change input method (language)
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 6597-6597のハイライト |作成日: 2023年5月24日水曜日 21:34:30
+
+leave the hostname part of the remote filename empty, e.g. /sudo::/etc/resolv.conf.
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 6597のメモ |作成日: 2023年5月24日水曜日 21:35:02
+
+tramp with sudo
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置 No. 6586のブックマーク |作成日: 2023年6月3日土曜日 10:20:06
+
+
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 6811-6814のハイライト |作成日: 2023年6月10日土曜日 19:19:05
+
+Occasionally you’ll have left your remote Emacs in the middle of waiting for you to type a response in the Minibuffer or the like, which can cause your emacsclient connection to hang; invoking ﻿top-level﻿ can abort this.
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置 No. 6811のブックマーク |作成日: 2023年6月10日土曜日 19:19:39
+
+
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 6816-6816のハイライト |作成日: 2023年6月11日日曜日 13:14:26
+
+M-x emacs-uptime to see how long your Emacs has been running.)
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 6861-6862のハイライト |作成日: 2023年6月11日日曜日 13:19:51
+
+C-h P (﻿describe-package﻿)
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 6983-6984のハイライト |作成日: 2023年6月28日水曜日 13:20:07
+
+how do you spell “F7”? Just ask Emacs: invoke C-h c (﻿describe-key-briefly﻿)
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 6984のメモ |作成日: 2023年6月28日水曜日 13:21:22
+
+get string representation of key binding 
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 6988-6989のハイライト |作成日: 2023年6月28日水曜日 13:22:11
+
+C-h w (﻿where-is﻿) tells me that dired is bound to three keystrokes
+==========
+﻿emacs-tutorial (Keith Waclena)
+- 位置No. 7002-7002のハイライト |作成日: 2023年6月28日水曜日 13:23:34
+
+(put 'suspend-frame 'disabled t)
+==========
+emacs-tutorial (Keith Waclena)
+- 位置No. 7013-7013のハイライト |作成日: 2023年7月1日土曜日 13:36:58
+
+After
+==========
+emacs-tutorial (Keith Waclena)
+- 位置No. 7013-7014のハイライト |作成日: 2023年7月1日土曜日 13:37:02
+
+After saving your tweaked Init File, just do this: M-& emacs --no-desktop --debug-ini
+==========
+emacs-tutorial (Keith Waclena)
+- 位置No. 7027-7027のハイライト |作成日: 2023年7月1日土曜日 13:43:36
+
+is
+==========
+emacs-tutorial (Keith Waclena)
+- 位置No. 7026-7027のハイライト |作成日: 2023年7月1日土曜日 13:43:40
+
+learn if you want to, and Robert Chassell’s An Introduction to Programming in Emacs Lisp is
+==========
+emacs-tutorial (Keith Waclena)
+- 位置No. 7027-7027のハイライト |作成日: 2023年7月1日土曜日 13:43:48
+
+An Introduction to Programming in Emacs Lisp is
+==========
+emacs-tutorial (Keith Waclena)
+- 位置No. 7027-7027のハイライト |作成日: 2023年7月1日土曜日 13:43:56
+
+An Introduction to Programming in Emacs Lisp is
+==========
+emacs-tutorial (Keith Waclena)
+- 位置No. 7027-7027のハイライト |作成日: 2023年7月1日土曜日 13:44:04
+
+An Introduction to Programming in Emacs Lisp is
+==========
+emacs-tutorial (Keith Waclena)
+- 位置No. 7027-7027のハイライト |作成日: 2023年7月1日土曜日 13:44:10
+
+An Introduction to Programming in Emacs Lisp
+==========
+emacs-tutorial (Keith Waclena)
+- 位置No. 7165-7167のハイライト |作成日: 2023年7月2日日曜日 14:12:08
+
+An Introduction to Programming in Emacs Lisp. Cambridge, MA: Free Software Foundation. https://www.gnu.org/software/emacs/manual/eintr.html. Read in Emacs with M-x info-display-manual RET eintr RET.
+==========
+emacs-tutorial (Keith Waclena)
+- 位置No. 7204-7204のハイライト |作成日: 2023年7月2日日曜日 14:18:40
+
+example:
+==========
+emacs-tutorial (Keith Waclena)
+- 位置No. 7204のメモ |作成日: 2023年7月2日日曜日 14:19:15
+
+emacs app replacements
+==========
+emacs-tutorial (Keith Waclena)
+- 位置No. 7226-7226のハイライト |作成日: 2023年7月2日日曜日 16:45:43
+
+shell-file-name
+==========
+emacs-tutorial (Keith Waclena)
+- 位置No. 7261-7263のハイライト |作成日: 2023年7月2日日曜日 16:52:33
+
+set the Region around the text you want to feed to the command and use M-| (﻿shell-command-on-region﻿)
+==========
+emacs-tutorial (Keith Waclena)
+- 位置No. 7263のメモ |作成日: 2023年7月2日日曜日 16:53:04
+
+pipe text from emacs
+==========
+emacs-tutorial (Keith Waclena)
+- 位置No. 7276-7277のハイライト |作成日: 2023年7月2日日曜日 16:54:59
+
+fire up GUI programs that don’t use the terminal, like, say, firefox (best done asynchronously with M-&).
+==========
+emacs-tutorial (Keith Waclena)
+- 位置No. 7277のメモ |作成日: 2023年7月2日日曜日 16:55:32
+
+M-& async exec
+==========
+emacs-tutorial (Keith Waclena)
+- 位置No. 7288-7288のハイライト |作成日: 2023年7月2日日曜日 16:57:02
+
+instead of top, use proced
+==========
+emacs-tutorial (Keith Waclena)
+- 位置No. 7296-7296のハイライト |作成日: 2023年7月2日日曜日 20:37:01
+
+M-& (﻿async-shell-command﻿).
+==========
+emacs-tutorial (Keith Waclena)
+- 位置No. 7316-7317のハイライト |作成日: 2023年7月2日日曜日 20:56:57
+
+M-x list-processes pops up a Buffer listing all the asynchronous processes of which Emacs is the parent.
+==========
+emacs-tutorial (Keith Waclena)
+- 位置No. 7358-7359のハイライト |作成日: 2023年7月6日木曜日 20:03:24
+
+especially see C-c C-r (﻿comint-show-output﻿)).
+==========
+emacs-tutorial (Keith Waclena)
+- 位置No. 7362-7363のハイライト |作成日: 2023年7月6日木曜日 20:03:34
+
+M-x ﻿browse-url
+==========
+emacs-tutorial (Keith Waclena)
+- 位置No. 7379-7379のハイライト |作成日: 2023年7月6日木曜日 20:13:26
+
+Re-running Commands
+==========
+emacs-tutorial (Keith Waclena)
+- 位置No. 7384-7385のハイライト |作成日: 2023年7月6日木曜日 20:16:28
+
+with RET and C-c RET you can re-run shell commands that appear in the output of shell commands:
+==========
+emacs-tutorial (Keith Waclena)
+- 位置No. 7404-7405のハイライト |作成日: 2023年7月6日木曜日 20:22:12
+
+C-c C-e *Go to prompt at end of Buffer
+==========
+emacs-tutorial (Keith Waclena)
+- 位置No. 7405-7406のハイライト |作成日: 2023年7月6日木曜日 20:22:43
+
+C-o C-c C-o *Discard output
+==========
+emacs-tutorial (Keith Waclena)
+- 位置No. 7409-7410のハイライト |作成日: 2023年7月6日木曜日 20:23:53
+
+C-u C-c C-u Kill (erase) current line (back to prompt)
+==========
+emacs-tutorial (Keith Waclena)
+- 位置No. 7410-7411のハイライト |作成日: 2023年7月6日木曜日 20:24:29
+
+C-w C-c C-w Kill (erase) previous word
+==========
+emacs-tutorial (Keith Waclena)
+- 位置No. 7418-7418のハイライト |作成日: 2023年7月6日木曜日 20:25:35
+
+C-c
+==========
+emacs-tutorial (Keith Waclena)
+- 位置No. 7418-7420のハイライト |作成日: 2023年7月6日木曜日 20:25:47
+
+C-c C-r (﻿comint-show-output﻿) scrolls the first line of this batch of output to the top of the Window; this is what to type if the output of your command was too long to fit in the Window,
+==========
+emacs-tutorial (Keith Waclena)
+- 位置No. 7421-7422のハイライト |作成日: 2023年7月6日木曜日 20:26:23
+
+C-c C-o (﻿comint-delete-output﻿)
+==========
+emacs-tutorial (Keith Waclena)
+- 位置No. 7423-7423のハイライト |作成日: 2023年7月6日木曜日 20:26:32
+
+C-c M-o (comint-clear-buffer)
+==========
+emacs-tutorial (Keith Waclena)
+- 位置No. 7424-7428のハイライト |作成日: 2023年7月6日木曜日 20:26:59
+
+C-c C-s (﻿comint-write-output﻿) write the output of the last executed command to a file; this is equivalent to, but nicer than, explicitly navigating to the beginning and end of the output, setting the region, and executing C-x C-w (﻿write-file﻿).
+==========
+emacs-tutorial (Keith Waclena)
+- 位置No. 7436-7438のハイライト |作成日: 2023年7月9日日曜日 13:35:45
+
+just run C-x k (﻿kill-buffer﻿) without properly exiting the shell; Emacs will, as usual, tell you the Buffer contains a running process, ask if you really want to terminate it, and if so, kill the Buffer.
+==========
+emacs-tutorial (Keith Waclena)
+- 位置No. 7442-7444のハイライト |作成日: 2023年7月9日日曜日 13:37:58
+
+An easy way to manage the common situation of one-shell-per-software-project is to use C-x p s (﻿project-shell﻿) instead of M-x shell;
+==========
+emacs-tutorial (Keith Waclena)
+- 位置No. 7444のメモ |作成日: 2023年7月9日日曜日 13:38:28
+
+"project" shell
+==========
+emacs-tutorial (Keith Waclena)
+- 位置No. 7597-7599のハイライト |作成日: 2023年7月11日火曜日 19:08:00
+
+M-x ﻿eww-open-file﻿ is equivalent to giving M-x eww a file:// URL,
+==========
+emacs-tutorial (Keith Waclena)
+- 位置No. 7603-7603のハイライト |作成日: 2023年7月11日火曜日 19:10:01
+
+the xdg-open(1) command.
+==========
+emacs-tutorial (Keith Waclena)
+- 位置No. 7603のメモ |作成日: 2023年7月11日火曜日 19:10:25
+
+what are xdgーutils???
+==========
+emacs-tutorial (Keith Waclena)
+- 位置No. 7615-7615のハイライト |作成日: 2023年7月16日日曜日 23:55:46
+
+EWW has a wealth of its own key bindings;
+==========
+emacs-tutorial (Keith Waclena)
+- 位置No. 7744-7744のハイライト |作成日: 2023年7月17日月曜日 0:12:33
+
+the fleet of Browse URL commands.
+==========
+emacs-tutorial (Keith Waclena)
+- 位置No. 7754-7755のハイライト |作成日: 2023年7月17日月曜日 0:14:09
+
+invoke Browse URL to use a specific browser by calling one of the commands in Table 46
+==========
+emacs-tutorial (Keith Waclena)
+- 位置No. 7769-7770のハイライト |作成日: 2023年7月17日月曜日 0:15:05
+
+browse-url-text-browser. The default value is lynx; IMHO better choices are elinks(1) (which does a really nice layout) or w3m(1) (which does images in the terminal).
+==========
+emacs-tutorial (Keith Waclena)
+- 位置No. 7785-7787のハイライト |作成日: 2023年7月17日月曜日 0:18:59
+
+turn it on in Shell Modes and, via goto-address-prog-mode, in programming language Major Modes, where it’s only activated in comments and strings.
+==========
+emacs-tutorial (Keith Waclena)
+- 位置No. 7787のメモ |作成日: 2023年7月17日月曜日 0:19:21
+
+goto address mode 
+==========
+emacs-tutorial (Keith Waclena)
+- 位置No. 7795-7798のハイライト |作成日: 2023年7月17日月曜日 0:21:05
+
+snippet: (setq url-cookie-untrusted-urls '(".*")) ; cookies: generally a bad idea If you feel less extreme about this than I do, you can Customize this variable to block only specific domains or URLs instead.
+==========
+emacs-tutorial (Keith Waclena)
+- 位置No. 7798のメモ |作成日: 2023年7月17日月曜日 0:21:23
+
+block cookies
+==========
+emacs-tutorial (Keith Waclena)
+- 位置No. 7800-7802のハイライト |作成日: 2023年7月17日月曜日 0:21:54
+
+User Options related to web browsing that you might want to Customize. Do M-x ﻿customize-group﻿ for the eww, browse-url, and url-cookie groups.
+==========
+cltl2  
+- 16ページのブックマーク |作成日: 2023年7月17日月曜日 0:23:13
+
+
+==========
+cltl2  
+- 246ページのブックマーク |作成日: 2023年7月17日月曜日 0:28:10
+
+
+==========
+cltl2  
+- 1101ページのブックマーク |作成日: 2023年7月17日月曜日 0:41:28
+
+
+==========
+cltl2  
+- 1091ページのブックマーク |作成日: 2023年7月17日月曜日 0:41:59
+
+
+==========
+cltl2  
+- 1129ページのブックマーク |作成日: 2023年7月17日月曜日 0:42:29
+
+
+==========
+emacs-tutorial (Keith Waclena)
+- 位置No. 7833-7833のハイライト |作成日: 2023年7月18日火曜日 21:30:01
+
+Moving around in the Calendar
+==========
+emacs-tutorial (Keith Waclena)
+- 位置No. 7856-7858のハイライト |作成日: 2023年7月18日火曜日 21:31:15
+
+count the number of days between any two dates in the Calendar. Just move to one of the days, set the Mark, move to the other day, and invoke M-‌= (﻿calendar-count-days-region﻿).
+==========
+emacs-tutorial (Keith Waclena)
+- 位置No. 7858-7858のハイライト |作成日: 2023年7月18日火曜日 21:33:13
+
+Holidays
+==========
+emacs-tutorial (Keith Waclena)
+- 位置No. 7917-7917のハイライト |作成日: 2023年7月18日火曜日 21:40:16
+
+The Diary
+==========
+emacs-tutorial (Keith Waclena)
+- 位置No. 7940-7940のハイライト |作成日: 2023年7月19日水曜日 19:59:23
+
+Appointments
+==========
+emacs-tutorial (Keith Waclena)
+- 位置No. 7945-7948のハイライト |作成日: 2023年7月19日水曜日 19:59:40
+
+this Init File snippet will enable the defaults: (appt-activate +1) ; appointment notifications, please (require 'notifications) ; also via desktop notifications
+==========
+emacs-tutorial (Keith Waclena)
+- 位置No. 7951-7951のハイライト |作成日: 2023年7月19日水曜日 20:00:01
+
+M-x ﻿appt-add﻿;
+==========
+emacs-tutorial (Keith Waclena)
+- 位置No. 7973-7973のハイライト |作成日: 2023年7月19日水曜日 20:02:02
+
+M-x world-clock
+==========
+emacs-tutorial (Keith Waclena)
+- 位置No. 8251-8252のハイライト |作成日: 2023年7月20日木曜日 19:39:52
+
+you can conveniently do a diff from Dired with = (dired-diff),
+==========
+emacs-tutorial (Keith Waclena)
+- 位置No. 8252のメモ |作成日: 2023年7月20日木曜日 19:40:13
+
+dired-diff
+==========
+emacs-tutorial (Keith Waclena)
+- 位置No. 8245-8247のハイライト |作成日: 2023年7月20日木曜日 19:40:50
+
+M-x ﻿diff-backup﻿ diffs the file with its backup file—this is way of answering the question, “what changes have I made since the last time I saved it?”—
+==========
+emacs-tutorial (Keith Waclena)
+- 位置No. 8241-8242のハイライト |作成日: 2023年7月20日木曜日 19:41:03
+
+M-x ﻿diff﻿: it prompts for two filenames,
+==========
+emacs-tutorial (Keith Waclena)
+- 位置No. 8247-8248のハイライト |作成日: 2023年7月20日木曜日 19:41:19
+
+M-x ﻿diff-buffer-with-file﻿ diffs the (possibly as yet unsaved) Buffer with its file on disk
+==========
+emacs-tutorial (Keith Waclena)
+- 位置No. 8285-8285のハイライト |作成日: 2023年7月20日木曜日 19:43:56
+
+M-x ﻿ediff
+==========
+emacs-tutorial (Keith Waclena)
+- 位置No. 8320-8321のハイライト |作成日: 2023年7月20日木曜日 20:12:25
+
+Ediff has a dozen useful entry points, listed in Table 56
+==========
+emacs-tutorial (Keith Waclena)
+- 位置No. 8416-8418のハイライト |作成日: 2023年7月24日月曜日 20:34:50
+
+When you finish the merge with q (﻿ediff-quit﻿), Buffer C, actually called *ediff-merge*, is the result of your merge: you generally want to save it to a file with C-x C-w (﻿write-file﻿).
+==========
+emacs-tutorial (Keith Waclena)
+- 位置No. 8418のメモ |作成日: 2023年7月24日月曜日 20:35:17
+
+save merge 
+==========
+emacs-tutorial (Keith Waclena)
+- 位置No. 8393-8393のハイライト |作成日: 2023年7月24日月曜日 20:39:21
+
+Merging
+==========
+emacs-tutorial (Keith Waclena)
+- 位置No. 8403-8404のハイライト |作成日: 2023年7月24日月曜日 20:40:31
+
+Ediff has no way of guessing whether you’d prefer variant A or variant B so it shows you both possibilities in Buffer C. If you prefer one or the other, just use the a or b commands.
+==========
+emacs-tutorial (Keith Waclena)
+- 位置No. 8403-8406のハイライト |作成日: 2023年7月24日月曜日 20:40:45
+
+Ediff has no way of guessing whether you’d prefer variant A or variant B so it shows you both possibilities in Buffer C. If you prefer one or the other, just use the a or b commands. With M-x ﻿ediff﻿, those commands update either the A or B buffer, but with M-x ﻿ediff-merge﻿. they update the C Buffer.
+==========
+emacs-tutorial (Keith Waclena)
+- 位置No. 8423-8423のハイライト |作成日: 2023年7月24日月曜日 20:41:33
+
+Table 57: Ediff Merge Entry Points
+==========
+emacs-tutorial (Keith Waclena)
+- 位置No. 8433-8433のハイライト |作成日: 2023年7月24日月曜日 20:44:08
+
+ediff-merge-files-with-ancestor.
+==========
+emacs-tutorial (Keith Waclena)
+- 位置No. 8433のメモ |作成日: 2023年7月24日月曜日 20:44:36
+
+Use with scm
+==========
+emacs-tutorial (Keith Waclena)
+- 位置No. 8448-8448のハイライト |作成日: 2023年7月24日月曜日 20:45:49
+
+You can also Ediff two directories,
+==========
+emacs-tutorial (Keith Waclena)
+- 位置No. 8451-8452のハイライト |作成日: 2023年7月24日月曜日 20:46:25
+
+M-x ﻿ediff-directories
+==========
+emacs-tutorial (Keith Waclena)
+- 位置No. 8527-8527のハイライト |作成日: 2023年7月24日月曜日 20:52:17
+
+With a prefix argument, compare-windows will ignore differences in whitespace.
+==========
+emacs-tutorial (Keith Waclena)
+- 位置No. 8528-8529のハイライト |作成日: 2023年7月24日月曜日 20:52:37
+
+complex and powerful; see M-x ﻿customize-group﻿ compare-windows.
+==========
+emacs-tutorial (Keith Waclena)
+- 位置No. 8608-8608のハイライト |作成日: 2023年7月30日日曜日 21:28:14
+
+Sending Mail
+==========
+emacs-tutorial (Keith Waclena)
+- 位置No. 8649-8649のハイライト |作成日: 2023年7月30日日曜日 21:45:12
+
+Reading Mail
+==========
+emacs-tutorial (Keith Waclena)
+- 位置No. 8706-8706のハイライト |作成日: 2023年7月30日日曜日 21:45:39
+
+Browsing Mbox Files
+==========
+emacs-tutorial (Keith Waclena)
+- 位置No. 8753-8753のハイライト |作成日: 2023年7月30日日曜日 21:49:41
+
+Games
+==========
+emacs-tutorial (Keith Waclena)
+- 位置No. 8789-8789のハイライト |作成日: 2023年7月30日日曜日 21:51:34
+
+Morse code
+==========
+emacs-tutorial (Keith Waclena)
+- 位置No. 8982-8983のハイライト |作成日: 2023年8月1日火曜日 20:58:06
+
+For more help solving Meta key problems, see the Emacs Wiki
+==========
+emacs-tutorial (Keith Waclena)
+- 位置No. 9006-9011のハイライト |作成日: 2023年8月1日火曜日 21:02:40
+
+download the Init File to your user-emacs-directory, renaming the file to, say, use-gnu-emacs.el, and now you can simply add this line to your existing Init File to include my recommendations: (with-demoted-errors "%S" (load-file (concat user-emacs-directory "use-gnu-emacs.el"))) If you add this line at the beginning of your existing Init File, the rest of your Init File will trump any conflicting settings; vice-versa if you add this line at the end.
+==========
+emacs-tutorial (Keith Waclena)
+- 位置No. 9011のメモ |作成日: 2023年8月1日火曜日 21:03:23
+
+load other init files - step by step
+==========
+emacs-tutorial (Keith Waclena)
+- 位置No. 9011-9011のハイライト |作成日: 2023年8月1日火曜日 21:04:49
+
+The Init File
+==========
+emacs-tutorial (Keith Waclena)
+- 位置No. 9011のメモ |作成日: 2023年8月1日火曜日 21:05:21
+
+author's recommended init settings
+==========
+emacs-tutorial (Keith Waclena)
+- 位置No. 9113-9113のハイライト |作成日: 2023年8月1日火曜日 21:08:20
+
+lots of Org Mode tips.
+==========
+emacs-tutorial (Keith Waclena)
+- 位置No. 9121-9121のハイライト |作成日: 2023年8月1日火曜日 21:09:10
+
+An Introduction to Programming in Emacs Lisp.
+==========
+emacs-tutorial (Keith Waclena)
+- 位置No. 9122-9123のハイライト |作成日: 2023年8月1日火曜日 21:09:18
+
+Read in Emacs with M-x info-display-manual RET eintr RET.
+==========
+emacs-tutorial (Keith Waclena)
+- 位置No. 9128-9128のハイライト |作成日: 2023年8月1日火曜日 21:09:59
+
+Comparing and Merging Files.
+==========
+emacs-tutorial (Keith Waclena)
+- 位置No. 9130-9130のハイライト |作成日: 2023年8月1日火曜日 21:10:05
+
+Read in Emacs with M-x info-display-manual RET diffutils RET.
+==========
+emacs-tutorial (Keith Waclena)
+- 位置No. 9130-9131のハイライト |作成日: 2023年8月1日火曜日 21:10:18
+
+Read in Emacs with M-x info-display-manual RET diffutils RET. Complete documentation for the GNU diff, diff3, cmp, and sdiff programs.
+==========
+emacs-tutorial (Keith Waclena)
+- 位置No. 9131-9131のハイライト |作成日: 2023年8月1日火曜日 21:11:49
+
+Emacs auth-source.
+==========
+emacs-tutorial (Keith Waclena)
+- 位置No. 9131のメモ |作成日: 2023年8月1日火曜日 21:12:10
+
+storing secrets !
+==========
+emacs-tutorial (Keith Waclena)
+- 位置No. 9132-9133のハイライト |作成日: 2023年8月1日火曜日 21:12:18
+
+Read in Emacs with M-x info-display-manual RET auth RET.
+==========
+emacs-tutorial (Keith Waclena)
+- 位置No. 9149-9149のハイライト |作成日: 2023年8月1日火曜日 21:13:50
+
+Read in Emacs with M-x info-display-manual RET ediff RET.
+==========
+emacs-tutorial (Keith Waclena)
+- 位置No. 9149のメモ |作成日: 2023年8月1日火曜日 21:14:05
+
+ediff info 
+==========
+emacs-tutorial (Keith Waclena)
+- 位置No. 9154-9154のハイライト |作成日: 2023年8月1日火曜日 21:15:18
+
+Read in Emacs with M-x info-display-manual RET autotype RET.
+==========
+emacs-tutorial (Keith Waclena)
+- 位置No. 9154のメモ |作成日: 2023年8月1日火曜日 21:16:14
+
+boilerplate, snippets, etc
+==========
+emacs-tutorial (Keith Waclena)
+- 位置No. 9158-9159のハイライト |作成日: 2023年8月1日火曜日 21:17:21
+
+one-page, double-sided, tri-fold reference card for your vest pocket (slip behind your pocket protector);
+==========
+emacs-tutorial (Keith Waclena)
+- 位置No. 9162-9163のハイライト |作成日: 2023年8月1日火曜日 21:17:43
+
+Read in Emacs with M-x info-display-manual RET org RET.
+==========
+emacs-tutorial (Keith Waclena)
+- 位置No. 9163のメモ |作成日: 2023年8月1日火曜日 21:17:52
+
+org mode
+==========
+emacs-tutorial (Keith Waclena)
+- 位置No. 9174-9175のハイライト |作成日: 2023年8月1日火曜日 21:18:49
+
+An overview of and tutorial for Org Mode’s timeclock facility.
+==========
+emacs-tutorial (Keith Waclena)
+- 位置No. 9183-9184のハイライト |作成日: 2023年8月1日火曜日 21:19:29
+
+Read in Emacs with M-x info-display-manual RET elisp RET.
+==========
+emacs-tutorial (Keith Waclena)
+- 位置No. 9184のメモ |作成日: 2023年8月1日火曜日 21:19:55
+
+complete elisp manual 
+==========
+emacs-tutorial (Keith Waclena)
+- 位置No. 9186-9186のハイライト |作成日: 2023年8月1日火曜日 21:20:17
+
+Read in Emacs with M-x info-display-manual RET dired-x RET.
+==========
+emacs-tutorial (Keith Waclena)
+- 位置No. 9186のメモ |作成日: 2023年8月1日火曜日 21:20:51
+
+dired info
+==========
+emacs-tutorial (Keith Waclena)
+- 位置No. 9199-9199のハイライト |作成日: 2023年8月1日火曜日 21:21:51
+
+demonstration of Emacs the Lisp Machine via a debugging problem.
+==========
+emacs-tutorial (Keith Waclena)
+- 位置No. 9206-9207のハイライト |作成日: 2023年8月3日木曜日 20:24:00
+
+how to build a computer out of a “game” with four trivial rules.
+==========
+emacs-tutorial (Keith Waclena)
+- 位置No. 9214-9214のハイライト |作成日: 2023年8月3日木曜日 20:25:10
+
+Calendrical Calculations:
+==========
+emacs-tutorial (Keith Waclena)
+- 位置No. 9228-9228のハイライト |作成日: 2023年8月3日木曜日 20:34:10
+
+Stallman’s personal history with Lisp and how it fits into the Emacs story.
+==========
+emacs-tutorial (Keith Waclena)
+- 位置No. 9245-9245のハイライト |作成日: 2023年8月3日木曜日 20:35:22
+
+The authoritative reference on Eshell.
+==========
+cltl2  
+- 18-18ページのハイライト |作成日: 2023年8月7日月曜日 21:30:44
+
+Binary, octal, and hexadecimal radices are useful enough to warrant the special abbreviations #b for #2r, #o for #8r, and #x for #16r. For example: #2r11010101 ;Another way of writing 213 decimal #b11010101 ;Ditto #b+11010101 ;Ditto #o325 ;Ditto, in octal radix #xD5 ;Ditto, in hexadecimal radix #16r+D5 ;Ditto #o-300 ;Decimal -192, written in base 8 #3r-21010 ;Same thing in base 3 #25R-7H ;Same thing in base 25 #xACCEDED ;181202413, in hexadecimal radix
+==========
+cltl2  
+- 18ページのメモ |作成日: 2023年8月7日月曜日 21:31:39
+
+numeric notation (binary. etc)
+==========
+cltl2  
+- 32ページのブックマーク |作成日: 2023年8月9日水曜日 23:58:48
+
+
+==========
+cltl2  
+- 32-32ページのハイライト |作成日: 2023年8月10日木曜日 0:09:11
+
+The number of dimensions of an array is called its rank (this terminology is borrowed from APL); the rank is a non-negative integer. Likewise, each dimension is itself a non-negative integer. The total number of elements in the array is the product of all the dimensions
+==========
+cltl2  
+- 32ページのメモ |作成日: 2023年8月10日木曜日 0:09:37
+
+array rank and dimensions 
+==========
+cltl2  
+- 40-40ページのハイライト |作成日: 2023年8月10日木曜日 0:28:10
+
+the type bignum is by defnition equivalent to (and integer (not fxnum))
+==========
+cltl2  
+- 40ページのハイライト |作成日: 2023年8月10日木曜日 0:29:15
+
+types
+==========
+cltl2  
+- 43ページのブックマーク |作成日: 2023年8月10日木曜日 0:30:10
+
+
+==========
+cltl2  
+- 44ページのブックマーク |作成日: 2023年8月15日火曜日 23:46:18
+
+
+==========
+cltl2  
+- 46ページのブックマーク |作成日: 2023年8月15日火曜日 23:46:39
+
+
+==========
+cltl2  
+- 44-44ページのハイライト |作成日: 2023年8月15日火曜日 23:47:17
+
+a few kinds of scope and extent
+==========
+cltl2  
+- 46ページのハイライト |作成日: 2023年8月15日火曜日 23:47:43
+
+example
+==========
+cltl2  
+- 46ページのメモ |作成日: 2023年8月15日火曜日 23:48:02
+
+try running this 
+==========
+cltl2  
+- 48-48ページのハイライト |作成日: 2023年8月15日火曜日 23:53:19
+
+special variable bindings are not “closed over
+==========
+cltl2  
+- 51ページのブックマーク |作成日: 2023年8月15日火曜日 23:59:36
+
+
+==========
+cltl2  
+- 51-51ページのハイライト |作成日: 2023年8月21日月曜日 0:00:14
+
+vector double-foat 100
+==========
+cltl2  
+- 51-51ページのハイライト |作成日: 2023年8月21日月曜日 0:00:19
+
+vector double-foat 100
+==========
+cltl2  
+- 51-51ページのハイライト |作成日: 2023年8月21日月曜日 0:00:22
+
+vector double-foat 100
+==========
+cltl2  
+- 51ページのメモ |作成日: 2023年8月21日月曜日 0:01:02
+
+vector type specifier example 
+==========
+cltl2  
+- 55-55ページのハイライト |作成日: 2023年8月21日月曜日 0:14:05
+
+array element-type dimensions
+==========
+cltl2  
+- 55ページのメモ |作成日: 2023年8月21日月曜日 0:14:53
+
+array type specifier, with examples 
+==========
+cltl2  
+- 56-56ページのハイライト |作成日: 2023年8月21日月曜日 0:16:15
+
+Now (array character) is not a subset of (array t); the two sets are in fact disjoint because (array character) is not the set of all arrays that can hold characters but rather the set of arrays that are specialized to hold precisely characters and no other objects. To test whether an array foo can hold a character, one should not use (typep foo ’(array character)) but rather (subtypep ’character (array-element-type foo))
+==========
+cltl2  
+- 56ページのメモ |作成日: 2023年8月21日月曜日 0:16:48
+
+array element type specifier
+==========
+cltl2  
+- 62ページのブックマーク |作成日: 2023年8月21日月曜日 0:30:34
+
+
+==========
+cltl2  
+- 74ページのブックマーク |作成日: 2023年8月28日月曜日 0:13:34
+
+
+==========
+cltl2  
+- 86ページのブックマーク |作成日: 2023年8月31日木曜日 23:51:58
+
+
+==========
+lovinglisp  
+- 21ページのブックマーク |作成日: 2023年9月4日月曜日 22:53:03
+
+
+==========
+lovinglisp  
+- 5-5ページのハイライト |作成日: 2023年9月4日月曜日 22:57:11
+
+of Coral Common Lisp on the Macintosh). I am going to ask you, dear reader, to trust me and adopt
+==========
+lovinglisp  
+- 5-5ページのハイライト |作成日: 2023年9月4日月曜日 22:57:16
+
+of Coral Common Lisp on the Macintosh). I am going to ask you, dear reader, to trust me and adopt
+==========
+lovinglisp  
+- 5-5ページのハイライト |作成日: 2023年9月4日月曜日 22:57:42
+
+adopt the following advice that I have adopted from Zach Beane¹⁶, the creator and maintainer of Quicklisp: • Create the file ∼/.config/common-lisp/source-registry.conf.d/projects.conf if it does not exist on your system • Assuming that you have cloned the repository for this book (loving-common-lisp) in your home directory (if you have a special place where you clone git repos, adjust the following), edit this configuration file to look like this: 1 (:tree 2 (:home "loving-common-lisp/src/") 3 ) This will make subdirectories of loving-common-lisp/src/ load-able by using Quicklisp
+==========
+lovinglisp  
+- 5ページのメモ |作成日: 2023年9月4日月曜日 22:58:40
+
+quicklisp configuration 
+==========
+lovinglisp  
+- 56ページのハイライト |作成日: 2023年9月4日月曜日 23:42:21
+
+Quicklib
+==========
+lovinglisp  
+- 56ページのメモ |作成日: 2023年9月4日月曜日 23:42:43
+
+error "quicklisp"
+==========
+lovinglisp  
+- 60-60ページのハイライト |作成日: 2023年9月4日月曜日 23:45:18
+
+Note: I almost never use pathnames. Instead, I specify files using a string and the character / as a directory delimiter. I find this to be portable for the Macintosh, Windows, and Linux operating systems using all Common Lisp implementations
+==========
+lovinglisp  
+- 60ページのメモ |作成日: 2023年9月4日月曜日 23:45:54
+
+pathnames: doesn't use
+==========
+lovinglisp  
+- 68ページのブックマーク |作成日: 2023年9月4日月曜日 23:47:47
+
+
+==========
+cltl2  
+- 91ページのブックマーク |作成日: 2023年9月4日月曜日 23:58:46
+
+
+==========
+cltl2  
+- 1117ページのブックマーク |作成日: 2023年9月5日火曜日 0:00:11
+
+
+==========
+lovinglisp (Mark Watson)
+- 位置No. 386-388のハイライト |作成日: 2023年9月6日水曜日 17:59:37
+
+define a command rsbcl: 1 alias rsbcl='rlwrap sbcl' This is fine, just remember to run sbcl
+==========
+lovinglisp (Mark Watson)
+- 位置 No. 2007のブックマーク |作成日: 2023年9月6日水曜日 18:06:49
+
+
+==========
+lovinglisp (Mark Watson)
+- 位置 No. 2577のブックマーク |作成日: 2023年9月7日木曜日 22:07:56
+
+
+==========
+lovinglisp (Mark Watson)
+- 位置No. 2758-2758のハイライト |作成日: 2023年9月8日金曜日 20:41:03
+
+The following list
+==========
+lovinglisp (Mark Watson)
+- 位置No. 2763-2765のハイライト |作成日: 2023年9月8日金曜日 20:41:13
+
+(make-instance 'hunchentoot:easy-acceptor :port 3000))
+==========
+lovinglisp (Mark Watson)
+- 位置No. 2765のメモ |作成日: 2023年9月8日金曜日 20:41:40
+
+Am I doing this anywhere ?
+==========
+lovinglisp (Mark Watson)
+- 位置No. 2906-2906のハイライト |作成日: 2023年9月8日金曜日 20:51:44
+
+(in-package
+==========
+lovinglisp (Mark Watson)
+- 位置No. 2906のメモ |作成日: 2023年9月8日金曜日 20:52:13
+
+bing search code
+==========
+lovinglisp (Mark Watson)
+- 位置No. 3015-3016のハイライト |作成日: 2023年9月8日金曜日 20:55:20
+
+Congitive Services on the Azure site.
+==========
+lovinglisp (Mark Watson)
+- 位置No. 3929-3930のハイライト |作成日: 2023年9月10日日曜日 0:12:40
+
+This also loads the projects in src/fasttag and src/categorize_summarize. Unfortunately, it takes about a minute
+==========
+lovinglisp (Mark Watson)
+- 位置No. 3930のメモ |作成日: 2023年9月10日日曜日 0:13:13
+
+the quickload takes a long time ?
+==========
+lovinglisp (Mark Watson)
+- 位置No. 3978-3978のハイライト |作成日: 2023年9月10日日曜日 0:16:09
+
+start SBCL with the NLP library and data preloaded using the Lisp image that you just created:
+==========
+lovinglisp (Mark Watson)
+- 位置No. 3978のメモ |作成日: 2023年9月10日日曜日 0:16:28
+
+load a lisp image!
+==========
+lovinglisp (Mark Watson)
+- 位置 No. 4562のブックマーク |作成日: 2023年9月10日日曜日 0:47:17
+
+
+==========
+A Programmer's Guide to Personal Finance (Springer II, William M.)
+- 22ページ|位置No. 237-237のハイライト |作成日: 2023年9月11日月曜日 22:19:23
+
+Roth IRAs are the exception – the contributions (but not earnings) can be withdrawn at any time, without penalty.
+==========
+A Programmer's Guide to Personal Finance (Springer II, William M.)
+- 22ページ|位置No. 238-239のハイライト |作成日: 2023年9月11日月曜日 22:19:41
+
+A spousal IRA allows a working spouse to contribute to IRAs for both themselves and a non-working spouse.
+==========
+A Programmer's Guide to Personal Finance (Springer II, William M.)
+- 33ページ|位置No. 383-386のハイライト |作成日: 2023年9月12日火曜日 19:48:46
+
+owning a corporation provides additional ways to defer taxation, such as creating a SEP-IRA retirement plan and redirecting a significant portion of the business profits into tax-deferred retirement plan contributions, allowing up to $61,0005 per year to flow directly into investments, untaxed.
+==========
+A Programmer's Guide to Personal Finance (Springer II, William M.)
+- 33ページ|位置No. 386のメモ |作成日: 2023年9月12日火曜日 19:49:01
+
+s-corps
+==========
+A Programmer's Guide to Personal Finance (Springer II, William M.)
+- 34ページ|位置No. 387-388のハイライト |作成日: 2023年9月12日火曜日 19:49:57
+
+LLC, or limited liability corporation, which then elects to be taxed as an S-corporation
+==========
+A Programmer's Guide to Personal Finance (Springer II, William M.)
+- 34ページ|位置No. 389-390のハイライト |作成日: 2023年9月12日火曜日 19:50:11
+
+Real estate investors will commonly have one LLC for each property, in order to shield each property from any lawsuits involving the others.
+==========
+A Programmer's Guide to Personal Finance (Springer II, William M.)
+- 34ページ|位置No. 393-395のハイライト |作成日: 2023年9月12日火曜日 19:50:52
+
+I carry liability insurance on my business and umbrella insurance for myself, so that if I’m ever sued for anything the insurance company will be the one fighting the lawsuit rather than me personally.
+==========
+A Programmer's Guide to Personal Finance (Springer II, William M.)
+- 34ページ|位置No. 395のメモ |作成日: 2023年9月12日火曜日 19:51:12
+
+insurance against litigation 
+==========
+A Programmer's Guide to Personal Finance (Springer II, William M.)
+- 43ページ|位置No. 496-498のハイライト |作成日: 2023年9月12日火曜日 20:00:06
+
+bridge loan, which covers the cost of your down payment until your original home sells5.
+==========
+A Programmer's Guide to Personal Finance (Springer II, William M.)
+- 43ページ|位置No. 498のメモ |作成日: 2023年9月12日火曜日 20:00:54
+
+avoid contingency to sell current house first 
+==========
+A Programmer's Guide to Personal Finance (Springer II, William M.)
+- 51ページ|位置No. 601-604のハイライト |作成日: 2023年9月14日木曜日 15:15:59
+
+documents with the following information: What should happen to your possessions? If you don't leave behind a will, then the laws in your state will determine who gets what, which may not be what you intended. If you have ongoing obligations, who will take over for you? What bank accounts and insurance policies do you have?  What are the logins and passwords for your accounts? Who needs to be notified of your death?
+==========
+A Programmer's Guide to Personal Finance (Springer II, William M.)
+- 49ページ|位置No. 579-604のハイライト |作成日: 2023年9月14日木曜日 15:16:12
+
+Additionally, depending on what kind of income you have, it may be (partially or entirely) nontaxable. It's wise to take a mini-retirement before it's time for the real thing, so you can see how you handle no longer going in to work. Maybe you'll love it, or maybe you'll go stir-crazy after a few weeks and desperately need to find something to do. These are good things to know before you're permanently out of work! Once you have an idea of how much your living expenses will be in retirement, you can calculate how much you'll need. Your income could (and hopefully, will) come from a variety of sources. If you're 62 or older, you have the option of taking Social Security (although it will be a permanently reduced amount if you're younger than your full retirement age, which will be between 65 and 67 depending on when you were born). You can check your benefit amount by logging in at ssa.gov. Up to 85% of your benefit will be taxable. Subtract your monthly Social Security benefit and any passive income you have from your monthly needs; this is the amount you'll need to withdraw each month from your retirement savings. On average, the stock market returns about 7% per year, adjusted for inflation. A useful rule of thumb is that withdrawing no more than 4% of your account each year will allow the account to keep growing over time. This means that the account will need to be at least 25 times the amount you will withdraw annually. If you have both traditional and Roth accounts, some of the money you withdraw may be nontaxable. You may choose to withdraw enough money from your traditional account to bring you to the top of one tax bracket, then withdraw enough from the Roth account to meet your remaining needs. The above calculation assumes that you want your retirement account to continue to grow indefinitely. Another approach is to assume a fixed lifespan and allow the account to shrink so long as it does not reach zero before you reach the age by which you expect to pass away. For myself, I prefer to assume that I'll live forever – or if not, at least I'll have a decent nest egg to pass on to my children. Chapter twelve Estate planning It's a subject that's not always pleasant to think about: what happens when we're no longer around? If nobody depends on you, this might not be something you need to worry about. But if you have a family and expect to leave behind an estate, it's worth taking the time to make sure that the people you care about will be taken care of after your death. This means leaving behind documents with the following information: What should happen to your possessions? If you don't leave behind a will, then the laws in your state will determine who gets what, which may not be what you intended. If you have ongoing obligations, who will take over for you? What bank accounts and insurance policies do you have?  What are the logins and passwords for your accounts? Who needs to be notified of your death?
+==========
+A Programmer's Guide to Personal Finance (Springer II, William M.)
+- 51ページ|位置No. 601-604のハイライト |作成日: 2023年9月14日木曜日 15:16:51
+
+leaving behind documents with the following information: What should happen to your possessions? If you don't leave behind a will, then the laws in your state will determine who gets what, which may not be what you intended. If you have ongoing obligations, who will take over for you? What bank accounts and insurance policies do you have?  What are the logins and passwords for your accounts? Who needs to be notified of your death?
+==========
+A Programmer's Guide to Personal Finance (Springer II, William M.)
+- 52ページ|位置No. 613-615のハイライト |作成日: 2023年9月14日木曜日 15:18:56
+
+Many of your assets can be transferred simply by naming beneficiaries. Examples include retirement plans and insurance policies; you can specify who they should pay in the event of your death. As long as they don't pay to your estate, they won't be included in the assets to be divided up.
+==========
+A Programmer's Guide to Personal Finance (Springer II, William M.)
+- 53ページ|位置No. 621-622のハイライト |作成日: 2023年9月14日木曜日 15:20:36
+
+A living trust allows you to avoid probate because the assets being passed on have been transferred to the trust and are no longer part of your estate.
+==========
+A Programmer's Guide to Personal Finance (Springer II, William M.)
+- 54ページ|位置No. 631-632のハイライト |作成日: 2023年9月14日木曜日 15:22:12
+
+federal estate tax (sometimes called the death tax) isn't worth worrying about, as the first $12.92 million of your estate is exempt.
+==========
+A Programmer's Guide to Personal Finance (Springer II, William M.)
+- 54ページ|位置No. 632-633のハイライト |作成日: 2023年9月14日木曜日 15:22:27
+
+Assets being transferred to your surviving spouse aren't subject to the tax, nor are those contained in an irrevocable trust.
+==========
+lovinglisp (Mark Watson)
+- 位置No. 4725-4726のハイライト |作成日: 2023年9月16日土曜日 12:06:03
+
+wget -m -w 2 http://knowledgebooks.com/ 2 wget -mk -w 2 http://knowledgebooks.com/
+==========
+lovinglisp (Mark Watson)
+- 位置No. 4726のメモ |作成日: 2023年9月16日土曜日 12:07:10
+
+recursive spidering with wget
+==========
+lovinglisp (Mark Watson)
+- 位置No. 4726のメモ |作成日: 2023年9月16日土曜日 12:08:25
+
+recursive spidering with wget
+
+2nd example converts urls into file paths
+==========
+lovinglisp (Mark Watson)
+- 位置No. 4733-4734のハイライト |作成日: 2023年9月16日土曜日 12:09:26
+
+cat *.html */*.html > ../web_site.html
+==========
+lovinglisp (Mark Watson)
+- 位置No. 4734のメモ |作成日: 2023年9月16日土曜日 12:10:48
+
+concatenate multiple files into 1!
+like dos copy fike1 fike2 destination-file
+==========
+lovinglisp (Mark Watson)
+- 位置 No. 4736のブックマーク |作成日: 2023年9月16日土曜日 12:11:25
+
+
+==========
+lovinglisp (Mark Watson)
+- 位置No. 4761-4762のハイライト |作成日: 2023年9月16日土曜日 12:19:03
+
+The OpenSearch.org web site contains many public OpenSearch services that you might want to try.
+==========
+lovinglisp (Mark Watson)
+- 位置No. 4736-4741のハイライト |作成日: 2023年9月16日土曜日 12:20:21
+
+Apache Nutch, like Solr, is built on Lucene search technology. I use Nutch as a “search engine in a box” when I need to spider web sites and I want a local copy with a good search index. Nutch handles a different developer’s use case over Solr which we covered in the Chapter on NoSQL. As we saw, Solr is an effective tool for indexing and searching structured data as documents. With very little setup, Nutch can be set up to automatically keep an up to date index of a list of web sites, and optionally follow links to some desired depth from these “seed” web sites.
+==========
+lovinglisp (Mark Watson)
+- 位置No. 4797-4799のハイライト |作成日: 2023年9月16日土曜日 12:31:39
+
+increase the heap space when starting SBCL when we want to use the CLML library: sbcl --dynamic-space-size 5000
+==========
+lovinglisp (Mark Watson)
+- 位置No. 5161-5161のハイライト |作成日: 2023年9月16日土曜日 12:40:20
+
+andf
+==========
+lovinglisp (Mark Watson)
+- 位置No. 5161のメモ |作成日: 2023年9月16日土曜日 12:40:36
+
+error "and"
+==========
+lovinglisp (Mark Watson)
+- 位置 No. 5162のブックマーク |作成日: 2023年9月16日土曜日 12:42:57
+
+
+==========
+cltl2  
+- 102-102ページのハイライト |作成日: 2023年9月22日金曜日 20:45:15
+
+null is true if its argument is (), and otherwise is false. This is the same operation performed by the function not; however, not is normally used to invert a Boolean value, whereas null is normally used to test for an empty list. The programmer can therefore express intent by the choice of function name. (null x) ≡ (typep x ’null) ≡ (eq x ’())
+==========
+cltl2  
+- 102-102ページのハイライト |作成日: 2023年9月22日金曜日 20:45:35
+
+symbolp x) ≡ (typep x ’symbol)
+==========
+cltl2  
+- 102-102ページのハイライト |作成日: 2023年9月22日金曜日 20:45:45
+
+symbolp x) ≡ (typep x ’symbol)
+==========
+cltl2  
+- 102-102ページのハイライト |作成日: 2023年9月22日金曜日 20:46:20
+
+(atom ’()) is true, because () ≡ nil. (atom x) ≡ (typep x ’atom) ≡ (not (typep x ’cons))
+==========
+cltl2  
+- 102-102ページのハイライト |作成日: 2023年9月22日金曜日 20:46:43
+
+Note that the empty list is not a cons, so (consp ’()) ≡ (consp ’nil) ) nil. (consp x) ≡ (typep x ’cons) ≡ (not (typep x ’atom))
+==========
+cltl2  
+- 102-102ページのハイライト |作成日: 2023年9月22日金曜日 20:47:15
+
+It does not check for whether the list is a “true list” (one terminated by nil) or a “dotted list” (one terminated by a non-null atom). (listp x) ≡ (typep x ’list) ≡ (typep x ’(or cons null))
+==========
+cltl2  
+- 106ページのブックマーク |作成日: 2023年9月22日金曜日 20:50:20
+
+
+==========
+A Programmer's Guide to Computer Science: A virtual degree for the self-taught developer (Springer, William)
+- 20ページ|位置No. 194のブックマーク |作成日: 2023年9月23日土曜日 23:16:05
+
+
+==========
+cltl2  
+- xivページのブックマーク |作成日: 2023年9月23日土曜日 23:39:17
+
+
+==========
+cltl2  
+- vページのブックマーク |作成日: 2023年9月23日土曜日 23:39:34
+
+
+==========
+cltl2  
+- 111-111ページのハイライト |作成日: 2023年9月23日土曜日 23:54:07
+
+Two hash tables are considered the same by equalp if and only if they satisfy a four-part test: • They must be of the same kind; that is, equivalent :test arguments were given to make-hash-table when the two hash tables were created. • They must have the same number of entries (see hash-table-count). • For every entry (key1, value1 ) in one hash table there must be a corresponding entry (key2, value2 ) in the other, such that key1 and key2 are considered to be the same by the :test function associated with the hash tables. • For every entry (key1, value1 ) in one hash table and its corresponding entry (key2, value2 ) in the other, such that key1 and key2 are the same, equalp must be true of value1 and value2.
+==========
+cltl2  
+- 111-111ページのハイライト |作成日: 2023年9月23日土曜日 23:54:17
+
+Two hash tables are considered the same by equalp if and only if they satisfy a four-part test: • They must be of the same kind; that is, equivalent :test arguments were given to make-hash-table when the two hash tables were created. • They must have the same number of entries (see hash-table-count). • For every entry (key1, value1 ) in one hash table there must be a corresponding entry (key2, value2 ) in the other, such that key1 and key2 are considered to be the same by the :test function associated with the hash tables. • For every entry (key1, value1 ) in one hash table and its corresponding entry (key2, value2 ) in the other, such that key1 and key2 are the same, equalp must be true of value1 and value2. The four parts of this test are carried out in the order shown, and if some part of the test fails, equalp returns nil and the other
+==========
+cltl2  
+- 111-111ページのハイライト |作成日: 2023年9月23日土曜日 23:54:25
+
+Two hash tables are considered the same by equalp if and only if they satisfy a four-part test: • They must be of the same kind; that is, equivalent :test arguments were given to make-hash-table when the two hash tables were created. • They must have the same number of entries (see hash-table-count). • For every entry (key1, value1 ) in one hash table there must be a corresponding entry (key2, value2 ) in the other, such that key1 and key2 are considered to be the same by the :test function associated with the hash tables. • For every entry (key1, value1 ) in one hash table and its corresponding entry (key2, value2 ) in the other, such that key1 and key2 are the same, equalp must be true of value1 and value2. The four parts of this test are carried out in the order shown, and if some part of the test fails, equalp returns nil and the other parts of the test are not attempted
+==========
+cltl2  
+- 112-112ページのハイライト |作成日: 2023年9月23日土曜日 23:54:51
+
+If equalp must compare two structures and neither defstruct defnition used the :type option, then equalp returns t if and only if the structures have the same type (that is, the same defstruct name) and the values of all corresponding slots (slots having the same name) are equalp.
+==========
+cltl2  
+- 114-114ページのハイライト |作成日: 2023年9月24日日曜日 0:02:35
+
+(and (>= n 0) (< n (length a-simple-vector)) (eq (elt a-simple-vector n) ’foo) (princ "Foo!"))
+==========
+cltl2  
+- 114-114ページのハイライト |作成日: 2023年9月24日日曜日 0:03:14
+
+If it is necessary to test whether a predicate is true of all elements of a list or vector (element 0 and element 1 and element 2 and : : :), then the function every may be useful.
+==========
+cltl2  
+- 114-114ページのハイライト |作成日: 2023年9月24日日曜日 0:04:12
+
+(and x y z ... w) ≡ (cond ((not x) nil) ((not y) nil) ((not z ) nil) : : : (t w)
+==========
+cltl2  
+- 114-114ページのハイライト |作成日: 2023年9月24日日曜日 0:07:20
+
+(or) evaluates to nil,
+==========
+cltl2  
+- 114-114ページのハイライト |作成日: 2023年9月24日日曜日 0:07:36
+
+(and) evaluates to t,
+==========
+cltl2  
+- 115-115ページのハイライト |作成日: 2023年9月24日日曜日 0:08:29
+
+If it is necessary to test whether a predicate is true of one or more elements of a list or vector (element 0 or element 1 or element 2 or : : :), then the function some may be useful
+==========
+cltl2  
+- 117ページのブックマーク |作成日: 2023年9月24日日曜日 0:09:01
+
+
+==========
+A Programmer's Guide to Computer Science: A virtual degree for the self-taught developer (Springer, William)
+- 28ページ|位置No. 268のブックマーク |作成日: 2023年10月4日水曜日 0:47:37
+
+
+==========
+A Programmer's Guide to Computer Science: A virtual degree for the self-taught developer (Springer, William)
+- 37ページ|位置No. 334のブックマーク |作成日: 2023年10月5日木曜日 23:01:33
+
+
+==========
+cltl2  
+- 259ページのブックマーク |作成日: 2023年10月5日木曜日 23:26:56
+
+
+==========
+A Programmer's Guide to Computer Science: A virtual degree for the self-taught developer (Springer, William)
+- 40ページ|位置No. 361のブックマーク |作成日: 2023年10月6日金曜日 21:33:31
+
+
+==========
+A Programmer's Guide to Computer Science: A virtual degree for the self-taught developer (Springer, William)
+- 46ページ|位置No. 413のブックマーク |作成日: 2023年10月6日金曜日 21:45:40
+
+
+==========
+A Programmer's Guide to Computer Science: A virtual degree for the self-taught developer (Springer, William)
+- 51ページ|位置No. 453-454のハイライト |作成日: 2023年10月8日日曜日 0:13:03
+
+A complete (sub)graph, or clique, is one that contains every possible edge between its vertices.
+==========
+A Programmer's Guide to Computer Science: A virtual degree for the self-taught developer (Springer, William)
+- 51ページ|位置No. 454-454のハイライト |作成日: 2023年10月8日日曜日 0:13:18
+
+An independent set (or stable set) is a set of vertices with no edges between them.
+==========
+A Programmer's Guide to Computer Science: A virtual degree for the self-taught developer (Springer, William)
+- 53ページ|位置No. 469-469のハイライト |作成日: 2023年10月8日日曜日 0:14:24
+
+graph without specifying otherwise, we always mean a simple graph.
+==========
+A Programmer's Guide to Computer Science: A virtual degree for the self-taught developer (Springer, William)
+- 53ページ|位置No. 469-470のハイライト |作成日: 2023年10月8日日曜日 0:15:00
+
+A graph with loops can be called a nonsimple graph,
+==========
+A Programmer's Guide to Computer Science: A virtual degree for the self-taught developer (Springer, William)
+- 53ページ|位置No. 470-470のハイライト |作成日: 2023年10月8日日曜日 0:16:26
+
+one with multiple edges is a multigraph.
+==========
+A Programmer's Guide to Computer Science: A virtual degree for the self-taught developer (Springer, William)
+- 53ページ|位置No. 470-471のハイライト |作成日: 2023年10月8日日曜日 0:18:59
+
+graph, assume that it means a simple undirected31 graph
+==========
+A Programmer's Guide to Computer Science: A virtual degree for the self-taught developer (Springer, William)
+- 53ページ|位置No. 470のブックマーク |作成日: 2023年10月8日日曜日 0:19:52
+
+
+==========
+If the Allies Had Fallen: Sixty Alternate Scenarios of World War II (Showalter, Dennis E.)
+- 20ページ|位置No. 704のブックマーク |作成日: 2023年10月10日火曜日 21:39:30
+
+
+==========
+If the Allies Had Fallen: Sixty Alternate Scenarios of World War II (Showalter, Dennis E.)
+- 30ページ|位置No. 982のブックマーク |作成日: 2023年10月11日水曜日 13:20:22
+
+
+==========
+If the Allies Had Fallen: Sixty Alternate Scenarios of World War II (Showalter, Dennis E.)
+- 56ページ|位置No. 1542のブックマーク |作成日: 2023年10月12日木曜日 12:31:07
+
+
+==========
+If the Allies Had Fallen: Sixty Alternate Scenarios of World War II (Showalter, Dennis E.)
+- 75ページ|位置No. 1909のブックマーク |作成日: 2023年10月12日木曜日 21:07:28
+
+
+==========
+If the Allies Had Fallen: Sixty Alternate Scenarios of World War II (Showalter, Dennis E.)
+- 85ページ|位置No. 2163のブックマーク |作成日: 2023年10月13日金曜日 0:02:11
+
+
+==========
+If the Allies Had Fallen: Sixty Alternate Scenarios of World War II (Showalter, Dennis E.)
+- 92ページ|位置No. 2332のブックマーク |作成日: 2023年10月13日金曜日 13:10:27
+
+
+==========
+If the Allies Had Fallen: Sixty Alternate Scenarios of World War II (Showalter, Dennis E.)
+- 93ページ|位置No. 2367のブックマーク |作成日: 2023年10月14日土曜日 14:05:09
+
+
+==========
+If the Allies Had Fallen: Sixty Alternate Scenarios of World War II (Showalter, Dennis E.)
+- 97ページ|位置No. 2467のブックマーク |作成日: 2023年10月15日日曜日 19:34:46
+
+
+==========
+cltl2  
+- 259-259ページのハイライト |作成日: 2023年10月15日日曜日 19:38:10
+
+The package thus replaces the “oblist” or “obarray
+==========
+cltl2  
+- 261ページのブックマーク |作成日: 2023年10月15日日曜日 19:46:09
+
+
+==========
+cltl2  
+- 262ページのブックマーク |作成日: 2023年10月15日日曜日 20:43:22
+
+
+==========
+If the Allies Had Fallen: Sixty Alternate Scenarios of World War II (Showalter, Dennis E.)
+- 101ページ|位置No. 2568のブックマーク |作成日: 2023年10月15日日曜日 21:16:46
+
+
+==========
+If the Allies Had Fallen: Sixty Alternate Scenarios of World War II (Showalter, Dennis E.)
+- 102ページ|位置No. 2596のブックマーク |作成日: 2023年10月15日日曜日 23:55:35
+
+
+==========
+If the Allies Had Fallen: Sixty Alternate Scenarios of World War II (Showalter, Dennis E.)
+- 115ページ|位置No. 2856のブックマーク |作成日: 2023年10月16日月曜日 0:34:18
+
+
+==========
+cltl2  
+- 263ページのブックマーク |作成日: 2023年10月16日月曜日 0:38:28
+
+
+==========
+cltl2  
+- 265-265ページのハイライト |作成日: 2023年10月16日月曜日 0:41:13
+
+#:bar When read, creates a new uninterned symbol named BAR. Printed when the symbol bar is uninterned (has no home package), even in the pathological case that bar is uninterned but nevertheless somehow accessible in the current package
+==========
+cltl2  
+- 265-265ページのハイライト |作成日: 2023年10月16日月曜日 19:43:04
+
+A symbol whose package slot contains nil (that is, has no home package) is printed preceded by #:.
+==========
+cltl2  
+- 265ページのメモ |作成日: 2023年10月16日月曜日 19:43:46
+
+uninterned symbols #:
+==========
+cltl2  
+- 265ページのブックマーク |作成日: 2023年10月16日月曜日 19:44:02
+
+
+==========
+cltl2  
+- 266-266ページのハイライト |作成日: 2023年10月16日月曜日 23:49:26
+
+use-package. This causes a package to inherit all of the external symbols of some other package. These symbols become accessible as internal symbols of the using package. That is, they can be referred to without a qualifer while this package is current, but they are not passed along to any other package that uses this package. Note that use-package, unlike import, does not cause any new symbols to be present in the current package but only makes them accessible by inheritance.
+==========
+cltl2  
+- 260-260ページのハイライト |作成日: 2023年10月16日月曜日 23:50:51
+
+we will refer to a symbol as being accessible in a package if it can be referred to without a package qualifer when that package is current, regardless of whether the mapping occurs within that package or via inheritance. We will refer to a symbol as being present in a package if the mapping is in the package itself and is not inherited from somewhere else. Thus a symbol present in a package is accessible, but an accessible symbol is not necessarily present
+==========
+cltl2  
+- 260ページのメモ |作成日: 2023年10月16日月曜日 23:51:16
+
+acessible vs present 
+==========
+cltl2  
+- 266-266ページのハイライト |作成日: 2023年10月16日月曜日 23:51:47
+
+unuse-package undoes the efects of a previous use-package
+==========
+cltl2  
+- 267-267ページのハイライト |作成日: 2023年10月16日月曜日 23:52:27
+
+There is no way to inherit the internal symbols of another package; to refer to an internal symbol, the user must either make that symbol’s home package current, use a qualifer, or import that symbol into the current package.
+==========
+cltl2  
+- 268ページのブックマーク |作成日: 2023年10月16日月曜日 23:54:41
+
+
+==========
+If the Allies Had Fallen: Sixty Alternate Scenarios of World War II (Showalter, Dennis E.)
+- 119ページ|位置No. 2946のブックマーク |作成日: 2023年10月18日水曜日 0:39:20
+
+
+==========
+If the Allies Had Fallen: Sixty Alternate Scenarios of World War II (Showalter, Dennis E.)
+- 124ページ|位置No. 3090のブックマーク |作成日: 2023年10月18日水曜日 20:08:34
+
+
+==========
+cltl2  
+- 272-272ページのハイライト |作成日: 2023年10月19日木曜日 22:29:25
+
+A valid implementation may initially have properties on any symbol, or dynamically put new properties on symbols (even user-created symbols), as long as no property indicator used for this purpose is an external symbol of any package defned by the standard or a symbol that is accessible from the common-lisp-user package or any package defned by the user
+==========
+cltl2  
+- 272ページのメモ |作成日: 2023年10月19日木曜日 22:29:40
+
+kind of interesting 
+==========
+cltl2  
+- 274-274ページのハイライト |作成日: 2023年10月19日木曜日 22:33:13
+
+a user program is permitted to add properties to or remove properties from symbols in the common-lisp package.
+==========
+cltl2  
+- 274ページのメモ |作成日: 2023年10月19日木曜日 22:33:54
+
+interesting, but probably not useful .
+==========
+cltl2  
+- 274ページのハイライト |作成日: 2023年10月19日木曜日 22:36:09
+
+undefned
+==========
+cltl2  
+- 274ページのメモ |作成日: 2023年10月19日木曜日 22:36:52
+
+because it over-writes a standard function OPEN
+==========
+cltl2  
+- 274ページのブックマーク |作成日: 2023年10月19日木曜日 22:37:30
+
+
+==========
+cltl2  
+- 281-281ページのハイライト |作成日: 2023年10月19日木曜日 22:39:52
+
+The defned-package-name may be a string or a symbol; if it is a symbol, only its print name matters, and not what package, if any, the symbol happens to be in.
+==========
+A Programmer's Guide to Computer Science: A virtual degree for the self-taught developer (Springer, William)
+- 57ページ|位置No. 498-500のハイライト |作成日: 2023年10月19日木曜日 22:59:42
+
+For a sparse graph, an adjacency list is much more space efficient than an adjacency matrix as we don't need to store O(n2) 0s, and it's easy to iterate over all of the existing edges. Additionally, when the graph is dynamic (changes over time), it's easier to add and remove vertices from the adjacency list.
+==========
+A Programmer's Guide to Computer Science: A virtual degree for the self-taught developer (Springer, William)
+- 57ページ|位置No. 500-502のハイライト |作成日: 2023年10月19日木曜日 23:00:07
+
+accessing edges is more efficient with an adjacency matrix; determining whether vertices i and j are adjacent requires simply checking whether A[i][j]=1,
+==========
+A Programmer's Guide to Computer Science: A virtual degree for the self-taught developer (Springer, William)
+- 58ページ|位置No. 507-508のハイライト |作成日: 2023年10月19日木曜日 23:01:31
+
+In a directed graph, or digraph, each arrow has a direction showing which way the relationship goes.
+==========
+A Programmer's Guide to Computer Science: A virtual degree for the self-taught developer (Springer, William)
+- 58ページ|位置No. 508のメモ |作成日: 2023年10月19日木曜日 23:02:06
+
+it only goes 1 way (usually)
+==========
+A Programmer's Guide to Computer Science: A virtual degree for the self-taught developer (Springer, William)
+- 58ページ|位置No. 512-513のハイライト |作成日: 2023年10月19日木曜日 23:02:52
+
+it's possible that there can only be one directed edge between any two vertices; this is an oriented or antisymmetric graph.
+==========
+A Programmer's Guide to Computer Science: A virtual degree for the self-taught developer (Springer, William)
+- 59ページ|位置No. 516-516のハイライト |作成日: 2023年10月19日木曜日 23:03:56
+
+An acyclic graph has at most one path between any two vertices;
+==========
+A Programmer's Guide to Computer Science: A virtual degree for the self-taught developer (Springer, William)
+- 59ページ|位置No. 521-521のハイライト |作成日: 2023年10月19日木曜日 23:04:42
+
+Every complete graph is also a cycle.
+==========
+A Programmer's Guide to Computer Science: A virtual degree for the self-taught developer (Springer, William)
+- 59ページ|位置No. 517-519のハイライト |作成日: 2023年10月19日木曜日 23:05:20
+
+A cyclic graph has at least one cycle: it is possible to find a path that begins and ends at the same vertex. In the case of directed graphs, we add the condition that all edges of a cycle must have the same orientation, clockwise or counterclockwise;
+==========
+A Programmer's Guide to Computer Science: A virtual degree for the self-taught developer (Springer, William)
+- 60ページ|位置No. 521のブックマーク |作成日: 2023年10月19日木曜日 23:05:30
+
+
+==========
+If the Allies Had Fallen: Sixty Alternate Scenarios of World War II (Showalter, Dennis E.)
+- 130ページ|位置No. 3236のブックマーク |作成日: 2023年10月19日木曜日 23:24:50
+
+
+==========
+If the Allies Had Fallen: Sixty Alternate Scenarios of World War II (Showalter, Dennis E.)
+- 133ページ|位置No. 3318のブックマーク |作成日: 2023年10月20日金曜日 13:49:31
+
+
+==========
+cltl2  
+- 278ページのブックマーク |作成日: 2023年10月22日日曜日 14:11:20
+
+
+==========
+hacking-your-way-emacs-sample (Marcin Borkowski)
+- 17ページ|位置No. 225のブックマーク |作成日: 2023年10月22日日曜日 22:54:16
+
+
+==========
+hacking-your-way-emacs-sample (Marcin Borkowski)
+- 24ページ|位置No. 348のブックマーク |作成日: 2023年10月22日日曜日 22:54:39
+
+
+==========
+If the Allies Had Fallen: Sixty Alternate Scenarios of World War II (Showalter, Dennis E.)
+- 137ページ|位置No. 3402のブックマーク |作成日: 2023年10月23日月曜日 20:44:59
+
+
+==========
+If the Allies Had Fallen: Sixty Alternate Scenarios of World War II (Showalter, Dennis E.)
+- 147ページ|位置No. 3636のブックマーク |作成日: 2023年10月24日火曜日 19:53:32
+
+
+==========
+If the Allies Had Fallen: Sixty Alternate Scenarios of World War II (Showalter, Dennis E.)
+- 152ページ|位置No. 3761のブックマーク |作成日: 2023年10月24日火曜日 21:16:36
+
+
+==========
+If the Allies Had Fallen: Sixty Alternate Scenarios of World War II (Showalter, Dennis E.)
+- 167ページ|位置No. 4045のブックマーク |作成日: 2023年10月24日火曜日 23:45:25
+
+
+==========
+If the Allies Had Fallen: Sixty Alternate Scenarios of World War II (Showalter, Dennis E.)
+- 181ページ|位置No. 4301のブックマーク |作成日: 2023年10月25日水曜日 20:05:00
+
+
+==========
+If the Allies Had Fallen: Sixty Alternate Scenarios of World War II (Showalter, Dennis E.)
+- 181ページ|位置No. 4323のブックマーク |作成日: 2023年10月27日金曜日 12:49:28
+
+
+==========
+If the Allies Had Fallen: Sixty Alternate Scenarios of World War II (Showalter, Dennis E.)
+- 184ページ|位置No. 4380のブックマーク |作成日: 2023年10月27日金曜日 14:52:30
+
+
+==========
+If the Allies Had Fallen: Sixty Alternate Scenarios of World War II (Showalter, Dennis E.)
+- 190ページ|位置No. 4530のブックマーク |作成日: 2023年10月27日金曜日 22:05:54
+
+
+==========
+If the Allies Had Fallen: Sixty Alternate Scenarios of World War II (Showalter, Dennis E.)
+- 199ページ|位置No. 4697のブックマーク |作成日: 2023年10月28日土曜日 21:48:30
+
+
+==========
+If the Allies Had Fallen: Sixty Alternate Scenarios of World War II (Showalter, Dennis E.)
+- 208ページ|位置No. 4896のブックマーク |作成日: 2023年10月29日日曜日 13:23:20
+
+
+==========
+lovinglisp (Mark Watson)
+- 位置 No. 11539のブックマーク |作成日: 2023年10月29日日曜日 15:44:58
+
+
+==========
+lovinglisp (Mark Watson)
+- 位置No. 12231-12231のハイライト |作成日: 2023年10月29日日曜日 15:59:39
+
+of
+==========
+lovinglisp (Mark Watson)
+- 位置No. 12231のメモ |作成日: 2023年10月29日日曜日 16:00:02
+
+errata: "to"
+==========
+If the Allies Had Fallen: Sixty Alternate Scenarios of World War II (Showalter, Dennis E.)
+- 211ページ|位置No. 4958のブックマーク |作成日: 2023年10月29日日曜日 21:08:48
+
+
+==========
+If the Allies Had Fallen: Sixty Alternate Scenarios of World War II (Showalter, Dennis E.)
+- 214ページ|位置No. 5028のブックマーク |作成日: 2023年10月30日月曜日 8:14:58
+
+
+==========
+If the Allies Had Fallen: Sixty Alternate Scenarios of World War II (Showalter, Dennis E.)
+- 217ページ|位置No. 5109のブックマーク |作成日: 2023年10月30日月曜日 20:36:52
+
+
+==========
+If the Allies Had Fallen: Sixty Alternate Scenarios of World War II (Showalter, Dennis E.)
+- 220ページ|位置No. 5196のブックマーク |作成日: 2023年10月31日火曜日 20:42:22
+
+
+==========
+If the Allies Had Fallen: Sixty Alternate Scenarios of World War II (Showalter, Dennis E.)
+- 230ページ|位置No. 5439のブックマーク |作成日: 2023年10月31日火曜日 22:59:25
+
+
+==========
+lovinglisp (Mark Watson)
+- 位置 No. 12226のブックマーク |作成日: 2023年11月1日水曜日 12:59:55
+
+
+==========
+lovinglisp (Mark Watson)
+- 位置No. 12258-12258のハイライト |作成日: 2023年11月3日金曜日 20:48:23
+
+to
+==========
+lovinglisp (Mark Watson)
+- 位置No. 12258のメモ |作成日: 2023年11月3日金曜日 20:49:02
+
+erratta "the"
+==========
+hacking-your-way-emacs (Marcin Borkowski)
+- 10ページ|位置No. 95のブックマーク |作成日: 2023年11月3日金曜日 21:10:10
+
+
+==========
+lovinglisp (Mark Watson)
+- 位置 No. 6671のブックマーク |作成日: 2023年11月3日金曜日 21:14:28
+
+
+==========
+If the Allies Had Fallen: Sixty Alternate Scenarios of World War II (Showalter, Dennis E.)
+- 242ページ|位置No. 5723のブックマーク |作成日: 2023年11月4日土曜日 0:00:52
+
+
+==========
+If the Allies Had Fallen: Sixty Alternate Scenarios of World War II (Showalter, Dennis E.)
+- 244ページ|位置No. 5794のブックマーク |作成日: 2023年11月4日土曜日 10:41:37
+
+
+==========
+If the Allies Had Fallen: Sixty Alternate Scenarios of World War II (Showalter, Dennis E.)
+- 250ページ|位置No. 5932のブックマーク |作成日: 2023年11月4日土曜日 14:08:47
+
+
+==========
+If the Allies Had Fallen: Sixty Alternate Scenarios of World War II (Showalter, Dennis E.)
+- 252ページ|位置No. 5995のブックマーク |作成日: 2023年11月4日土曜日 21:13:42
+
+
+==========
+If the Allies Had Fallen: Sixty Alternate Scenarios of World War II (Showalter, Dennis E.)
+- 255ページ|位置No. 6034のブックマーク |作成日: 2023年11月4日土曜日 22:40:02
+
+
+==========
+cltl2  
+- 280-280ページのハイライト |作成日: 2023年11月4日土曜日 22:48:19
+
+import signals a correctable error if any of the imported symbols has the same name as some distinct symbol already accessible in the package
+==========
+cltl2  
+- 280-280ページのハイライト |作成日: 2023年11月4日土曜日 22:48:43
+
+shadowing-import symbols &optional package This is like import, but it does not signal an error even if the importation of a symbol would shadow some symbol already accessible in the package
+==========
+cltl2  
+- 283-283ページのハイライト |作成日: 2023年11月4日土曜日 22:53:52
+
+The order in which options appear in a defpackage form does not matter; part of the convenience of defpackage is that it sorts out the options into the correct order for processing. Options are processed in the following order: 1. :shadow and :shadowing-import-from 2. :use 3. :import-from and :intern 4. :export
+==========
+cltl2  
+- 283ページのメモ |作成日: 2023年11月4日土曜日 22:54:22
+
+defpackage options
+==========
+cltl2  
+- 287-287ページのハイライト |作成日: 2023年11月4日土曜日 23:08:43
+
+Macro] with-package-iterator (
+==========
+cltl2  
+- 291ページのブックマーク |作成日: 2023年11月4日土曜日 23:09:20
+
+
+==========
+cltl2  
+- 291-291ページのハイライト |作成日: 2023年11月4日土曜日 23:10:10
+
+numbers. These representations may be divided into four categories: integers, ratios, foatingpoint numbers, and complex numbers.
+==========
+cltl2  
+- 291-291ページのハイライト |作成日: 2023年11月4日土曜日 23:10:49
+
+numbers in Common Lisp are not true objects; eq cannot be counted upon to operate on them reliably. In particular, it is possible that the expression (let ((x z) (y z)) (eq x y)) may be false rather than true if the value of z is a number.
+==========
+cltl2  
+- 291ページのメモ |作成日: 2023年11月4日土曜日 23:11:04
+
+eq with numbers 
+==========
+cltl2  
+- 291-291ページのハイライト |作成日: 2023年11月4日土曜日 23:11:49
+
+If two objects are to be compared for “identity,” but either might be a number, then the predicate eql is probably appropriate; if both objects are known to be numbers, then = may be preferable
+==========
+cltl2  
+- 291ページのメモ |作成日: 2023年11月4日土曜日 23:12:07
+
+eq eql =
+==========
+cltl2  
+- 292ページのブックマーク |作成日: 2023年11月4日土曜日 23:12:14
+
+
+==========
+hacking-your-way-emacs (Marcin Borkowski)
+- 24ページ|位置No. 348のブックマーク |作成日: 2023年11月4日土曜日 23:14:24
+
+
+==========
+If the Allies Had Fallen: Sixty Alternate Scenarios of World War II (Showalter, Dennis E.)
+- 258ページ|位置No. 6117のブックマーク |作成日: 2023年11月6日月曜日 13:08:53
+
+
+==========
+If the Allies Had Fallen: Sixty Alternate Scenarios of World War II (Showalter, Dennis E.)
+- 260ページ|位置No. 6168のブックマーク |作成日: 2023年11月6日月曜日 19:57:18
+
+
+==========
+If the Allies Had Fallen: Sixty Alternate Scenarios of World War II (Showalter, Dennis E.)
+- 264ページ|位置No. 6270のブックマーク |作成日: 2023年11月7日火曜日 21:18:50
+
+
+==========
+If the Allies Had Fallen: Sixty Alternate Scenarios of World War II (Showalter, Dennis E.)
+- 277ページ|位置No. 6531のブックマーク |作成日: 2023年11月8日水曜日 0:10:51
+
+
+==========
+If the Allies Had Fallen: Sixty Alternate Scenarios of World War II (Showalter, Dennis E.)
+- 282ページ|位置No. 6651のブックマーク |作成日: 2023年11月8日水曜日 13:05:07
+
+
+==========
+23060_CODE_6-2023_Web  
+- 10ページのブックマーク |作成日: 2023年11月8日水曜日 13:07:32
+
+
+==========
+23060_CODE_6-2023_Web  
+- 12-12ページのハイライト |作成日: 2023年11月8日水曜日 22:34:15
+
+When picking a single tenant app, you’re effectively saying “I’m writing an app that will be used by only my organization
+==========
+23060_CODE_6-2023_Web  
+- 12ページのハイライト |作成日: 2023年11月8日水曜日 22:34:19
+
+When
+==========
+23060_CODE_6-2023_Web  
+- 12-12ページのハイライト |作成日: 2023年11月8日水曜日 22:34:29
+
+When picking a multi-tenant app, you are effectively saying “I’m writing an app that will be used by users of my organization, and users of other organizations with Azure AD accounts.
+==========
+23060_CODE_6-2023_Web  
+- 12-12ページのハイライト |作成日: 2023年11月8日水曜日 22:35:08
+
+Microsoft accounts, also known as personal accounts, are a special kind of account
+==========
+hacking-your-way-emacs (Marcin Borkowski)
+- 13ページ|位置No. 153のブックマーク |作成日: 2023年11月9日木曜日 13:30:00
+
+
+==========
+hacking-your-way-emacs (Marcin Borkowski)
+- 15ページ|位置No. 178-180のハイライト |作成日: 2023年11月9日木曜日 20:26:06
+
+M-g M-g moves to a line with the given number, and hope that the M-g prefix has something to move to a column – then, pressing M-g C-h shows all bindings starting with M-g, and indeed M-g TAB is what we are looking for.
+==========
+hacking-your-way-emacs (Marcin Borkowski)
+- 15ページ|位置No. 180のメモ |作成日: 2023年11月9日木曜日 20:26:38
+
+move-to-column
+==========
+hacking-your-way-emacs (Marcin Borkowski)
+- 17ページ|位置No. 225のブックマーク |作成日: 2023年11月9日木曜日 20:40:47
+
+
+==========
+hacking-your-way-emacs (Marcin Borkowski)
+- 19ページ|位置No. 263のブックマーク |作成日: 2023年11月10日金曜日 13:01:11
+
+
+==========
+hacking-your-way-emacs (Marcin Borkowski)
+- 18ページ|位置No. 238-240のハイライト |作成日: 2023年11月10日金曜日 13:01:47
+
+(push (point) buffer-undo-list)
+==========
+hacking-your-way-emacs (Marcin Borkowski)
+- 18ページ|位置No. 239のメモ |作成日: 2023年11月10日金曜日 13:02:28
+
+buffer-undo-list
+==========
+hacking-your-way-emacs (Marcin Borkowski)
+- 18ページ|位置No. 239のメモ |作成日: 2023年11月10日金曜日 13:02:52
+
+buffer-undo-list example 
+==========
+hacking-your-way-emacs (Marcin Borkowski)
+- 22ページ|位置No. 302-302のハイライト |作成日: 2023年11月10日金曜日 16:41:32
+
+line-beginning-position,
+==========
+hacking-your-way-emacs (Marcin Borkowski)
+- 21ページ|位置No. 282-282のハイライト |作成日: 2023年11月10日金曜日 16:45:51
+
+buffer-substring
+==========
+hacking-your-way-emacs (Marcin Borkowski)
+- 21ページ|位置No. 285-285のハイライト |作成日: 2023年11月10日金曜日 16:46:23
+
+delete-and-extract-region
+==========
+hacking-your-way-emacs (Marcin Borkowski)
+- 21ページ|位置No. 284-284のハイライト |作成日: 2023年11月10日金曜日 16:46:38
+
+delete-region
+==========
+hacking-your-way-emacs (Marcin Borkowski)
+- 23ページ|位置No. 321-321のハイライト |作成日: 2023年11月10日金曜日 16:47:55
+
+(line-end-position).
+==========
+hacking-your-way-emacs (Marcin Borkowski)
+- 26ページ|位置No. 377-378のハイライト |作成日: 2023年11月10日金曜日 16:56:16
+
+Instead of insert, we can use insert-before-markers. This is a function which is probably much less known and much less often used than insert.
+==========
+hacking-your-way-emacs (Marcin Borkowski)
+- 26ページ|位置No. 380-380のハイライト |作成日: 2023年11月10日金曜日 16:56:39
+
+the mark ring – you can read about markers in the Elisp Reference,
+==========
+hacking-your-way-emacs (Marcin Borkowski)
+- 26ページ|位置No. 384-384のハイライト |作成日: 2023年11月10日金曜日 16:57:32
+
+apropos-function
+==========
+hacking-your-way-emacs (Marcin Borkowski)
+- 28ページ|位置No. 409-413のハイライト |作成日: 2023年11月10日金曜日 17:04:14
+
+use the index – when in an Info buffer with the Elisp reference, press i and type e.g. indentation. The command Info-index is smart enough to tell you if the entry you selected points to more than one place in the index, and if so, it gives you a nice tip: pressing , (the comma) moves you to the next one. Even better, there is the Info-virtual-index command (bound to capital I), which constructs a “virtual node” with a menu of all the places the given index entry points to.
+==========
+hacking-your-way-emacs (Marcin Borkowski)
+- 28ページ|位置No. 408-409のハイライト |作成日: 2023年11月10日金曜日 17:05:50
+
+indent-according-to-mode.
+==========
+hacking-your-way-emacs (Marcin Borkowski)
+- 29ページ|位置No. 436のブックマーク |作成日: 2023年11月10日金曜日 17:06:33
+
+
+==========
+hacking-your-way-emacs (Marcin Borkowski)
+- 30ページ|位置No. 445-446のハイライト |作成日: 2023年11月10日金曜日 20:57:04
+
+you can just define your command to have a parameter and declare that it is going to use the “raw prefix argument” for that: (interactive "P") (note: that is an upper-case P).
+==========
+hacking-your-way-emacs (Marcin Borkowski)
+- 30ページ|位置No. 446のメモ |作成日: 2023年11月10日金曜日 20:57:21
+
+prefix argument 
+==========
+hacking-your-way-emacs (Marcin Borkowski)
+- 33ページ|位置No. 508-509のハイライト |作成日: 2023年11月10日金曜日 21:12:12
+
+Elisp reference, especially its detailed node list and index (for quick access of those, it’s worth remembering about the m, i and I keys).
+==========
+hacking-your-way-emacs (Marcin Borkowski)
+- 34ページ|位置No. 509のブックマーク |作成日: 2023年11月10日金曜日 21:12:18
+
+
+==========
+hacking-your-way-emacs (Marcin Borkowski)
+- 36ページ|位置No. 537のブックマーク |作成日: 2023年11月11日土曜日 13:48:10
+
+
+==========
+hacking-your-way-emacs (Marcin Borkowski)
+- 36ページ|位置No. 545-546のハイライト |作成日: 2023年11月13日月曜日 21:56:23
+
+If we begin a buffer’s name with a space, it is an “ephemeral” buffer. Such buffers are not suggested for autocompletion when switch-buffer is used, they do not record undo information by default,
+==========
+hacking-your-way-emacs (Marcin Borkowski)
+- 39ページ|位置No. 582-584のハイライト |作成日: 2023年11月13日月曜日 22:00:15
+
+It is (almost) a synonym of defvar – nothing prevents Elisp code from changing the value of a variable defined with defconst. The “const” here is just a signal to the programmer that this should not be changed.
+==========
+hacking-your-way-emacs (Marcin Borkowski)
+- 39ページ|位置No. 584のメモ |作成日: 2023年11月13日月曜日 22:00:25
+
+defconst
+==========
+hacking-your-way-emacs (Marcin Borkowski)
+- 39ページ|位置No. 591-593のハイライト |作成日: 2023年11月13日月曜日 22:18:48
+
+how to pass the region to the command. There are many ways to do it, one of them being the r code for the interactive clause. It is a bit exceptional in that it handles two arguments and not one,
+==========
+hacking-your-way-emacs (Marcin Borkowski)
+- 39ページ|位置No. 593のメモ |作成日: 2023年11月13日月曜日 22:19:06
+
+interactive r
+==========
+hacking-your-way-emacs (Marcin Borkowski)
+- 39ページ|位置No. 595-596のハイライト |作成日: 2023年11月13日月曜日 22:19:29
+
+(interactive "r") puts in the arguments, and this is also what the functions region-beginning and region-end return).
+==========
+hacking-your-way-emacs (Marcin Borkowski)
+- 40ページ|位置No. 604-605のハイライト |作成日: 2023年11月13日月曜日 22:22:47
+
+use markers, which store positions in the buffer, and if some text in inserted or deleted before a marker, the position it points to moves accordingly. (The way to “convert” a numerical position to a marker is the copy-marker function.
+==========
+hacking-your-way-emacs (Marcin Borkowski)
+- 42ページ|位置No. 629-629のハイライト |作成日: 2023年11月13日月曜日 22:29:38
+
+get-buffer-create
+==========
+hacking-your-way-emacs (Marcin Borkowski)
+- 42ページ|位置No. 632-632のハイライト |作成日: 2023年11月13日月曜日 22:29:58
+
+generate-new-buffer
+==========
+hacking-your-way-emacs (Marcin Borkowski)
+- 42ページ|位置No. 632-633のハイライト |作成日: 2023年11月13日月曜日 22:30:16
+
+generate-new-buffer function. It creates a buffer using the given string as the basis of its name, but if such a buffer already exists, it appends a suffix to make one that doesn’t.
+==========
+hacking-your-way-emacs (Marcin Borkowski)
+- 43ページ|位置No. 646-646のハイライト |作成日: 2023年11月13日月曜日 22:32:03
+
+(current-window-configuration)
+==========
+hacking-your-way-emacs (Marcin Borkowski)
+- 43ページ|位置No. 655-655のハイライト |作成日: 2023年11月13日月曜日 22:35:37
+
+deactivate-mark function
+==========
+hacking-your-way-emacs (Marcin Borkowski)
+- 43ページ|位置No. 656-656のハイライト |作成日: 2023年11月13日月曜日 22:35:48
+
+also a variable called deactivate-mark.
+==========
+hacking-your-way-emacs (Marcin Borkowski)
+- 43ページ|位置No. 658のブックマーク |作成日: 2023年11月13日月曜日 22:36:22
+
+
+==========
+A Programmer's Guide to Computer Science: A virtual degree for the self-taught developer (Springer, William)
+- 60ページ|位置No. 522-522のハイライト |作成日: 2023年11月13日月曜日 22:43:31
+
+A tree is simply a connected graph in which there are no cycles.
+==========
+A Programmer's Guide to Computer Science: A virtual degree for the self-taught developer (Springer, William)
+- 176ページ|位置No. 1392-1393のハイライト |作成日: 2023年11月13日月曜日 22:46:10
+
+Two edges are called incident if they share a vertex, just as two vertices are called adjacent if they are connected by an edge.
+==========
+A Programmer's Guide to Computer Science: A virtual degree for the self-taught developer (Springer, William)
+- 64ページ|位置No. 559-560のハイライト |作成日: 2023年11月13日月曜日 22:49:30
+
+Coloring algorithms are commonly used in applications such as scheduling, data mining, networking,
+==========
+A Programmer's Guide to Computer Science: A virtual degree for the self-taught developer (Springer, William)
+- 64ページ|位置No. 564-565のハイライト |作成日: 2023年11月13日月曜日 22:50:53
+
+In an unweighted graph, edges simply show which vertices have a direct path between them,
+==========
+A Programmer's Guide to Computer Science: A virtual degree for the self-taught developer (Springer, William)
+- 64ページ|位置No. 565-565のハイライト |作成日: 2023年11月13日月曜日 22:51:22
+
+weighted
+==========
+A Programmer's Guide to Computer Science: A virtual degree for the self-taught developer (Springer, William)
+- 64ページ|位置No. 565-566のハイライト |作成日: 2023年11月13日月曜日 22:51:41
+
+graphs, in which each edge is assigned a weight.
+==========
+A Programmer's Guide to Computer Science: A virtual degree for the self-taught developer (Springer, William)
+- 67ページ|位置No. 569のブックマーク |作成日: 2023年11月13日月曜日 22:52:14
+
+
+==========
+cltl2  
+- 295-295ページのハイライト |作成日: 2023年11月13日月曜日 23:00:01
+
+Whereas #C(5 0) and 5 are not distinct values in Common Lisp (they are always eql), #C(5.0 0.0) and 5.0 are always distinct values in Common Lisp (they are never eql, although they are equalp)
+==========
+cltl2  
+- 296-296ページのハイライト |作成日: 2023年11月13日月曜日 23:01:01
+
+/= all diferent
+==========
+cltl2  
+- 297-297ページのハイライト |作成日: 2023年11月13日月曜日 23:01:11
+
+< monotonically increasing
+==========
+cltl2  
+- 297-297ページのハイライト |作成日: 2023年11月13日月曜日 23:02:20
+
+With three or more arguments, they are useful for range checks, as shown in the following example: (<= 0 x 9) ;true if x is between 0 and 9, inclusive
+==========
+cltl2  
+- 297ページのメモ |作成日: 2023年11月13日月曜日 23:02:31
+
+range check 
+==========
+cltl2  
+- 298-298ページのハイライト |作成日: 2023年11月13日月曜日 23:03:59
+
+min 5.0 2) ) 2 or 2.0
+==========
+cltl2  
+- 298-298ページのハイライト |作成日: 2023年11月13日月曜日 23:04:05
+
+min 5.0 2) ) 2 or 2.0
+==========
+cltl2  
+- 299ページのブックマーク |作成日: 2023年11月13日月曜日 23:04:31
+
+
+==========
+hacking-your-way-emacs (Marcin Borkowski)
+- 44ページ|位置No. 674-675のハイライト |作成日: 2023年11月14日火曜日 20:47:13
+
+save-mark-and-excursion macro, though, which acts like save-excursion, but restores also the previous mark position.)
+==========
+hacking-your-way-emacs (Marcin Borkowski)
+- 45ページ|位置No. 679-680のハイライト |作成日: 2023年11月14日火曜日 20:48:03
+
+Emacs has a built-in package called thingatpt (short for “thing at point”), which has functions returning various possible “things” the point is on – words, sentences, urls, emails etc.
+==========
+hacking-your-way-emacs (Marcin Borkowski)
+- 45ページ|位置No. 691-691のハイライト |作成日: 2023年11月14日火曜日 20:50:26
+
+(current-word)))
+==========
+hacking-your-way-emacs (Marcin Borkowski)
+- 46ページ|位置No. 719-721のハイライト |作成日: 2023年11月14日火曜日 20:53:36
+
+bobp and eobp check if we are on the beginning or end of the current buffer. (There are also bolp and eolp, checking if we are on the beginning or end of the current line.)
+==========
+hacking-your-way-emacs (Marcin Borkowski)
+- 48ページ|位置No. 745-745のハイライト |作成日: 2023年11月14日火曜日 21:09:38
+
+(delete-region
+==========
+hacking-your-way-emacs (Marcin Borkowski)
+- 48ページ|位置No. 747-747のハイライト |作成日: 2023年11月14日火曜日 21:09:56
+
+(insert-buffer-substring
+==========
+hacking-your-way-emacs (Marcin Borkowski)
+- 48ページ|位置No. 748-748のハイライト |作成日: 2023年11月14日火曜日 21:10:13
+
+(set-window-configuration
+==========
+hacking-your-way-emacs (Marcin Borkowski)
+- 49ページ|位置No. 768-770のハイライト |作成日: 2023年11月14日火曜日 21:14:53
+
+kill-buffer runs the hook kill-buffer-hook, which may contain various clean-up functions. In our case, this hook would not be run, since we added t as the second argument to get-buffer-create.)
+==========
+hacking-your-way-emacs (Marcin Borkowski)
+- 49ページ|位置No. 755-755のハイライト |作成日: 2023年11月14日火曜日 21:15:15
+
+we need a way to cancel a started reordering session. This is very easy to do.
+==========
+hacking-your-way-emacs (Marcin Borkowski)
+- 50ページ|位置No. 771のブックマーク |作成日: 2023年11月14日火曜日 21:16:40
+
+
+==========
