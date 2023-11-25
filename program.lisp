@@ -37,54 +37,58 @@
       (format stream "~s, found in: ~a~@[, location: ~d~]~@[, page number: ~d~]" text title location page-number))))
 
 (defun get-note-headers (&optional (path "./kindle-notes.txt"))
-  (flet ((get-location-info-start-position (line-with-location-info)
-	   (let ((marker-1-position (search *location-marker-1* line-with-location-info))
-		 (marker-2-position (search *location-marker-2* line-with-location-info)))
-	     (when (or
-		    marker-1-position
-		    marker-2-position)
-	       (+
-		(if marker-1-position marker-1-position marker-2-position)
-		(if marker-1-position (length *location-marker-1*) (length *location-marker-2*))))))
-	 (get-page (line-with-location-info)
-	   (let ((marker-start (search *page-marker* line-with-location-info))
-		 (page-info-start (position-if (lambda (c) (digit-char-p c)) line-with-location-info)))
-	     (if (and
-		  marker-start
-		  (< page-info-start marker-start))
-		 (parse-integer
-		  (subseq line-with-location-info
-			  page-info-start
-			  (+
-			   page-info-start
-			   (position-if-not (lambda (c) (digit-char-p c)) line-with-location-info :start page-info-start)))
-		  :junk-allowed t)
-		 nil)))
-	 (clean (string)
-	   (delete #\Return string)))
-    (with-open-file (s path)
-      (let ((kindle-entries ())
-	    (previous-line nil))
-	(loop
-	  for line = (read-line s nil nil)
-	  while line
-	  do
-	     (when (null previous-line)
-	       (setf previous-line line))
-	     (when (string= "==========" line)
-	       (let* ((title (read-line s nil nil))
-		      (line-with-location-info (read-line s nil nil))
-		      (location-info-start-position (get-location-info-start-position line-with-location-info))
-		      (location-info (if location-info-start-position
-					 (subseq
-					  line-with-location-info
-					  location-info-start-position
-					  (+ location-info-start-position (position-if-not #'digit-char-p (subseq line-with-location-info location-info-start-position))))
-					 nil))
-		      (page-number (get-page line-with-location-info)))
-		 (push (make-instance 'kindle-entry :text (clean previous-line) :title (clean title) :location location-info :page-number page-number) kindle-entries)))
-	     (setf previous-line line))
-	(nreverse kindle-entries)))))
+  (labels ((get-location-start-position (line-with-location)
+	     (let ((marker-1-position (search *location-marker-1* line-with-location))
+		   (marker-2-position (search *location-marker-2* line-with-location)))
+	       (when (or
+		      marker-1-position
+		      marker-2-position)
+		 (+
+		  (if marker-1-position marker-1-position marker-2-position)
+		  (if marker-1-position (length *location-marker-1*) (length *location-marker-2*))))))
+	   (get-page (line-with-location) ;; re-do with regex?
+	     (let ((marker-start (search *page-marker* line-with-location))
+		   (page-info-start (position-if (lambda (c) (digit-char-p c)) line-with-location)))
+	       (if (and
+		    marker-start
+		    (< page-info-start marker-start))
+		   (parse-integer
+		    (subseq line-with-location
+			    page-info-start
+			    (+
+			     page-info-start
+			     (position-if-not (lambda (c) (digit-char-p c)) line-with-location :start page-info-start)))
+		    :junk-allowed t)
+		   nil)))
+	   (parse-kindle-entry (s previous-line) ;; re-do with regex?
+	     (let* ((title (read-line s nil nil))
+		    (line-with-location (read-line s nil nil))
+		    (location-start-position (get-location-start-position line-with-location))
+		    (location (if location-start-position
+				  (subseq
+				   line-with-location
+				   location-start-position
+				   (+ location-start-position (position-if-not #'digit-char-p (subseq line-with-location location-start-position))))
+				  nil))
+		    (page-number (get-page line-with-location)))
+	       (make-instance 'kindle-entry :text (clean previous-line) :title (clean title) :location location :page-number page-number)))
+	   (clean (string)
+	     (delete #\Return string)))
+    (flet ((read-from-file (path)
+	     (with-open-file (s path)
+	       (let ((kindle-entries ())
+		     (previous-line nil))
+		 (loop
+		   for line = (read-line s nil nil)
+		   while line
+		   do
+		      (when (null previous-line)
+			(setf previous-line line))
+		      (when (string= "==========" line)
+			(push (parse-kindle-entry s previous-line) kindle-entries))
+		      (setf previous-line line))
+		 (nreverse kindle-entries)))))
+      (read-from-file path))))
 
 (defgeneric empty-entry-p (kindle-entry)
   (:documentation "Is this an empty entry?"))
