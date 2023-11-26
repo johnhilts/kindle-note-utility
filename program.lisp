@@ -109,3 +109,22 @@
 
 (defun show-tip-of-the-day (&optional (note-headers *note-headers*))
   (aref note-headers (random (length note-headers))))
+
+(defun print-org-table (&optional (note-headers *note-headers*) (abbreviated t))
+  "Print kindle entries in org table format."
+  (with-output-to-string (stream)
+    (format stream " | Text | Title | Location | Page No |~%")
+    (loop for kindle-entry across note-headers
+	  do
+	     (print-org-table-row kindle-entry stream abbreviated))))
+
+(defgeneric print-org-table-row (kindle-entry stream abbreviated)
+  (:documentation "Print kindle-entry as an org table row."))
+;; (documentation 'print-org-table-row 'function)
+
+(defmethod print-org-table-row ((kindle-entry kindle-entry) stream abbreviated)
+  "Print kindle-entry as an org table row."
+  (with-slots (text title location page-number) kindle-entry
+    (let ((formatted-text (if abbreviated (subseq text 0 (min (length text) 15)) text)))
+      (format stream " | ~a | ~a | ~a | ~a |~%" formatted-text title (if location location "") (if page-number page-number "")))))
+;; how to find: (find-method #'print-org-table-row nil (list (find-class 'kindle-entry)))
