@@ -77,7 +77,7 @@
 (defun get-note-headers (&optional (path "./kindle-notes.txt"))
   (flet ((read-from-file (path)
 	   (with-open-file (stream path)
-	     (let ((kindle-entries ())
+	     (let ((kindle-entries (make-array 0 :element-type 'kindle-entry :fill-pointer 0 :adjustable t))
 		   (previous-line nil))
 	       (loop
 		 for line = (read-line stream nil nil)
@@ -86,9 +86,9 @@
 		    (when (null previous-line)
 		      (setf previous-line line))
 		    (when (string= "==========" line)
-		      (push (parse-kindle-entry stream previous-line) kindle-entries))
+		      (vector-push-extend (parse-kindle-entry stream previous-line) kindle-entries))
 		    (setf previous-line line))
-	       (nreverse kindle-entries)))))
+	       kindle-entries))))
     (read-from-file path)))
 
 (defgeneric empty-entry-p (kindle-entry)
@@ -108,4 +108,4 @@
 (defparameter *note-headers* (remove-empty-entries (get-note-headers)))
 
 (defun show-tip-of-the-day (&optional (note-headers *note-headers*))
-  (nth (random (length note-headers)) note-headers))
+  (aref note-headers (random (length note-headers))))
