@@ -21,3 +21,7 @@
      (:body
       (:div
        (who:str (jfh-kindle-notes:format-object (jfh-kindle-notes:show-tip-of-the-day))))))))
+
+(tbnl:define-easy-handler (daily-tip-simple :URI "/daily-tip-simple") ()
+  "daily tip page (simple string only version no markup)"
+  (jfh-kindle-notes:format-object (jfh-kindle-notes:show-tip-of-the-day)))
