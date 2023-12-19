@@ -1,6 +1,21 @@
 ;;;; start, stop web-app
 (cl:in-package #:jfh-kindle-notes-web-app)
 
+(defmethod print-object ((application-configuration application-configuration) stream)
+  "Print application configuration."
+  (print-unreadable-object (application-configuration stream :type t)
+    (with-accessors ((swank-port swank-port) (swank-interface swank-interface) (http-port http-port) (ssl-port ssl-port) (settings-file-path settings-file-path)) application-configuration
+      (format stream
+	      "~:[~:;Swank Port: ~:*~d~]~:[~:;, Swank Interface: ~:*~a~]~2:*~:[~:;, ~]HTTP Port: ~d, ~:[~:;SSL Port: ~:*~d, ~]Settings File: ~s"
+	      swank-port swank-interface http-port ssl-port settings-file-path))))
+
+(defmethod print-object ((web-application web-application) stream)
+  "Print web application."
+  (print-unreadable-object (web-application stream :type t)
+    (with-accessors ((hunchentoot-acceptor hunchentoot-acceptor) (application-configuration application-configuration)) web-application
+      (format stream
+	      "Hunchentoot Acceptor: ~a, Configuration: ~a" hunchentoot-acceptor application-configuration))))
+
 (defun make-default-settings ()
   "Constructor for application configuration object with default settings."
   (make-instance 'application-configuration

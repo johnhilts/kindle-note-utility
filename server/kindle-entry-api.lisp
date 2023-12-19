@@ -1,7 +1,7 @@
 ;;;; Web API for kindle entries
 (cl:in-package #:jfh-kindle-notes-web-app)
 
-(define-api-endpoint daily-tip "/daily-tip" ()
+(define-api-endpoint daily-tip-data "/daily-tip-data" ()
   "REST endpoint for tip of the day"
   (case verb
     (:get

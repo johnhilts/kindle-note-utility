@@ -44,7 +44,7 @@
 * package #:jfh-kindle-notes
 * TODO list
 - [X] Write =convert-to-json= in jfh-kindle-notes-common
-- [ ] Write app-start to initialize data etc for the application.
+- [X] Write app-start to initialize data etc for the application.
   - Not directly related to web-concerns.
   - But OK to call from =APPLICATION-SHELL=
     - Should =APPLICATION-SHELL= be moved to a "main.lisp"?

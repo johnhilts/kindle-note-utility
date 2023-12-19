@@ -4,4 +4,5 @@
   (:use #:common-lisp)
   (:export
    #:kindle-entry
-   #:show-tip-of-the-day))
+   #:show-tip-of-the-day
+   #:format-object))
