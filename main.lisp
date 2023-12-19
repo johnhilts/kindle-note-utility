@@ -1,8 +1,4 @@
-(in-package #:cl-user)
-(defpackage #:jfh/kindle-notes
-  (:use #:common-lisp))
-
-(in-package #:jfh/kindle-notes)
+(in-package #:jfh-kindle-notes)
 
 (defparameter *location-marker-1* "位置No. ")
 
@@ -128,3 +124,7 @@
     (let ((formatted-text (if abbreviated (subseq text 0 (min (length text) 15)) text)))
       (format stream " | ~a | ~a | ~a | ~a |~%" formatted-text title (if location location "") (if page-number page-number "")))))
 ;; how to find: (find-method #'print-org-table-row nil (list (find-class 'kindle-entry)))
+
+(defun application-shell ()
+  "Use this to start the application."
+  (jfh-kindle-notes-web-app:web-application-shell))

@@ -1,0 +1,50 @@
+* Server organization
+** Paths
+./server
+** packages
+- #:jfh-kindle-notes-web-core
+  - hunchentoot
+- #:jfh-kindle-notes-server-core
+  - swank 
+  - system level settings
+* Application
+* package #:jfh-kindle-notes-web-app
+** file names
+- server/web-protocol.lisp
+- server/web-app.lisp
+** classes
+*** application-configuration
+**** use-ssl
+**** start-swank
+ - Change to "use-swank"
+**** swank-port
+**** http-port
+**** ssl-port
+*** web-application
+**** =*the-http-server*=
+  - Change to hunchentoot-acceptor
+** methods
+*** start-web-app
+**** specialize on application-configuration
+**** return web-application
+*** stop-web-app
+**** specialize on web-application and application-configuration
+**** return #:web-app-stopped
+* package #:jfh-kindle-notes-common
+** file names
+- server/server-protocol.lisp
+- server/json.lisp
+** classes
+*** kindle-entry
+- from jfh-kindle-notes
+** methods
+*** convert-to-json 
+**** export from package
+**** specialize on kindle-entry
+* package #:jfh-kindle-notes
+* TODO list
+- [X] Write =convert-to-json= in jfh-kindle-notes-common
+- [ ] Write app-start to initialize data etc for the application.
+  - Not directly related to web-concerns.
+  - But OK to call from =APPLICATION-SHELL=
+    - Should =APPLICATION-SHELL= be moved to a "main.lisp"?
