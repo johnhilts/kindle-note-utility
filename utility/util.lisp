@@ -1,4 +1,4 @@
-(in-package #:jfh-kindle-notes-server-infrastructure)
+(in-package #:jfh-utility)
 
 (defun fetch-or-create-data (file-path &optional call-back)
   "read data from persistence store; call call back if provided"

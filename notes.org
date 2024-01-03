@@ -43,8 +43,75 @@
 **** specialize on kindle-entry
 * package #:jfh-kindle-notes
 * TODO list
+- [-] Change all the packages!!!
+  - No more "server".
+    - We aren't even writing a "server"!!
+  - [X] #:jfh-kindle-notes-utility
+    - [X] Put it in the utility folder
+      - [X] json.lisp
+      - [X] io.lisp
+      - [X] util.lisp
+  - [-] #:jfh-kindle-notes-web-app
+    - [X] +About the same as now+
+    - [ ] Put it in the web-app folder
+      - Only actual web things.
+  - [ ] #:jfh-kindle-notes-main
+    - [ ] Everything else goes in here.
+      - The actual things this app does.
+      - Including web pages and APIs
+        - You need to inherit the generic ones from the #:jfh-kindle-notes-web-app
+* package ideas, etc
+** TODO jfh-app-core
+- [X] A protocol for interfacing with swank.
+  - Start / stop swank.
+  - Settings such as port numbers, etc
+- [X] Make a nice constructor, and only expose that.
+  - [X] +Un-expose accessor names.+
+- [X] Protocol for User settings.
+  - Encryption.
+  - Data paths.
+** TODO jfh-web-core
+- [-] Re-instate:
+  - [-] publish-static
+    - [X] Add back code.
+    - [ ] Steal styles from bun website
+  - [X] user-path
+- [X] Call swank from application-shell, *not* web-app-shell
+- [ ] Upload page for kindle notes file.
+- [ ] All pages need to require auth'd user.
+- [X] A protocol for interfacing with hunchentoot.
+  - Start / stop web.
+  - Settings such as port numbers, etc
+- [X] Macros, etc, for pages, web APIs, etc
+  - Such as pages requiring authentication.
+** DONE jfh-utility
+- [X] Replace jfh-kindle-notes-utility
+  - as-is, 1:1 replacement.
+** TODO jfh-kindle-notes-main
+- [ ] See notes above.
+* DONE list
 - [X] Write =convert-to-json= in jfh-kindle-notes-common
 - [X] Write app-start to initialize data etc for the application.
   - Not directly related to web-concerns.
   - But OK to call from =APPLICATION-SHELL=
     - Should =APPLICATION-SHELL= be moved to a "main.lisp"?
+* PCL entries (test-use)
+** whole table
+  | Text                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | Title | Location | Page No |
+  | The choice of whether to use WITH-SLOTSversus WITH-ACCESSORSis the same as the choice between SLOT-VALUEand an accessor function: low-level code that provides the basic functionality of a class may use SLOT-VALUEor WITH-SLOTSto directly manipulate slots in ways not supported by accessor functions or to explicitly avoid the effects of auxiliary methods that may have been defined on the accessor functions. But you should generally use accessor functions or WITH-ACCESSORSunless you have a specific reason not to.                                                                                          | pcl   |          |     241 |
+  | you generally want to put restarts in the lowest-level code possible                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | pcl   |          |     235 |
+  | restart-case is a mechanism that allows only imperative transfer of control for its associated restarts. restart-case is built on a lower-level mechanism called restart-bind, which does not force transfer of control. restart-bind is to restart-case as handler-bind is to handler-case. The syntax is (restart-bind ((name function . options)) . body) The body is executed in a dynamic context within which the function will be called whenever (invoke-restart ’name) is executed. The options are keyword-style and are used to pass information such as that provided with the :report keyword in restart-case. | pcl   |          |     213 |
+** just the text
+restart-case is a mechanism that allows only imperative transfer of control for its associated restarts. 
+restart-case is built on a lower-level mechanism called restart-bind, which does not force transfer of control. 
+restart-bind is to restart-case as handler-bind is to handler-case. 
+The syntax is (restart-bind ((name function . options)) . body) 
+The body is executed in a dynamic context within which the function will be called whenever (invoke-restart ’name) is executed. 
+The options are keyword-style and are used to pass information such as that provided with the :report keyword in restart-case.
+
+The choice of whether to use WITH-SLOTSversus WITH-ACCESSORSis the same as the choice between SLOT-VALUEand an accessor function: low-level code that provides the basic functionality of a class
+ may use SLOT-VALUEor WITH-SLOTSto directly manipulate slots in ways not supported by accessor functions or to explicitly avoid the effects of auxiliary methods that may have been defined on the
+ accessor functions. 
+But you should generally use accessor functions or WITH-ACCESSORSunless you have a specific reason not to.                                                                                         
+
+you generally want to put restarts in the lowest-level code possible                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       

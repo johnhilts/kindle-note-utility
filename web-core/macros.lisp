@@ -1,5 +1,5 @@
-;;;; Web App macros
-(cl:in-package #:jfh-kindle-notes-web-app)
+;;;; Web core macros
+(cl:in-package #:jfh-web-core)
 
 (defmacro define-api-endpoint (name end-point params &body body)
   `(tbnl:define-easy-handler (,name :uri ,end-point) (,@params)

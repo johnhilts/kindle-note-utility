@@ -1,5 +1,0 @@
-(defun start-local ()
-  (swank:set-default-directory "/home/jfh/code/lisp/source/kindle/kindle-note-utility/")
-  (asdf:load-system "jfh-kindle-notes")
-  ;; (in-package #:todo-project)
-  )

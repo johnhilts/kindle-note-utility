@@ -1,1 +1,1 @@
-(:http-port 5095 :ssl-port nil :static-root "" :swank-port 4009 :swank-interface "localhost")
+(:http-port 5095 :ssl-port nil :static-root "" :swank-port 4009 :swank-interface "192.168.1.18" :user-path-root "./users/")

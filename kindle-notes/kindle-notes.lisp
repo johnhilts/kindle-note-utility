@@ -9,7 +9,7 @@
 (defmethod format-object ((kindle-entry kindle-entry))
   "Format a kindle entry"
   (with-accessors ((text text) (title title) (location location) (page-number page-number)) kindle-entry
-    (format nil "~s, found in: ~a~@[, location: ~d~]~@[, page number: ~d~]" text (string-trim " " title) location page-number))))
+    (format nil "~s, found in: ~a~@[, location: ~d~]~@[, page number: ~d~]" text (string-trim " " title) location page-number)))
 
 (defmethod print-object ((kindle-entry kindle-entry) stream)
   "Print a kindle entry"
@@ -56,7 +56,7 @@
 	   (page-number (if location nil (get-page line-with-location))))
       (make-instance 'kindle-entry :text (clean kindle-entry-text) :title (clean title) :location location :page-number page-number))))
 
-(defun get-note-headers (&optional (path "./kindle-notes.txt"))
+(defun get-note-headers (&optional (path "../kindle-notes.txt"))
   (flet ((read-from-file (path)
 	   (with-open-file (stream path)
 	     (let ((kindle-entries (make-array 0 :element-type 'kindle-entry :fill-pointer 0 :adjustable t))
