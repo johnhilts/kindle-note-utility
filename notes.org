@@ -71,14 +71,19 @@
   - Encryption.
   - Data paths.
 ** TODO jfh-web-core
-- [-] Re-instate:
-  - [-] publish-static
+- [ ] Expose web-configuration
+  - [ ] Add global to main
+    - =jfh-kindle-notes-main::*web-configuration*=
+  - [ ] Assign to the defparameter when starting up the app.
+  - [ ] Fix how we access the static-root info in pages.lisp.
+- [ ] All pages need to require auth'd user.
+- [ ] Upload page for kindle notes file.
+- [X] Re-instate:
+  - [X] publish-static
     - [X] Add back code.
-    - [ ] Steal styles from bun website
+    - [X] Steal styles from bun website
   - [X] user-path
 - [X] Call swank from application-shell, *not* web-app-shell
-- [ ] Upload page for kindle notes file.
-- [ ] All pages need to require auth'd user.
 - [X] A protocol for interfacing with hunchentoot.
   - Start / stop web.
   - Settings such as port numbers, etc

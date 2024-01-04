@@ -7,13 +7,14 @@
     (with-accessors
           ((http-port http-port)
            (ssl-port ssl-port)
+	   (static-root static-root)
            (application-configuration jfh-app-core:application-configuration))
         web-configuration
       (format stream
               ;; "~a, ~a, ~a" http-port ssl-port application-configuration
 	      ;; "~:[~:;Swank Port: ~:*~d~]~:[~:;, Swank Interface: ~:*~a~]~:*~:[~:;, ~]HTTP Port: ~d, ~:[~:;SSL Port: ~:*~d, ~]Settings File: ~s, User Path: ~s"
 	      ;; swank-port swank-interface http-port ssl-port settings-file-path user-path-root
-              "~A, HTTP Port: ~D~:[~:;, SSL Port: ~:*~D~]" application-configuration http-port ssl-port))))
+              "~A, ~:[~:;HTTP Port: ~:*~D, ~]~:[~:;SSL Port: ~:*~D, ~]Static root path: ~S" application-configuration http-port ssl-port static-root))))
 
 (defmethod print-object ((web-application web-application) stream)
   "Print web application."
@@ -22,7 +23,7 @@
       (format stream
 	      "Hunchentoot Acceptor: ~a, Configuration: ~a" hunchentoot-acceptor web-configuration))))
 
-(defun make-web-configuration (&optional (ssl-port nil) (http-port 8080))
+(defun make-web-configuration (&optional (ssl-port nil) (http-port 8080) (static-root ""))
   "Get configuration info from the file system and hydrate web-configuration object.
 Input: default configuration values.
 Output: web-configuration object."
@@ -32,10 +33,12 @@ Output: web-configuration object."
 			    (make-instance 'web-configuration
 					   :ssl-port (getf settings :ssl-port)
 					   :http-port (getf settings :http-port)
+					   :static-root (getf settings :static-root)
                                            :application-configuration app-configuration)
 	                    (make-instance 'web-configuration
 					   :ssl-port ssl-port
 					   :http-port http-port
+					   :static-root static-root
                                            :application-configuration app-configuration)))))
     (jfh-utility:fetch-or-create-data (jfh-app-core:settings-file-path app-configuration) call-back)))
 

@@ -32,3 +32,4 @@ production/**
 **/users/**
 **/users-old/**
 *.back
+*.*~

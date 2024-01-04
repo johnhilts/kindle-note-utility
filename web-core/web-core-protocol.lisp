@@ -6,6 +6,8 @@
 	       :initarg :http-port)
    (%ssl-port :reader ssl-port
 	      :initarg :ssl-port)
+   (%static-root :reader static-root
+		 :initarg :static-root)
    (%application-configuration :reader jfh-app-core:application-configuration
 	                       :initarg :application-configuration))
   (:documentation "Application configurations."))

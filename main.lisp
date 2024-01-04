@@ -9,4 +9,6 @@
 
   (let ((web-application (jfh-web-core:web-application-shell)))
 
-    (jfh-app-core:start-swank (jfh-app-core:application-configuration (jfh-web-core:web-configuration web-application)))))
+    (jfh-app-core:start-swank (jfh-app-core:application-configuration (jfh-web-core:web-configuration web-application)))
+
+    web-application))

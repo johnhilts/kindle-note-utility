@@ -5,6 +5,7 @@
   (:export
    #:web-application-shell
    #:web-configuration
+   #:static-root
    #:add-static-path-map
    #:define-api-endpoint
    #:verb))
