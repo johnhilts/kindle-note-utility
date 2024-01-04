@@ -27,9 +27,9 @@
 (defgeneric stop-hunchentoot (web-application)
   (:documentation "Input: web-application. Stop hunchentoot web-server via the provided web-application object."))
 
-;; (defgeneric stop-web-app (web-application &optional stop-swank)
-;;   (:documentation "Input: web-application objects. Output: #:web-app-stopped. This will stop the web application, and optionally stop swank. The HTTP port will be released. Also, optionally stop the swank server."))
-;; ;; (documentation 'stop-web-app 'function)
+(defgeneric stop-web-app (web-application)
+  (:documentation "Input: web-application objects. Output: #:web-app-stopped. This will stop the web application. The HTTP port will be released."))
+;; (documentation 'stop-web-app 'function)
 
 (defgeneric make-web-application (tbnl:easy-acceptor web-configuration)
   (:documentation "Input: hunchentoot easy-acceptor, application-configuration (default settings) object. Output web-application object."))

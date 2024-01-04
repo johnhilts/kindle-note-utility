@@ -109,9 +109,15 @@ The syntax is (restart-bind ((name function . options)) . body)
 The body is executed in a dynamic context within which the function will be called whenever (invoke-restart ’name) is executed. 
 The options are keyword-style and are used to pass information such as that provided with the :report keyword in restart-case.
 
-The choice of whether to use WITH-SLOTSversus WITH-ACCESSORSis the same as the choice between SLOT-VALUEand an accessor function: low-level code that provides the basic functionality of a class
- may use SLOT-VALUEor WITH-SLOTSto directly manipulate slots in ways not supported by accessor functions or to explicitly avoid the effects of auxiliary methods that may have been defined on the
- accessor functions. 
-But you should generally use accessor functions or WITH-ACCESSORSunless you have a specific reason not to.                                                                                         
-
 you generally want to put restarts in the lowest-level code possible                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+** What restarts do I want?
+*** handle used port for http / ssl
+**** options
+- Re-try (built-in)
+- Use a different port number - default to (incf port-number)
+- Is there a way to see if a port is unavailable?
+*** handle used port for swank
+** condition for port already in use
+Socket error in "bind": EADDRINUSE (Address already in use)
+   [Condition of type SB-BSD-SOCKETS:ADDRESS-IN-USE-ERROR]
+

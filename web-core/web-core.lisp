@@ -46,9 +46,19 @@ Output: web-configuration object."
              (if ssl-port
                  (make-instance 'tbnl:easy-ssl-acceptor :port ssl-port :ssl-privatekey-file #P"../certs/server.key" :ssl-certificate-file #P"../certs/server.crt")
                  (make-instance 'tbnl:easy-acceptor :port http-port)))))
-    (prog1
-	(tbnl:start (make-acceptor-instance))
-      (format t "~&huncentoot started~%" ))))
+    (let ((acceptor-instance (make-acceptor-instance)))
+      (prog1
+	  (restart-case (tbnl:start acceptor-instance)
+	    (skip-hunchentoot-start ()
+              :report "Skip starting Web Server (hunchentoot)."
+              (hunchentoot-acceptor *web-application*))
+	    ;; (use-different-port ()
+	    ;;   :report "Use a different port - will increment by 1 from the configured port number."
+	    ;;   ;; (format nil "Use a different port - change from ~d to ~d" (tbnl:acceptor-port acceptor-instance) (1+ (tbnl:acceptor-port acceptor-instance))))
+	    ;;   (with-accessors ((http-port http-port) (ssl-port ssl-port)) web-configuration
+	    ;; 	(start-hunchentoot (make-web-configuration (if ssl-port (1+ ssl-port) nil) (if http-port (1+ http-port) nil)))))
+	    )
+	    (format t "~&huncentoot started~%"))))))
 
 (defmethod make-web-application ((hunchentoot-acceptor tbnl:easy-acceptor) (web-configuration web-configuration))
   "Constructor for web-application"
@@ -79,7 +89,6 @@ Output: web-configuration object."
    :key #'car
    :test #'string=))
 
-;; TODO - add restart if http or ssl port is in use
 (defmethod start-web-app ((web-configuration web-configuration))
   "Input: application-configuration object and path maps for static assets. Output: web-application object. This will start the web application running on top of hunchentoot."
   (setf tbnl:*session-max-time* (* 24 7 60 60))
@@ -88,32 +97,14 @@ Output: web-configuration object."
   (make-web-application (start-hunchentoot web-configuration) web-configuration))
 ;; how to find: (find-method #'start-web-app nil (list (find-class 'application-configuration)))
 
-;; ;; TODO - add restart if swank port is in use
-;; (defmethod start-web-app ((web-configuration web-configuration))
-;;   "Input: application-configuration object. Output: web-application object. This will start the web application running on top of hunchentoot, and optionally start swank."
-;;   (when (jfh-app-core:swank-port web-configuration)
-;;     (jfh-app-core:start-swank web-configuration))
-;;   (setf tbnl:*session-max-time* (* 24 7 60 60))
-;;   (setf tbnl:*rewrite-for-session-urls* nil)
-;;   ;; (publish-static-content)
-;;   ;; (let ((user-index-path (format nil "~a/user-index.sexp" *users-root-folder-path*)))
-;;   ;;   (ensure-directories-exist user-index-path))
-;;   ;; (format t "~&loaded user info~%" )
-;;   (make-web-application (start-hunchentoot web-configuration) web-configuration))
-;; ;; how to find: (find-method #'start-web-app nil (list (find-class 'application-configuration)))
-
 (defmethod stop-hunchentoot ((web-application web-application))
   "Input: web-application. Stop hunchentoot web-server via the provided web-application object."
   (tbnl:stop (hunchentoot-acceptor web-application)))
 
-;; (defmethod stop-web-app ((web-application web-application) &optional (stop-swank nil))
-;;   "Input: web-application and application-configuration objects. Output: #:web-app-stopped. This will stop the web application, and optionally stop swank. The HTTP port will be released"
-;;   (stop-hunchentoot web-application)
-;;   (when (and
-;; 	 stop-swank
-;; 	 (jfh-app-core:swank-port (web-configuration web-application)))
-;;     (jfh-app-core:stop-swank (web-configuration web-application)))
-;;   '#:web-app-stopped)
+(defmethod stop-web-app ((web-application web-application))
+  "Input: web-application and application-configuration objects. Output: #:web-app-stopped. This will stop the web application. The HTTP port will be released"
+  (stop-hunchentoot web-application)
+  '#:web-app-stopped)
 
 (defvar *web-application*)
 
@@ -129,5 +120,5 @@ NOTE use of non-exported symbol."
   (null (tbnl::acceptor-shutdown-p (hunchentoot-acceptor *web-application*))))
 
 (defun %clear-static-routes ()
-  "Just a convenience method!"
+  "NOTE - Just a convenience method!"
   (setq tbnl:*dispatch-table* (last tbnl:*dispatch-table*)))
