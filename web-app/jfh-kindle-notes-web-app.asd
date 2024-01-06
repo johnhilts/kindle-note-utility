@@ -6,9 +6,10 @@
   :license  "MIT"
   :version "0.0.1"
   :serial t
-  :depends-on (#:hunchentoot #:cl-json #:cl-who #:jfh-utility #:jfh-web-core)
+  :depends-on (#:hunchentoot #:parenscript #:cl-json #:cl-who #:jfh-utility #:jfh-web-core)
   :components ((:file package)
                (:file configure)
+	       (:file auth)
                (:file pages)
                (:file kindle-entry-api)))
 

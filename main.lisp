@@ -12,3 +12,7 @@
     (jfh-app-core:start-swank (jfh-app-core:application-configuration (jfh-web-core:web-configuration web-application)))
 
     web-application))
+
+;; TODO - add call to instantiate web-auth instance
+;; (auth:use-web-auth (auth:web-auth-pages))
+;; (funcall (function auth:*web-auth-pages*))

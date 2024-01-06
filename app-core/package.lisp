@@ -10,4 +10,8 @@
    #:swank-port
    #:swank-interface
    #:settings-file-path
-   #:user-path-root))
+   #:user-path-root
+   #:application-user
+   #:user-id
+   #:user-name
+   #:user-password))

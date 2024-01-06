@@ -75,7 +75,7 @@
   - [ ] Add global to main
     - =jfh-kindle-notes-main::*web-configuration*=
   - [ ] Assign to the defparameter when starting up the app.
-  - [ ] Fix how we access the static-root info in pages.lisp.
+  - [ ] Fix how we access the static-root info in pages.lisp and auth.lisp.
 - [ ] All pages need to require auth'd user.
 - [ ] Upload page for kindle notes file.
 - [X] Re-instate:

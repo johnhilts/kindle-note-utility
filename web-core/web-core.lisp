@@ -61,7 +61,7 @@ Output: web-configuration object."
 	    ;;   (with-accessors ((http-port http-port) (ssl-port ssl-port)) web-configuration
 	    ;; 	(start-hunchentoot (make-web-configuration (if ssl-port (1+ ssl-port) nil) (if http-port (1+ http-port) nil)))))
 	    )
-	    (format t "~&huncentoot started~%"))))))
+	(format t "~&huncentoot started~%")))))
 
 (defmethod make-web-application ((hunchentoot-acceptor tbnl:easy-acceptor) (web-configuration web-configuration))
   "Constructor for web-application"
