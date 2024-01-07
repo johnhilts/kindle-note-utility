@@ -46,14 +46,30 @@
       (save-application-user application-user application-configuration))))
 
 ;; TODO convert this function to FIND-USER-INFO
-(defun find-user-entry (search-value &key by)
+(defun find-user-info (user-name)
   "Search for user info in file system."
-  (ecase by
-    (:login
-     (let* ((user-index-entry (find-user-index-entry search-value :by by))
-            (user-guid (cadr user-index-entry)))
-       (awhen user-guid
-         (read-user-info it))))
-    (:guid
-     (awhen search-value
-       (read-user-info it)))))
+  (let* ((user-index-entry (find-user-index-entry search-value :by by))
+         (user-guid (cadr user-index-entry)))
+    (awhen user-guid
+      (read-user-info it))))
+
+;; TODO convert this function to fit with this app
+(defun find-user-index-entry (search-value &key by)
+  "Search for user info by specifified field in user index file."
+  (let ((user-index (or *user-index* (read-user-index))))
+    (case by
+      (:login (find search-value user-index :test #'(lambda (search-value e) (string= search-value (car e)))))
+      (:guid (find search-value user-index :test #'(lambda (search-value e) (string= search-value (cadr e))))))))
+
+;; TODO define find-user-path
+(defun find-user-path (??)
+  "???"
+  ???)
+
+#|
+./source/kindle/kindle-note-utility/app-core/user.lisp:45:      (ensure-directories-exist (FIND-USER-PATH application-user application-configuration))
+./source/kindle/kindle-note-utility/app-core/user.lisp:53:     (let* ((user-index-entry (FIND-USER-INDEX-ENTRY search-value :by by))
+./source/kindle/kindle-note-utility/web-auth/web-auth.lisp:26:           (funcall (FIND-USER-INFO *web-auth-pages*) user-name)))
+./source/kindle/kindle-note-utility/web-auth/pages.lisp:5:  (let ((user-info (funcall (FIND-USER-INFO *web-auth-pages*) user :by :login)))
+./source/kindle/kindle-note-utility/web-app/auth.lisp:62:                  (let ((user-info (FIND-USER-ENTRY (tbnl:post-parameter "user") :by :login)))
+|#
