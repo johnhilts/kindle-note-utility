@@ -17,7 +17,10 @@
              :href (format nil "~A~A~D" (web:static-root (web:web-configuration web::*web-application*)) "/styles.css?v=" (get-version))))
      (:body
       (:div
-       "Welcome to the kindle notes utility!")))))
+       "Welcome to the kindle notes utility!")
+      (:div "&nbsp;")
+      (:div
+       (:a :href "/daily-tip" "Daily Tip from your Kindle Notes."))))))
 
 (tbnl:define-easy-handler (daily-tip :URI "/daily-tip") ()
   "daily tip page"

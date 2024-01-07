@@ -1,7 +1,7 @@
 ;;;; protocol for auth related concerns. 
 (cl:in-package #:jfh-web-auth)
 
-(defclass web-auth-pages ()
+(defclass web-auth-pages () ;; TODO this is a weird name ... let's change it
   ((%show-auth-failure :reader show-auth-failure
 		       :initarg :show-auth-failure
 		       :initform (error "Registering a function for show-auth-failure is required."))

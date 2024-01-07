@@ -8,6 +8,7 @@
   :serial t
   :depends-on (#:cl-json #:ironclad)
   :components ((:file package)
+               (:file crypto)
                (:file guid)
                (:file io)
                (:file json)

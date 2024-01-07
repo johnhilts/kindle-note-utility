@@ -6,6 +6,7 @@
   (:export
    #:define-protected-page
    #:authenticated-user
+   #:use-web-auth
    #:web-auth-pages
    #:*web-auth-pages*
    #:show-auth-failure

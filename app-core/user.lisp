@@ -44,3 +44,16 @@
       (jfh-utility:fetch-or-create-data user-index-file-path #'callback)
       (ensure-directories-exist (find-user-path application-user application-configuration))
       (save-application-user application-user application-configuration))))
+
+;; TODO convert this function to FIND-USER-INFO
+(defun find-user-entry (search-value &key by)
+  "Search for user info in file system."
+  (ecase by
+    (:login
+     (let* ((user-index-entry (find-user-index-entry search-value :by by))
+            (user-guid (cadr user-index-entry)))
+       (awhen user-guid
+         (read-user-info it))))
+    (:guid
+     (awhen search-value
+       (read-user-info it)))))

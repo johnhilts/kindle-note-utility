@@ -4,4 +4,8 @@
   (:use #:common-lisp)
   (:local-nicknames (#:web #:jfh-web-core) (#:auth #:jfh-web-auth))
   (:export
-   #:*static-paths-maps*))
+   #:*static-paths-maps*
+   #:signup-page
+   #:login-page
+   #:find-user-info
+   #:show-auth-failure))
