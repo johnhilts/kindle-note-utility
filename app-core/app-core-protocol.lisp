@@ -33,8 +33,24 @@
              :initform nil))
   (:documentation "Application user info."))
 
+(defclass user-index-entry ()
+  ((%user-name :reader user-name
+	       :initarg :user-name)
+   (%user-id :reader user-id
+	       :initarg :user-id))
+  (:documentation "User index entry. Link User ID to persisted data."))
+
 (defgeneric find-user-path (application-user application-configuration)
   (:documentation "Input: application-user and app-configuration. Output: user path."))
+
+(defgeneric find-user-index-entry (application-user application-configuration)
+  (:documentation "Input: application-user and app-configuration. Output: user index entry."))
+
+(defgeneric make-user-index-entry (application-user)
+  (:documentation "Input: application-user. Output: user index entry."))
+
+(defgeneric user-index-entry->list (user-index-entry)
+  (:documentation "Input: user index entry. Output: regular list. Conversion function."))
 
 (defgeneric save-application-user (application-user application-configuration)
   (:documentation "Input: application-user and app-configuration. Output: application-user. Persist application user info."))
