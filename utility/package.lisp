@@ -4,6 +4,7 @@
   (:use #:common-lisp)
   (:export
    #:fetch-or-create-data
+   #:read-complete-file
    #:write-complete-file
    #:generate-unique-token
    #:hash-password

@@ -21,15 +21,18 @@
 
 (defclass application-user ()
   ((%user-id :reader user-id
-	       :initform "")
+	     :initarg :user-id
+	     :initform "")
    (%user-name :reader user-name
 	       :initarg :user-name)
    (%user-password :reader user-password
 		   :initarg :user-password
                    :initform "")
    (%create-date :reader create-date
+		 :initarg :create-date
 		 :initform (get-universal-time))
    (%disable :reader disable
+	     :initarg :disable
              :initform nil))
   (:documentation "Application user info."))
 

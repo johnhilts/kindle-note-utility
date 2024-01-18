@@ -10,11 +10,17 @@
     (when (zerop (length user-id))
       (setf #1# (jfh-utility:generate-unique-token)))
     (when (zerop (length password))
-      (setf #2# (jfh-utility:hash-password password)))))
+      (setf #2# (jfh-utility:hash-password password)))
+    (when (null #3=(slot-value application-user '%create-date))
+      (setf #3# (get-universal-time)))))
 
 (defun make-application-user (user-name user-password)
   "Constructor for application-user."
   (make-instance 'application-user :user-name user-name :user-password user-password))
+
+(defun make-minimum-application-user (user-id)
+  "Constructor for application-user."
+  (make-instance 'application-user :user-id user-id :user-name ""))
 
 (defmethod print-object ((application-user application-user) stream)
   "Print application user."
@@ -71,6 +77,19 @@
       (ensure-directories-exist (find-user-path application-user application-configuration))
       (save-application-user application-user application-configuration))))
 
+(defun user-entry->application-user (user-entry)
+  (make-instance 'application-user
+		 :user-id (getf user-entry :user-id)
+		 :user-name (getf user-entry :user-name)
+		 :user-password (getf user-entry :user-password)
+		 :create-date (getf user-entry :create-date)
+		 :disable (getf user-entry :disable)))
+
+(defun read-user-info (user-id)
+  "read user info from user-id/user.sexp The guid-like user ID is needed to find the folder."
+  (let ((minimum-user-info (make-minimum-application-user user-id)))
+    (jfh-utility:read-complete-file (format nil "~A/user.sexp" (find-user-path minimum-user-info (make-application-configuration))))))
+
 ;; TODO convert this function to FIND-USER-INFO
 ;; notes on differences in user index file
 ;; 1. saving as p-list
@@ -79,14 +98,22 @@
 ;; 4. examples
 ;; (getf (user-index-entry->list (make-user-index-entry *jfh-user*)) :user-name)
 ;; (getf (user-index-entry->list (make-user-index-entry *jfh-user*)) :user-id)
+#|
+(let ((list (list
+	       (list :USER-NAME "them@somewhere.com" :USER-ID "890-321")
+	       (list :USER-NAME "you@there.com" :USER-ID "123-457")
+	       (user-index-entry->list (make-user-index-entry *jfh-user*)))))
+		(getf (find-if (lambda (entry) (string= (getf entry :user-name) "me@here.com")) list) :user-id)) ; => "2244336-27999-7839125-96272"
+|#
 (defun find-user-info (user-name)
   "Search for user info in file system."
-  (let* ((user-index-entry (find-user-index-entry search-value :by by))
+  (let* ((user-index-entry (find-user-index-entry search-value :by by)) ;; TODO - need to extract logic to find user-index from SAVE-NEW-APPLICATION-USER
          (user-guid (cadr user-index-entry)))
-    (awhen user-guid
-      (read-user-info it))))
+    (when user-id
+      (user-entry->application-user (read-user-info user-id)))))
 
 ;; TODO convert this function to fit with this app
+;; TODO see SAVE-NEW-APPLICATION-USER for logic to extract to here; may be able to make this a DEFMETHOD specializing on APPLICATION-CONFIGURATION
 (defun find-user-index-entry (user-id)
   "Search for user info by specifified field in user index file."
   (let ((user-index (or *user-index* (read-user-index))))
