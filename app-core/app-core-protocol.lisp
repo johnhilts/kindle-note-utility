@@ -46,8 +46,8 @@
 (defgeneric find-user-path (application-user application-configuration)
   (:documentation "Input: application-user and app-configuration. Output: user path."))
 
-(defgeneric find-user-index-entry (application-user application-configuration)
-  (:documentation "Input: application-user and app-configuration. Output: user index entry."))
+(defgeneric find-user-index-entry (user-name application-configuration)
+  (:documentation "Input: User name (login) and app-configuration. Output: user index entry."))
 
 (defgeneric make-user-index-entry (application-user)
   (:documentation "Input: application-user. Output: user index entry."))

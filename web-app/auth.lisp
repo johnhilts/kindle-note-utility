@@ -58,6 +58,7 @@
               (validate-signup-parameters (tbnl:post-parameter "name") (tbnl:post-parameter "user") (tbnl:post-parameter "password") (tbnl:post-parameter "confirm-password"))
             (if signup-validation-successful
                 (progn
+		  ;; TODO change this to the "save new user" function.
                   (add-user (tbnl:post-parameter "name") (tbnl:post-parameter "user") (tbnl:post-parameter "password"))
                   (let ((user-info (find-user-entry (tbnl:post-parameter "user") :by :login)))
                     (establish-user-session user-info))

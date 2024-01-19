@@ -12,19 +12,22 @@
 
 (defun application-shell ()
   "Use this to start the application."
-  (mapc
-   (lambda (pair)
-     (jfh-web-core:add-static-path-map (car pair) (cadr pair)))
-   jfh-kindle-notes-web-app:*static-paths-maps*)
+  (flet ((map-static-paths ()
+	   (mapc
+	    (lambda (pair)
+	      (jfh-web-core:add-static-path-map (car pair) (cadr pair)))
+	    jfh-kindle-notes-web-app:*static-paths-maps*)))
 
-  (let ((web-application (jfh-web-core:web-application-shell)))
-
-    (setf *web-configuration* (web:web-configuration web-application))
-    (auth:use-web-auth (auth:web-auth-pages))
+    (map-static-paths)
     
-    (jfh-app-core:start-swank (jfh-app-core:application-configuration (jfh-web-core:web-configuration web-application)))
+    (let ((web-application (jfh-web-core:web-application-shell)))
 
-    web-application))
+      (setf *web-configuration* (web:web-configuration web-application))
+      (auth:use-web-auth (auth:web-auth-pages))
+      
+      (jfh-app-core:start-swank (jfh-app-core:application-configuration (jfh-web-core:web-configuration web-application)))
+
+      web-application)))
 
 ;; TODO - add call to instantiate web-auth instance
 ;; (auth:use-web-auth (auth:web-auth-pages))

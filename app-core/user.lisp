@@ -65,10 +65,13 @@
    :user-id (user-id user-index-entry)
    :user-name (user-name user-index-entry)))
 
+(defun get-user-index-file-path (user-path-root)
+  (format nil "~Auser-index.sexp" user-path-root))
+
 (defmethod save-new-application-user ((application-user application-user) (application-configuration application-configuration))
   "Input: application-user and app-configuration. Output: application-user. Persist application user info."
   (let* ((user-path-root (user-path-root application-configuration))
-         (user-index-file-path (format nil "~Auser-index.sexp" user-path-root)))
+         (user-index-file-path (get-user-index-file-path user-path-root)))
     (flet ((callback (user-index)
              (push (user-index-entry->list (make-user-index-entry application-user)) user-index)
              (jfh-utility:write-complete-file user-index-file-path user-index)))
@@ -107,19 +110,17 @@
 |#
 (defun find-user-info (user-name)
   "Search for user info in file system."
-  (let* ((user-index-entry (find-user-index-entry search-value :by by)) ;; TODO - need to extract logic to find user-index from SAVE-NEW-APPLICATION-USER
-         (user-guid (cadr user-index-entry)))
+  (let* ((user-index-entry (find-user-index-entry user-name (make-application-configuration)))
+         (user-id (getf user-index-entry :user-id)))
     (when user-id
       (user-entry->application-user (read-user-info user-id)))))
 
-;; TODO convert this function to fit with this app
-;; TODO see SAVE-NEW-APPLICATION-USER for logic to extract to here; may be able to make this a DEFMETHOD specializing on APPLICATION-CONFIGURATION
-(defun find-user-index-entry (user-id)
-  "Search for user info by specifified field in user index file."
-  (let ((user-index (or *user-index* (read-user-index))))
-    (case by
-      (:login (find search-value user-index :test #'(lambda (search-value e) (string= search-value (car e)))))
-      (:guid (find search-value user-index :test #'(lambda (search-value e) (string= search-value (cadr e))))))))
+(defmethod find-user-index-entry (user-name (application-configuration application-configuration))
+  "Input: User ID and app-configuration. Output: user index entry."
+  (let* ((user-path-root (user-path-root application-configuration))
+         (user-index-file-path (get-user-index-file-path user-path-root))
+	 (user-index (jfh-utility:fetch-or-create-data user-index-file-path)))
+    (find-if (lambda (entry) (string= (getf entry :user-name) user-name)) user-index)))
 
 #|
 ./source/kindle/kindle-note-utility/app-core/user.lisp:45:      (ensure-directories-exist (FIND-USER-PATH application-user application-configuration))
