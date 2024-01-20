@@ -37,6 +37,11 @@
               (:div (:input :name "password" :type "password" :placeholder "Password" :class "login-input"))
               (:div (:button "Login") (:span "&nbsp;") (:button :id "sign-up-button" :type "button" :onclick "javascript:location.href=\"/signup\";" "Sign-Up"))))))))
 
+;; TODO - inherit from application-user to add name field + persisting that additional info
+(defun add-user (name id password)
+  "Add new user."
+  (jfh-app-core:save-new-application-user (jfh-app-core:make-application-user id password) (jfh-app-core:application-configuration jfh-kindle-notes-main:*web-configuration*)))
+
 (defun signup-page ()
   (who:with-html-output-to-string
       (*standard-output* nil :prologue t :indent t)
@@ -55,13 +60,12 @@
            (tbnl:post-parameter "password")
            (tbnl:post-parameter "confirm-password"))
           (multiple-value-bind (signup-validation-successful signup-validation-failure-reasons)
-              (validate-signup-parameters (tbnl:post-parameter "name") (tbnl:post-parameter "user") (tbnl:post-parameter "password") (tbnl:post-parameter "confirm-password"))
+              (auth:validate-signup-parameters (tbnl:post-parameter "name") (tbnl:post-parameter "user") (tbnl:post-parameter "password") (tbnl:post-parameter "confirm-password"))
             (if signup-validation-successful
                 (progn
-		  ;; TODO change this to the "save new user" function.
                   (add-user (tbnl:post-parameter "name") (tbnl:post-parameter "user") (tbnl:post-parameter "password"))
-                  (let ((user-info (find-user-entry (tbnl:post-parameter "user") :by :login)))
-                    (establish-user-session user-info))
+                  (let ((user-info (jfh-app-core:find-user-info (tbnl:post-parameter "user"))))
+                    (auth:establish-user-session user-info))
                   (who:htm (:script :type "text/javascript"
                                     (who:str
                                      (ps:ps

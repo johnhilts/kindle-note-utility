@@ -13,4 +13,6 @@
    #:find-user-info
    #:login-page
    #:logout-page
-   #:signup-page))
+   #:signup-page
+   #:validate-signup-parameters
+   #:establish-user-session))

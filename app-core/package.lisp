@@ -14,4 +14,8 @@
    #:application-user
    #:user-id
    #:user-name
-   #:user-password))
+   #:user-password
+   #:make-application-user
+   #:save-new-application-user
+   #:save-application-user
+   #:find-user-info))
