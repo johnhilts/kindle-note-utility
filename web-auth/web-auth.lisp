@@ -18,21 +18,21 @@ This probably needs some re-working but is serviceable for now."
   (let ((session-token (jfh-utility:generate-unique-token)))
     (setf (tbnl:session-value 'the-session) session-token)
     (tbnl:set-cookie (string 'the-session) :value session-token :secure t :http-only t)
-    (setf (gethash session-token (session-user-map *web-auth-pages*)) (jfh-app-core:user-name application-user))))
+    (setf (gethash session-token (session-user-map *web-auth-pages*)) (jfh-app-core:user-login application-user))))
 
-(defun validate-signup-parameters (name user-name password confirm-password)
+(defun validate-signup-parameters (name user-login password confirm-password)
   "Validate the values used to signup a user."
-  (flet ((exists (user-name)
-           (funcall (find-user-info *web-auth-pages*) user-name)))
+  (flet ((exists (user-login)
+           (funcall (find-user-info *web-auth-pages*) user-login)))
     (let ((signup-validation-failure-reasons ()))
       (if (or
 	   (zerop (length name))
-	   (zerop (length user-name))
+	   (zerop (length user-login))
 	   (zerop (length password))
 	   (zerop (length confirm-password)))
           (push "Please enter all fields." signup-validation-failure-reasons))
       (progn
-        (when (exists user-name)
+        (when (exists user-login)
           (push "User already exists; please login." signup-validation-failure-reasons))
         (when (not (string= password confirm-password))
           (push "Passwords don't match." signup-validation-failure-reasons)))

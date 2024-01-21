@@ -6,28 +6,27 @@
 - Encrypt the user password. This is meant to prevent the plain text password from being in memory.
 - Set the User ID to a unique ID."
   (let ((user-id #1=(slot-value application-user '%user-id))
-        (password #2=(slot-value application-user '%user-password)))
+        (password #2=(slot-value application-user '%user-password))
+        (create-date #3=(slot-value application-user '%create-date)))
     (when (zerop (length user-id))
-      (setf #1# (jfh-utility:generate-unique-token)))
-    (when (zerop (length password))
-      (setf #2# (jfh-utility:hash-password password)))
-    (when (null #3=(slot-value application-user '%create-date))
+      (setf #1# (jfh-utility:generate-unique-token))
+      (setf #2# (jfh-utility:hash-password password))
       (setf #3# (get-universal-time)))))
 
-(defun make-application-user (user-name user-password)
+(defun make-application-user (user-login user-password)
   "Constructor for application-user."
-  (make-instance 'application-user :user-name user-name :user-password user-password))
+  (make-instance 'application-user :user-login user-login :user-password user-password))
 
 (defun make-minimum-application-user (user-id)
   "Constructor for application-user."
-  (make-instance 'application-user :user-id user-id :user-name ""))
+  (make-instance 'application-user :user-id user-id :user-login ""))
 
 (defmethod print-object ((application-user application-user) stream)
   "Print application user."
   (print-unreadable-object (application-user stream :type t)
-    (with-accessors ((user-id user-id) (user-name user-name) (create-date create-date) (disable disable)) application-user
+    (with-accessors ((user-id user-id) (user-login user-login) (create-date create-date) (disable disable)) application-user
       (format stream
-	      "User ID: ~A, User Name: ~S, Created: ~A, Disabled: ~:[false~;true~]" user-id user-name create-date disable))))
+	      "User ID: ~A, User Login: ~S, Created: ~A, Disabled: ~:[false~;true~]" user-id user-login create-date disable))))
 
 (defmethod find-user-path ((application-user application-user) (application-configuration application-configuration))
   "Input: application-user and app-configuration. Output: user path."
@@ -40,7 +39,7 @@
   (let ((user-info-file-path (format nil "~Auser.sexp" (find-user-path application-user application-configuration)))
         (user-info-list (list
                          :user-id (user-id application-user)
-                         :user-name (user-name application-user)
+                         :user-login (user-login application-user)
                          :user-password (user-password application-user)
                          :create-date (create-date application-user)
                          :disable (disable application-user))))
@@ -49,21 +48,21 @@
 (defmethod print-object ((user-index-entry user-index-entry) stream)
   "Print user index entry."
   (print-unreadable-object (user-index-entry stream :type t)
-    (with-accessors ((user-id user-id) (user-name user-name)) user-index-entry
+    (with-accessors ((user-id user-id) (user-login user-login)) user-index-entry
       (format stream
-	      "User ID: ~A, User Name: ~S" user-id user-name))))
+	      "User ID: ~A, User Name: ~S" user-id user-login))))
 
 (defmethod make-user-index-entry ((application-user application-user))
   "Input: application-user. Output: user index entry."
   (make-instance 'user-index-entry
-		 :user-name (user-name application-user)
+		 :user-login (user-login application-user)
 		 :user-id (user-id application-user)))
 
 (defmethod user-index-entry->list ((user-index-entry user-index-entry))
   "Input: user index entry. Output: regular list. Conversion function."
   (list
    :user-id (user-id user-index-entry)
-   :user-name (user-name user-index-entry)))
+   :user-login (user-login user-index-entry)))
 
 (defun get-user-index-file-path (user-path-root)
   (format nil "~Auser-index.sexp" user-path-root))
@@ -83,7 +82,7 @@
 (defun user-entry->application-user (user-entry)
   (make-instance 'application-user
 		 :user-id (getf user-entry :user-id)
-		 :user-name (getf user-entry :user-name)
+		 :user-login (getf user-entry :user-login)
 		 :user-password (getf user-entry :user-password)
 		 :create-date (getf user-entry :create-date)
 		 :disable (getf user-entry :disable)))
@@ -108,19 +107,19 @@
 	       (user-index-entry->list (make-user-index-entry *jfh-user*)))))
 		(getf (find-if (lambda (entry) (string= (getf entry :user-name) "me@here.com")) list) :user-id)) ; => "2244336-27999-7839125-96272"
 |#
-(defun find-user-info (user-name)
+(defun find-user-info (user-login)
   "Search for user info in file system."
-  (let* ((user-index-entry (find-user-index-entry user-name (make-application-configuration)))
+  (let* ((user-index-entry (find-user-index-entry user-login (make-application-configuration)))
          (user-id (getf user-index-entry :user-id)))
     (when user-id
       (user-entry->application-user (read-user-info user-id)))))
 
-(defmethod find-user-index-entry (user-name (application-configuration application-configuration))
+(defmethod find-user-index-entry (user-login (application-configuration application-configuration))
   "Input: User ID and app-configuration. Output: user index entry."
   (let* ((user-path-root (user-path-root application-configuration))
          (user-index-file-path (get-user-index-file-path user-path-root))
 	 (user-index (jfh-utility:fetch-or-create-data user-index-file-path)))
-    (find-if (lambda (entry) (string= (getf entry :user-name) user-name)) user-index)))
+    (find-if (lambda (entry) (string= (getf entry :user-login) user-login)) user-index)))
 
 #|
 ./source/kindle/kindle-note-utility/app-core/user.lisp:45:      (ensure-directories-exist (FIND-USER-PATH application-user application-configuration))
@@ -129,3 +128,7 @@
 ./source/kindle/kindle-note-utility/web-auth/pages.lisp:5:  (let ((user-info (funcall (FIND-USER-INFO *web-auth-pages*) user :by :login)))
 ./source/kindle/kindle-note-utility/web-app/auth.lisp:62:                  (let ((user-info (FIND-USER-ENTRY (tbnl:post-parameter "user") :by :login)))
 |#
+
+(defmethod test-clos-with-user ((application-user application-user))
+  ;; (call-next-method)
+  (print "I'm the base object!"))

@@ -23,8 +23,8 @@
   ((%user-id :reader user-id
 	     :initarg :user-id
 	     :initform "")
-   (%user-name :reader user-name
-	       :initarg :user-name)
+   (%user-login :reader user-login
+	       :initarg :user-login)
    (%user-password :reader user-password
 		   :initarg :user-password
                    :initform "")
@@ -37,8 +37,8 @@
   (:documentation "Application user info."))
 
 (defclass user-index-entry ()
-  ((%user-name :reader user-name
-	       :initarg :user-name)
+  ((%user-login :reader user-login
+	       :initarg :user-login)
    (%user-id :reader user-id
 	       :initarg :user-id))
   (:documentation "User index entry. Link User ID to persisted data."))
@@ -46,7 +46,7 @@
 (defgeneric find-user-path (application-user application-configuration)
   (:documentation "Input: application-user and app-configuration. Output: user path."))
 
-(defgeneric find-user-index-entry (user-name application-configuration)
+(defgeneric find-user-index-entry (user-login application-configuration)
   (:documentation "Input: User name (login) and app-configuration. Output: user index entry."))
 
 (defgeneric make-user-index-entry (application-user)
@@ -60,3 +60,5 @@
 
 (defgeneric save-new-application-user (application-user application-configuration)
   (:documentation "Input: application-user. Output: application-user. Persist *NEW* application user info."))
+
+(defgeneric test-clos-with-user (application-user))

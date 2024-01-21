@@ -14,7 +14,7 @@
       (:title "Home page for \"Daily Tip from your Kindle Notes\"")
       (:link :type "text/css"
              :rel "stylesheet"
-             :href (format nil "~A~A~D" (web:static-root (web:web-configuration web::*web-application*)) "/styles.css?v=" (get-version))))
+             :href (format nil "~A~A~D" (web:static-root jfh-kindle-notes-main:*web-configuration*) "/styles.css?v=" (get-version))))
      (:body
       (:div
        "Welcome to the kindle notes utility!")

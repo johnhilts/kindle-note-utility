@@ -11,7 +11,7 @@
       (:title "Auth Failure")
       (:link :type "text/css"
              :rel "stylesheet"
-             :href (format nil "~A~A~D" (web:static-root (web:web-configuration web::*web-application*)) "/styles.css?v=" (get-version))))
+             :href (format nil "~A~A~D" (web:static-root jfh-kindle-notes-main:*web-configuration*) "/styles.css?v=" (get-version))))
      (:body
       (:h2 "Authorization failed!")
       (:div "User or password didn't match"
@@ -27,7 +27,7 @@
       (:title "Kindle Notes Utility - Login")
       (:link :type "text/css"
              :rel "stylesheet"
-             :href (web:static-root (web:web-configuration web::*web-application*))))
+             :href (web:static-root jfh-kindle-notes-main:*web-configuration*)))
      (:body
       (:h2 "Use this page to Login!")
       (:form :method "post" :action "auth"
@@ -52,7 +52,7 @@
       (:title "Kindle Notes Utility - Signup")
       (:link :type "text/css"
              :rel "stylesheet"
-             :href (format nil "~A~A~D" (web:static-root (web:web-configuration web::*web-application*)) "/styles.css?v=" (get-version))))
+             :href (format nil "~A~A~D" (web:static-root jfh-kindle-notes-main:*web-configuration*) "/styles.css?v=" (get-version))))
      (:body
       (if (or
            (tbnl:post-parameter "name")

@@ -13,9 +13,10 @@
    #:user-path-root
    #:application-user
    #:user-id
-   #:user-name
+   #:user-login
    #:user-password
    #:make-application-user
    #:save-new-application-user
    #:save-application-user
-   #:find-user-info))
+   #:find-user-info
+   #:test-clos-with-user))

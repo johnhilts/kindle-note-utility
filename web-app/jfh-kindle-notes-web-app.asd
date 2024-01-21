@@ -9,6 +9,8 @@
   :depends-on (#:hunchentoot #:parenscript #:cl-json #:cl-who #:jfh-utility #:jfh-web-core)
   :components ((:file package)
                (:file configure)
+               (:file web-app-protocol)
+               (:file user)
 	       (:file auth)
                (:file pages)
                (:file kindle-entry-api)))
