@@ -11,7 +11,7 @@
       (:title "Auth Failure")
       (:link :type "text/css"
              :rel "stylesheet"
-             :href (format nil "~A~A~D" (web:static-root jfh-kindle-notes-main:*web-configuration*) "/styles.css?v=" (get-version))))
+             :href (format nil "~A~A~D" (web:static-root *web-configuration*) "/styles.css?v=" (get-version))))
      (:body
       (:h2 "Authorization failed!")
       (:div "User or password didn't match"
@@ -27,7 +27,7 @@
       (:title "Kindle Notes Utility - Login")
       (:link :type "text/css"
              :rel "stylesheet"
-             :href (web:static-root jfh-kindle-notes-main:*web-configuration*)))
+             :href (web:static-root *web-configuration*)))
      (:body
       (:h2 "Use this page to Login!")
       (:form :method "post" :action "auth"
@@ -40,7 +40,7 @@
 ;; TODO - inherit from application-user to add name field + persisting that additional info
 (defun add-user (name id password)
   "Add new user."
-  (jfh-app-core:save-new-application-user (jfh-app-core:make-application-user id password) (jfh-app-core:application-configuration jfh-kindle-notes-main:*web-configuration*)))
+  (jfh-app-core:save-new-application-user (jfh-app-core:make-application-user id password) (jfh-app-core:application-configuration *web-configuration*)))
 
 (defun signup-page ()
   (who:with-html-output-to-string
@@ -52,7 +52,7 @@
       (:title "Kindle Notes Utility - Signup")
       (:link :type "text/css"
              :rel "stylesheet"
-             :href (format nil "~A~A~D" (web:static-root jfh-kindle-notes-main:*web-configuration*) "/styles.css?v=" (get-version))))
+             :href (format nil "~A~A~D" (web:static-root *web-configuration*) "/styles.css?v=" (get-version))))
      (:body
       (if (or
            (tbnl:post-parameter "name")
