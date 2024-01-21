@@ -60,5 +60,3 @@
 
 (defgeneric save-new-application-user (application-user application-configuration)
   (:documentation "Input: application-user. Output: application-user. Persist *NEW* application user info."))
-
-(defgeneric test-clos-with-user (application-user))

@@ -128,7 +128,3 @@
 ./source/kindle/kindle-note-utility/web-auth/pages.lisp:5:  (let ((user-info (funcall (FIND-USER-INFO *web-auth-pages*) user :by :login)))
 ./source/kindle/kindle-note-utility/web-app/auth.lisp:62:                  (let ((user-info (FIND-USER-ENTRY (tbnl:post-parameter "user") :by :login)))
 |#
-
-(defmethod test-clos-with-user ((application-user application-user))
-  ;; (call-next-method)
-  (print "I'm the base object!"))

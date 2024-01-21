@@ -49,7 +49,7 @@ Output: application-configuration object."
 	    (skip-swank-start ()
               :report "Skip Swank Start."
               swank-port))
-	(format t "Started swank at port: ~A." swank-port)))))
+	(format t "Started swank at port: ~A." swank-port))))) ;; TODO - if different swank port used because of USE-VALUE restart, this will still show the old port #
 
 (defmethod stop-swank ((application-configuration application-configuration))
   (with-accessors ((swank-port swank-port)) application-configuration

@@ -18,5 +18,4 @@
    #:make-application-user
    #:save-new-application-user
    #:save-application-user
-   #:find-user-info
-   #:test-clos-with-user))
+   #:find-user-info))
