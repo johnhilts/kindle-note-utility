@@ -37,11 +37,6 @@
               (:div (:input :name "password" :type "password" :placeholder "Password" :class "login-input"))
               (:div (:button "Login") (:span "&nbsp;") (:button :id "sign-up-button" :type "button" :onclick "javascript:location.href=\"/signup\";" "Sign-Up"))))))))
 
-;; TODO - inherit from application-user to add name field + persisting that additional info
-(defun add-user (name id password)
-  "Add new user."
-  (jfh-app-core:save-new-application-user (jfh-app-core:make-application-user id password) (jfh-app-core:application-configuration *web-configuration*)))
-
 (defun signup-page ()
   (who:with-html-output-to-string
       (*standard-output* nil :prologue t :indent t)

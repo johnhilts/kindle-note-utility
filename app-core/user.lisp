@@ -34,16 +34,21 @@
     (with-accessors ((user-id user-id)) application-user
       (format nil "~A~A/" user-path-root user-id))))
 
+(defmethod save-user (file-name user-info-list (application-user application-user) (application-configuration application-configuration))
+  "Input: file-name, user info list (not a class), application-user and app-configuration. Output: user info list. Persist application user info."
+  (let ((user-info-file-path (format nil "~A~A" (find-user-path application-user application-configuration) file-name)))
+    (jfh-utility:write-complete-file user-info-file-path user-info-list)))
+
 (defmethod save-application-user ((application-user application-user) (application-configuration application-configuration))
-  "Input: application-user and app-configuration. Output: application-user. Persist application user info."
-  (let ((user-info-file-path (format nil "~Auser.sexp" (find-user-path application-user application-configuration)))
+  "Input: application-user and app-configuration. Output: serialized application-user. Persist application user info."
+  (let ((file-name "user.sexp")
         (user-info-list (list
                          :user-id (user-id application-user)
                          :user-login (user-login application-user)
                          :user-password (user-password application-user)
                          :create-date (create-date application-user)
                          :disable (disable application-user))))
-    (jfh-utility:write-complete-file user-info-file-path user-info-list)))
+    (save-user file-name user-info-list application-user application-configuration)))
 
 (defmethod print-object ((user-index-entry user-index-entry) stream)
   "Print user index entry."

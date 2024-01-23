@@ -55,6 +55,9 @@
 (defgeneric user-index-entry->list (user-index-entry)
   (:documentation "Input: user index entry. Output: regular list. Conversion function."))
 
+(defgeneric save-user (file-name user-info-list application-user application-configuration) ;; TODO think of better function/method names
+  (:documentation "Input: file-name, user info list (not a class), application-user and app-configuration. Output: user info list. Persist application user info."))
+
 (defgeneric save-application-user (application-user application-configuration)
   (:documentation "Input: application-user and app-configuration. Output: application-user. Persist application user info."))
 
