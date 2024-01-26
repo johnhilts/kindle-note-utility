@@ -41,16 +41,18 @@ Output: application-configuration object."
 (defmethod start-swank ((application-configuration application-configuration))
   "Input: application-configuration. Start swank on the configured port."
   (with-accessors ((swank-port swank-port) (swank-interface swank-interface)) application-configuration
-    (let ((*debug-io* (make-broadcast-stream)))
-      (block swank-start
-        (let ((actual-port (restart-case (swank:create-server :port swank-port
-					                      :interface swank-interface
-					                      :dont-close t)
-	                     (skip-swank-start ()
-                               :report "Skip Swank Start."
-                               (format t "Swank start skipped.")
-                               (return-from swank-start swank-port)))))
-	  (format t "Started swank at port: ~A." actual-port))))))
+    (flet ((start-swank-server ()
+             (restart-case (swank:create-server :port swank-port
+					        :interface swank-interface
+					        :dont-close t)
+	       (skip-swank-start ()
+                 :report "Skip Swank Start."
+                 (format t "Swank start skipped.")
+                 (throw 'swank-start swank-port)))))
+      (let ((*debug-io* (make-broadcast-stream)))
+        (catch 'swank-start
+          (let ((actual-port (start-swank-server)))
+	    (format t "Started swank at port: ~A." actual-port)))))))
 
 (defmethod stop-swank ((application-configuration application-configuration))
   (with-accessors ((swank-port swank-port)) application-configuration
