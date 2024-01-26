@@ -42,14 +42,15 @@ Output: application-configuration object."
   "Input: application-configuration. Start swank on the configured port."
   (with-accessors ((swank-port swank-port) (swank-interface swank-interface)) application-configuration
     (let ((*debug-io* (make-broadcast-stream)))
-      (prog1
-	  (restart-case (swank:create-server :port swank-port
-					     :interface swank-interface
-					     :dont-close t)
-	    (skip-swank-start ()
-              :report "Skip Swank Start."
-              swank-port))
-	(format t "Started swank at port: ~A." swank-port))))) ;; TODO - if different swank port used because of USE-VALUE restart, this will still show the old port #
+      (block swank-start
+        (let ((actual-port (restart-case (swank:create-server :port swank-port
+					                      :interface swank-interface
+					                      :dont-close t)
+	                     (skip-swank-start ()
+                               :report "Skip Swank Start."
+                               (format t "Swank start skipped.")
+                               (return-from swank-start swank-port)))))
+	  (format t "Started swank at port: ~A." actual-port))))))
 
 (defmethod stop-swank ((application-configuration application-configuration))
   (with-accessors ((swank-port swank-port)) application-configuration
