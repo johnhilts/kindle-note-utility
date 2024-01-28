@@ -42,8 +42,8 @@
 **** export from package
 **** specialize on kindle-entry
 * package #:jfh-kindle-notes
-* TODO list
-- [-] Change all the packages!!!
+* DONE list
+- [X] Change all the packages!!!
   - No more "server".
     - We aren't even writing a "server"!!
   - [X] #:jfh-kindle-notes-utility
@@ -51,17 +51,17 @@
       - [X] json.lisp
       - [X] io.lisp
       - [X] util.lisp
-  - [-] #:jfh-kindle-notes-web-app
+  - [X] #:jfh-kindle-notes-web-app
     - [X] +About the same as now+
-    - [ ] Put it in the web-app folder
+    - [X] Put it in the web-app folder
       - Only actual web things.
-  - [ ] #:jfh-kindle-notes-main
-    - [ ] Everything else goes in here.
+  - [X] #:jfh-kindle-notes-main
+    - [X] Everything else goes in here.
       - The actual things this app does.
       - Including web pages and APIs
         - You need to inherit the generic ones from the #:jfh-kindle-notes-web-app
 * package ideas, etc
-** TODO jfh-app-core
+** DONE jfh-app-core
 - [X] A protocol for interfacing with swank.
   - Start / stop swank.
   - Settings such as port numbers, etc
@@ -71,13 +71,13 @@
   - Encryption.
   - Data paths.
 ** TODO jfh-web-core
-- [ ] Expose web-configuration
-  - [ ] Add global to main
-    - =jfh-kindle-notes-main::*web-configuration*=
-  - [ ] Assign to the defparameter when starting up the app.
-  - [ ] Fix how we access the static-root info in pages.lisp and auth.lisp.
 - [ ] All pages need to require auth'd user.
 - [ ] Upload page for kindle notes file.
+- [X] Expose web-configuration
+  - [X] Add global to main
+    - =jfh-kindle-notes-main::*web-configuration*=
+  - [X] Assign to the defparameter when starting up the app.
+  - [X] Fix how we access the static-root info in pages.lisp and auth.lisp.
 - [X] Re-instate:
   - [X] publish-static
     - [X] Add back code.
@@ -89,11 +89,11 @@
   - Settings such as port numbers, etc
 - [X] Macros, etc, for pages, web APIs, etc
   - Such as pages requiring authentication.
+** DONE jfh-kindle-notes-main
+- [X] See notes above.
 ** DONE jfh-utility
 - [X] Replace jfh-kindle-notes-utility
   - as-is, 1:1 replacement.
-** TODO jfh-kindle-notes-main
-- [ ] See notes above.
 * DONE list
 - [X] Write =convert-to-json= in jfh-kindle-notes-common
 - [X] Write app-start to initialize data etc for the application.
