@@ -1,3 +1,5 @@
+* DONE remove condition handling on READ-COMPLETE-FILE for now
+- I currently don't have any use cases requiring it.
 * Server organization
 ** Paths
 ./server
@@ -125,4 +127,29 @@ you generally want to put restarts in the lowest-level code possible
 ** condition for port already in use
 Socket error in "bind": EADDRINUSE (Address already in use)
    [Condition of type SB-BSD-SOCKETS:ADDRESS-IN-USE-ERROR]
-
+* scratch
+** who-uses READ-COMPLETE-FILE
+/home/jfh/code/lisp/source/kindle/kindle-note-utility/app-core/user.lisp
+  JFH-APP-CORE::READ-USER-INFO
+/home/jfh/code/lisp/source/kindle/kindle-note-utility/utility/util.lisp
+  FETCH-OR-CREATE-DATA
+*** who-uses READ-USER-INFO
+/home/jfh/code/lisp/source/kindle/kindle-note-utility/app-core/user.lisp
+  FIND-USER-INFO
+*** who-uses FIND-USER-INFO
+#<buffer auth.lisp>
+  JFH-KINDLE-NOTES-WEB-APP:SIGNUP-PAGE
+*** who-uses FETCH-OR-CREATE-DATA
+/home/jfh/code/lisp/source/kindle/kindle-note-utility/web-core/web-core.lisp
+  JFH-WEB-CORE::MAKE-WEB-CONFIGURATION
+#<buffer user.lisp<app-core>>
+  (DEFMETHOD JFH-APP-CORE:SAVE-NEW-APPLICATION-USER (JFH-APP-CORE:APPLICATION-USER JFH-APP-CORE:APPLICATION-CONFIGURATION))
+/home/jfh/code/lisp/source/kindle/kindle-note-utility/app-core/app-core.lisp
+  JFH-APP-CORE:MAKE-APPLICATION-CONFIGURATION
+/home/jfh/code/lisp/source/kindle/kindle-note-utility/app-core/user.lisp
+  (DEFMETHOD JFH-APP-CORE::FIND-USER-INDEX-ENTRY (T JFH-APP-CORE:APPLICATION-CONFIGURATION))
+* DONE read-file conditions
+** fetch-or-create-data
+- use the restart that creates an empty file if missing
+** JFH-APP-CORE::READ-USER-INFO < FIND-USER-INFO < JFH-KINDLE-NOTES-WEB-APP:SIGNUP-PAGE
+- use the restart that creates an empty file if missing
