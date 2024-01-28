@@ -1,6 +1,8 @@
 ;;;; start, stop web-app
 (cl:in-package #:jfh-web-core)
 
+(defvar *web-application*)
+
 (defmethod print-object ((web-configuration web-configuration) stream)
   "Print application configuration."
   (print-unreadable-object (web-configuration stream :type t)
@@ -69,6 +71,8 @@ Output: web-configuration object."
 		 :hunchentoot-acceptor hunchentoot-acceptor
 		 :web-configuration web-configuration))
 
+(defparameter *static-path-maps* ())
+
 (defun add-static-content-handlers ()
   "Add handlers for provided static content web/path mappings."
   (mapc
@@ -83,7 +87,6 @@ Output: web-configuration object."
   ;;        "/styles.css" "static/styles.css") *dispatch-table*)
   )
 
-(defparameter *static-path-maps* ())
 (defun add-static-path-map (web-path physical-path)
   "add mapping pairs to be used to expose static assets from the web server."
   (pushnew
@@ -108,8 +111,6 @@ Output: web-configuration object."
   "Input: web-application and application-configuration objects. Output: #:web-app-stopped. This will stop the web application. The HTTP port will be released"
   (stop-hunchentoot web-application)
   '#:web-app-stopped)
-
-(defvar *web-application*)
 
 (defun web-application-shell ()
   "Use this to start the web application."

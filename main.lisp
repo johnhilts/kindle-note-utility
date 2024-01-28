@@ -5,7 +5,7 @@
   (make-instance 'auth:web-auth-pages
 		 :signup-page #'web-app:signup-page
 		 :login-page #'web-app:login-page
-		 :find-user-info #'web-app:find-user-info
+		 :find-user-info #'jfh-app-core:find-user-info
 		 :show-auth-failure #'web-app:show-auth-failure))
 
 (defun application-shell ()
@@ -21,11 +21,15 @@
     (let ((web-application (jfh-web-core:web-application-shell)))
 
       (setf web-app:*web-configuration* (web:web-configuration web-application))
-      (auth:use-web-auth (make-instance 'auth:web-auth-pages))
+      (auth:use-web-auth (register-web-auth-functions))
       
       (jfh-app-core:start-swank (jfh-app-core:application-configuration (jfh-web-core:web-configuration web-application)))
 
       web-application)))
+
+(defun %refresh-web-auth-functions ()
+  "The function pointers don't automatically updated when a function is re-compiled, so use this to update them."
+  (auth:use-web-auth (register-web-auth-functions)))
 
 ;; TODO - add call to instantiate web-auth instance
 ;; (auth:use-web-auth (make-instance 'auth:web-auth-pages)) [need to fill in actual functions!!]

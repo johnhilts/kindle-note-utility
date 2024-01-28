@@ -65,7 +65,7 @@
                                     (who:str
                                      (ps:ps
                                       (alert "Signup Successful!")
-                                      (setf (@ location href) "/daily-tip"))))))
+                                      (setf (ps:@ location href) "/daily-tip"))))))
                 (who:htm
                  (:div
                   (:span (who:fmt "Signup Failed, because <ul>~{<li>~a</li>~% ~}</ul>" signup-validation-failure-reasons)))
