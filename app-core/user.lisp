@@ -6,12 +6,11 @@
 - Encrypt the user password. This is meant to prevent the plain text password from being in memory.
 - Set the User ID to a unique ID."
   (let ((user-id #1=(slot-value application-user '%user-id))
-        (password #2=(slot-value application-user '%user-password))
-        (create-date #3=(slot-value application-user '%create-date)))
+        (password #2=(slot-value application-user '%user-password)))
     (when (zerop (length user-id))
       (setf #1# (jfh-utility:generate-unique-token))
       (setf #2# (jfh-utility:hash-password password))
-      (setf #3# (get-universal-time)))))
+      (setf (slot-value application-user '%create-date) (get-universal-time)))))
 
 (defun make-application-user (user-login user-password)
   "Constructor for application-user."
