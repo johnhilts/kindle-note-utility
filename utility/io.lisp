@@ -6,45 +6,10 @@
   (:report (lambda (condition stream)
              (format stream "~AReported file name: ~S." (app-message condition) (file-error-pathname condition)))))
 
-(defun read-complete-file (path &optional (create-if-missing-p nil))
+(defun read-complete-file (path)
   "read complete file all at once"
-  (restart-case
-      (with-open-file (in path :if-does-not-exist (if create-if-missing-p :create :error))
-	(read in nil))
-    (file-missing-create ()
-      :report "File Missing - Create."
-      (format t "Create missing file.")
-      (read-complete-file path t))
-    (file-missing-error (file-error &optional (file-path path))
-      :report "File Missing - Error!"
-      (error (make-condition 'file-missing-error
-			     :app-message (format nil "The file for ~S is missing; the requested operation cannot be completed without it." file-path)
-			     :pathname (file-error-pathname file-error))))))
-#|
-Example how to handle restarts
-(handler-bind ((error
-		 #'(lambda (c)
-		     (invoke-restart 'jfh-utility::file-missing-create))))
-  (jfh-utility::read-complete-file "fake-file.txt"))
-|#
-
-(defun handle-example ()
-  (handler-bind ((file-error
-		   #'(lambda (c)
-		       (print (file-error-pathname c))
-		       (invoke-restart 'jfh-utility::file-missing-create))))
-    (jfh-utility::read-complete-file "fake-file.txt")))
-
-(defun handle-example-angry (&optional (missing-file-name "fake-file.txt"))
-  (handler-bind ((file-missing-error
-		   #'(lambda (c)
-		       (return-from handle-example-angry c)))
-		 (file-error
-		   #'(lambda (c)
-		       (if (search "fake" (namestring (file-error-pathname c)))
-			   (error "No fake files allowed!")
-			   (invoke-restart 'jfh-utility::file-missing-error c "users index")))))
-    (jfh-utility::read-complete-file missing-file-name)))
+  (with-open-file (in path :if-does-not-exist :create)
+    (read in nil)))
 
 (defun write-complete-file (path list)
   "write complete file all at once"
