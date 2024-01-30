@@ -1,28 +1,11 @@
 ;;;; functions for auth related to this web app; usually called from a page handler
 (cl:in-package #:jfh-kindle-notes-web-app)
 
-(defun common-header (title)
-  (who:with-html-output-to-string
-      (*standard-output* nil :indent t)
-    (:head
-     (:meta :charset "utf-8")
-     (:meta :name "viewport" :content "width=device-width, initial-scale=1.0")
-     (:title (format nil "Kindle Notes Utility - ~A" title))
-     (:link :type "text/css"
-            :rel "stylesheet"
-            :href (format nil "~A~A~D" (web:static-root *web-configuration*) "/styles.css?v=" (get-version))))))
-
 (defun show-auth-failure ()
   (who:with-html-output-to-string
       (*standard-output* nil :prologue t :indent t)
     (:html
-     (:head
-      (:meta :charset "utf-8")
-      (:meta :name "viewport" :content "width=device-width, initial-scale=1.0")
-      (:title "Auth Failure")
-      (:link :type "text/css"
-             :rel "stylesheet"
-             :href (format nil "~A~A~D" (web:static-root *web-configuration*) "/styles.css?v=" (get-version))))
+     (who:str (common-header "Auth Failure"))
      (:body
       (:h2 "Authorization failed!")
       (:div "User or password didn't match"
@@ -32,7 +15,7 @@
   (who:with-html-output-to-string
       (*standard-output* nil :prologue t :indent t)
     (:html
-     (who:str (common-header "Signup"))
+     (who:str (common-header "Login"))
      (:body
       (:h2 "Use this page to Login!")
       (:form :method "post" :action "auth"
@@ -46,13 +29,7 @@
   (who:with-html-output-to-string
       (*standard-output* nil :prologue t :indent t)
     (:html
-     (:head
-      (:meta :charset "utf-8")
-      (:meta :name "viewport" :content "width=device-width, initial-scale=1.0")
-      (:title "Kindle Notes Utility - Signup")
-      (:link :type "text/css"
-             :rel "stylesheet"
-             :href (format nil "~A~A~D" (web:static-root *web-configuration*) "/styles.css?v=" (get-version))))
+     (who:str (common-header "Signup"))
      (:body
       (if (or
            (tbnl:post-parameter "name")
@@ -106,10 +83,7 @@
   (who:with-html-output-to-string
       (*standard-output* nil :prologue t :indent t)
     (:html
-     (:head (:title "EZ Utils - Version")
-            (:link :type "text/css"
-                   :rel "stylesheet"
-                   :href (format-string  *static-root* "/styles.css?v=" (get-version))))
+     (who:str (common-header "Version"))
      (:body
       (:div "Version")
       (:div (who:str(get-version)))))))

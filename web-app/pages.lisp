@@ -8,13 +8,7 @@
   (who:with-html-output-to-string
       (*standard-output* nil :prologue t :indent t)
     (:html
-     (:head
-      (:meta :charset "utf-8")
-      (:meta :name "viewport" :content "width=device-width, initial-scale=1.0")
-      (:title "Home page for \"Daily Tip from your Kindle Notes\"")
-      (:link :type "text/css"
-             :rel "stylesheet"
-             :href (format nil "~A~A~D" (web:static-root *web-configuration*) "/styles.css?v=" (get-version))))
+     (who:str (common-header "Daily Tip from your Kindle Notes"))
      (:body
       (:div
        "Welcome to the kindle notes utility!")
@@ -27,13 +21,7 @@
   (who:with-html-output-to-string
       (*standard-output* nil :prologue t :indent t)
     (:html
-     (:head
-      (:meta :charset "utf-8")
-      (:meta :name "viewport" :content "width=device-width, initial-scale=1.0")
-      (:title "Daily Tip from your Kindle Notes")
-      (:link :type "text/css"
-             :rel "stylesheet"
-             :href (format nil "~A~A~D" (web:static-root *web-configuration*) "/styles.css?v=" (get-version))))
+     (who:str (common-header "Daily Tip from your Kindle Notes"))
      (:body
       (:div
        (who:str (jfh-kindle-notes:format-object (jfh-kindle-notes:show-tip-of-the-day))))))))
