@@ -73,6 +73,9 @@
   - Encryption.
   - Data paths.
 ** TODO jfh-web-core
+- [ ] add a COMMON-HEADER function to web-app and use it on all pages.
+  - [ ] Get it out of web-app/auth.lisp
+  - [ ] Add it to web-app/pages.lisp
 - [ ] All pages need to require auth'd user.
 - [ ] Upload page for kindle notes file.
 - [X] Expose web-configuration

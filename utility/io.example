@@ -45,8 +45,20 @@ Example how to handle restarts
 			   (error "No fake files allowed!")
 			   (invoke-restart 'jfh-utility::file-missing-error c "users index")))))
     (jfh-utility::read-complete-file missing-file-name)))
-
-(defun write-complete-file (path list)
+on end-of-page (condition) ((message :initform "End of the Page!" :reader message)))
+(handler-bind ((end-of-page
+         (lambda (c)
+           (message c)
+           (print "hit any graphic key then enter to continue")
+           (read)
+           (invoke-restart 'continue))))
+  (progn
+    (restart-case (signal 'end-of-page)
+      (continue ()))
+    (print "continuing ...")))
+ write-complete-file (path list)
   "write complete file all at once"
   (with-open-file (out path :direction :output :if-exists :supersede :if-does-not-exist :create)
     (prin1 list out))) ;; print is just like prin1, except it precedes each output with a line break, and ends with a space
+
+
