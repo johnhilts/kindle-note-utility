@@ -2,7 +2,7 @@
 (cl:in-package #:jfh-web-auth)
 
 (tbnl:define-easy-handler (authenticate-handler :uri "/auth") (user password redirect-back-to)
-  (let ((user-info (funcall (find-user-info *web-auth-pages*) user :by :login)))
+  (let ((user-info (funcall (find-user-info *web-auth-pages*) user))) ;; TODO - rename "user" -> "user-login"
     (if
      (and user-info
           (string=

@@ -31,10 +31,9 @@
       (:meta :charset "utf-8")
       (:meta :name "viewport" :content "width=device-width, initial-scale=1.0")
       (:title "Daily Tip from your Kindle Notes")
-      ;; (:link :type "text/css"
-      ;;        :rel "stylesheet"
-      ;;        :href (format-string  *static-root* "/styles.css?v=" (get-version)))
-      )
+      (:link :type "text/css"
+             :rel "stylesheet"
+             :href (format nil "~A~A~D" (web:static-root *web-configuration*) "/styles.css?v=" (get-version))))
      (:body
       (:div
        (who:str (jfh-kindle-notes:format-object (jfh-kindle-notes:show-tip-of-the-day))))))))

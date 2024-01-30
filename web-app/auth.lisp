@@ -1,6 +1,17 @@
 ;;;; functions for auth related to this web app; usually called from a page handler
 (cl:in-package #:jfh-kindle-notes-web-app)
 
+(defun common-header (title)
+  (who:with-html-output-to-string
+      (*standard-output* nil :indent t)
+    (:head
+     (:meta :charset "utf-8")
+     (:meta :name "viewport" :content "width=device-width, initial-scale=1.0")
+     (:title (format nil "Kindle Notes Utility - ~A" title))
+     (:link :type "text/css"
+            :rel "stylesheet"
+            :href (format nil "~A~A~D" (web:static-root *web-configuration*) "/styles.css?v=" (get-version))))))
+
 (defun show-auth-failure ()
   (who:with-html-output-to-string
       (*standard-output* nil :prologue t :indent t)
@@ -21,13 +32,7 @@
   (who:with-html-output-to-string
       (*standard-output* nil :prologue t :indent t)
     (:html
-     (:head
-      (:meta :charset "utf-8")
-      (:meta :name "viewport" :content "width=device-width, initial-scale=1.0")
-      (:title "Kindle Notes Utility - Login")
-      (:link :type "text/css"
-             :rel "stylesheet"
-             :href (web:static-root *web-configuration*)))
+     (who:str (common-header "Signup"))
      (:body
       (:h2 "Use this page to Login!")
       (:form :method "post" :action "auth"
