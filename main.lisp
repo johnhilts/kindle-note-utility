@@ -3,10 +3,10 @@
 (defun register-web-auth-functions ()
   "Register functions using provided class to enable web-auth features."
   (make-instance 'auth:web-auth-pages
-		 :signup-page #'web-app:signup-page
-		 :login-page #'web-app:login-page
-		 :find-user-info #'jfh-app-core:find-user-info
-		 :show-auth-failure #'web-app:show-auth-failure))
+		 :signup-page 'web-app:signup-page
+		 :login-page 'web-app:login-page
+		 :find-user-info 'jfh-app-core:find-user-info
+		 :show-auth-failure 'web-app:show-auth-failure))
 
 (defun application-shell ()
   "Use this to start the application."
