@@ -91,10 +91,10 @@
 		 :create-date (getf user-entry :create-date)
 		 :disable (getf user-entry :disable)))
 
-(defun read-user-info (user-id)
+(defun read-user-info (user-id file-name)
   "read user info from user-id/user.sexp The guid-like user ID is needed to find the folder."
   (let ((minimum-user-info (make-minimum-application-user user-id)))
-    (jfh-utility:read-complete-file (format nil "~A/user.sexp" (find-user-path minimum-user-info (make-application-configuration))))))
+    (jfh-utility:read-complete-file (format nil "~A/~A" (find-user-path minimum-user-info (make-application-configuration)) file-name))))
 
 ;; TODO convert this function to FIND-USER-INFO
 ;; notes on differences in user index file
@@ -116,7 +116,7 @@
   (let* ((user-index-entry (find-user-index-entry user-login (make-application-configuration)))
          (user-id (getf user-index-entry :user-id)))
     (when user-id
-      (user-entry->application-user (read-user-info user-id)))))
+      (user-entry->application-user (read-user-info user-id "user.sexp")))))
 
 (defmethod find-user-index-entry (user-login (application-configuration application-configuration))
   "Input: User ID and app-configuration. Output: user index entry."

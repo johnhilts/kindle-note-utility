@@ -9,7 +9,6 @@
       (format stream
        	      "User Name: ~A" user-name))))
 
-;; TODO - inherit from application-user to add name field + persisting that additional info
 (defun add-user (user-name user-login user-password)
   "Add new user."
   (jfh-app-core:save-new-application-user (make-web-app-user user-name user-login user-password) (jfh-app-core:application-configuration *web-configuration*)))
@@ -25,3 +24,9 @@
         (user-info-list (list
                          :user-name (user-name web-app-user))))
     (jfh-app-core:save-user file-name user-info-list web-app-user application-configuration)))
+
+(defun find-web-user-info (user-login)
+  "Derive web-user info from app-user."
+  (let* ((application-user (jfh-app-core:find-user-info user-login))
+         (web-user-info (jfh-app-core:read-user-info (jfh-app-core:user-id application-user) "web-app-user.sexp")))
+    (make-web-app-user (getf web-user-info :user-name) user-login "")))

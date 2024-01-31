@@ -5,5 +5,3 @@
   ((%user-name :reader user-name
 	       :initarg :user-name))
   (:documentation "Web Application user info."))
-
-(defgeneric test-clos-with-user (web-app-user))

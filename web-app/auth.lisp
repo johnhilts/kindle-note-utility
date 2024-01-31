@@ -68,15 +68,16 @@
                    (:div (:button "Submit"))))))))))
 
 (auth:define-protected-page (admin-page "/admin") ()
-  (who:with-html-output-to-string
+  (let ((web-user (find-web-user-info auth:authenticated-user)))
+    (who:with-html-output-to-string
       (*standard-output* nil :prologue t :indent t)
     (:html
-     (:head (:title "Admin"))
+     (who:str (common-header "Admin"))
      (:body
-      (:h2 (who:fmt "Welcome to the Admin Page, ~a!" auth:authenticated-user))
+      (:h2 (who:fmt "Welcome to the Admin Page, ~A!" (user-name web-user)))
       (:div "You're supposed to be logged in to see this!")
       (:div
-       (:a :href "/logout" "Click here to logout!"))))))
+       (:a :href "/logout" "Click here to logout!")))))))
 
 
 (tbnl:define-easy-handler (version-page :uri "/version") ()
