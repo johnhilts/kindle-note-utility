@@ -83,7 +83,12 @@
   "Remove any entries without any text."
   (remove-if-not #'empty-entry-p kindle-entries))
 
-(defparameter *note-headers* (remove-empty-entries (get-note-headers)))
+(defparameter *note-headers* (remove-empty-entries (get-note-headers))
+  "A sequence of note headers.")
+
+(defun refresh-note-headers ()
+  "Refresh notes content."
+  (setf *note-headers* (remove-empty-entries (get-note-headers))))
 
 (defun show-tip-of-the-day (&optional (note-headers *note-headers*))
   (aref note-headers (random (length note-headers))))

@@ -7,3 +7,9 @@
    #:show-tip-of-the-day
    #:format-object
    #:print-object))
+
+(defpackage #:jfh-kindle-notes-util
+  (:use #:common-lisp)
+  (:export
+   #:list-titles
+   #:search-for))
