@@ -76,8 +76,12 @@
 - [X] add a COMMON-HEADER function to web-app and use it on all pages.
   - [X] Get it out of web-app/auth.lisp
   - [X] Add it to web-app/pages.lisp
-- [ ] All pages need to require auth'd user.
+- [X] All pages need to require auth'd user.
 - [ ] Upload page for kindle notes file.
+- [ ] Come up with more object oriented way to retrieve web-user info
+  - [ ] Use a different class just for registration / authentication.
+    - We don't want to read in the password unnecessarily!
+  - [ ] Need to think some more how exactly to design this.
 - [X] Expose web-configuration
   - [X] Add global to main
     - =jfh-kindle-notes-main::*web-configuration*=

@@ -16,7 +16,7 @@
       (:div
        (:a :href "/daily-tip" "Daily Tip from your Kindle Notes."))))))
 
-(tbnl:define-easy-handler (daily-tip :URI "/daily-tip") ()
+(auth:define-protected-page (daily-tip "/daily-tip") ()
   "daily tip page"
   (who:with-html-output-to-string
       (*standard-output* nil :prologue t :indent t)
@@ -26,6 +26,28 @@
       (:div
        (who:str (jfh-kindle-notes:format-object (jfh-kindle-notes:show-tip-of-the-day))))))))
 
-(tbnl:define-easy-handler (daily-tip-simple :URI "/daily-tip-simple") ()
+(auth:define-protected-page (daily-tip-simple "/daily-tip-simple") ()
   "daily tip page (simple string only version no markup)"
   (jfh-kindle-notes:format-object (jfh-kindle-notes:show-tip-of-the-day)))
+
+(auth:define-protected-page (admin-page "/admin") ()
+  (let ((web-user (find-web-user-info auth:authenticated-user)))
+    (who:with-html-output-to-string
+      (*standard-output* nil :prologue t :indent t)
+    (:html
+     (who:str (common-header "Admin"))
+     (:body
+      (:h2 (who:fmt "Welcome to the Admin Page, ~A!" (user-name web-user)))
+      (:div "You're supposed to be logged in to see this!")
+      (:div
+       (:a :href "/logout" "Click here to logout!")))))))
+
+
+(tbnl:define-easy-handler (version-page :uri "/version") ()
+  (who:with-html-output-to-string
+      (*standard-output* nil :prologue t :indent t)
+    (:html
+     (who:str (common-header "Version"))
+     (:body
+      (:div "Version")
+      (:div (who:str(get-version)))))))

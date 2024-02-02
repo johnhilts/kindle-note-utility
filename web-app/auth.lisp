@@ -66,25 +66,3 @@
                    (:div (:input :name "password" :type "password" :placeholder "Password" :class "login-input"))
                    (:div (:input :name "confirm-password" :type "password" :placeholder "Confirm Password" :class "login-input"))
                    (:div (:button "Submit"))))))))))
-
-(auth:define-protected-page (admin-page "/admin") ()
-  (let ((web-user (find-web-user-info auth:authenticated-user)))
-    (who:with-html-output-to-string
-      (*standard-output* nil :prologue t :indent t)
-    (:html
-     (who:str (common-header "Admin"))
-     (:body
-      (:h2 (who:fmt "Welcome to the Admin Page, ~A!" (user-name web-user)))
-      (:div "You're supposed to be logged in to see this!")
-      (:div
-       (:a :href "/logout" "Click here to logout!")))))))
-
-
-(tbnl:define-easy-handler (version-page :uri "/version") ()
-  (who:with-html-output-to-string
-      (*standard-output* nil :prologue t :indent t)
-    (:html
-     (who:str (common-header "Version"))
-     (:body
-      (:div "Version")
-      (:div (who:str(get-version)))))))

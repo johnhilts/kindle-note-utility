@@ -13,6 +13,7 @@
        ,(when description description)
        (multiple-value-bind (authenticated-user present-p)
            (get-authenticated-user)
+         (declare (ignorable authenticated-user))
          (if present-p
              ,@body-after-description
              (tbnl:redirect (format nil "/login?redirect-back-to=~a" (tbnl:url-encode ,end-point))))))))
