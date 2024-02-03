@@ -31,6 +31,10 @@
   "The function pointers don't automatically updated when a function is re-compiled, so use this to update them."
   (auth:use-web-auth (register-web-auth-functions)))
 
+(defun %current-swank-port ()
+  "Get the current swank port used by the web app."
+  (jfh-app-core:swank-port (jfh-app-core:application-configuration web-app:*web-configuration*)))
+
 ;; TODO - add call to instantiate web-auth instance
 ;; (auth:use-web-auth (make-instance 'auth:web-auth-pages)) [need to fill in actual functions!!]
 ;; (funcall (function auth:*web-auth-pages*))
