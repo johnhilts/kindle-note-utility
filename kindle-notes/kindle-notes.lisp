@@ -9,7 +9,8 @@
 (defmethod format-object ((kindle-entry kindle-entry))
   "Format a kindle entry"
   (with-accessors ((text text) (title title) (location location) (page-number page-number)) kindle-entry
-    (format nil "~s, found in: ~a~@[, location: ~d~]~@[, page number: ~d~]" text (string-trim " " title) location page-number)))
+    ;; (format nil "~s, found in: ~a~@[, location: ~d~]~@[, page number: ~d~]" text (string-trim " " title) location page-number)
+    (format nil "From ~A (~@[location: ~D~]~@[page number: ~D~]) :~%~A~%" (string-trim " " title) location page-number text)))
 
 (defmethod print-object ((kindle-entry kindle-entry) stream)
   "Print a kindle entry"
