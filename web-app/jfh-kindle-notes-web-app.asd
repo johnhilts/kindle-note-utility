@@ -12,6 +12,7 @@
                (:file web-app-protocol)
                (:file user)
 	       (:file auth)
+               (:file upload)
                (:file pages)
                (:file kindle-entry-api)))
 
