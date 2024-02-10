@@ -72,14 +72,19 @@
 - [X] Protocol for User settings.
   - Encryption.
   - Data paths.
-** TODO jfh-web-core [7/9]
+** TODO jfh-web-core [7/10]
 - [X] add a COMMON-HEADER function to web-app and use it on all pages.
   - [X] Get it out of web-app/auth.lisp
   - [X] Add it to web-app/pages.lisp
 - [X] All pages need to require auth'd user.
-- [ ] Upload page for kindle notes file.
-  - [ ] Save uploaded file to user folder.
+- [ ] Forgot your password?
+  - [ ] Reset password.
+  - [ ] Email link.
+- [-] Upload page for kindle notes file.
+  - [X] Save uploaded file to user folder.
+    - [X] Need to be able to populate the web-app-user user-id slot!!
   - [ ] Create a page to list uploaded files.
+    - [ ] Redirect to the =/upload-list= page
     - [ ] Can also display the list of titles derived from the file.
 - [ ] Come up with more object oriented way to retrieve web-user info.
   - [ ] Use a different class just for registration / authentication.

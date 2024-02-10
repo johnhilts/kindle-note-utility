@@ -1,29 +1,31 @@
 ;;;; Web pages for kindle entries (uploads)
 (cl:in-package #:jfh-kindle-notes-web-app)
 
-(defun handle-file (post-parameter)
+(defun process-upload-file (post-parameter authenticated-user)
+  "Handles file uploads."
   (when (and post-parameter
              (listp post-parameter))
     (destructuring-bind (path file-name content-type)
         post-parameter
-      (let ((new-path (make-pathname :name (format nil "hunchentoot-test-~A"
-                                                   (random 100))
-                                     :type nil
-                                     :defaults #p"/tmp/hunchentoot/test/")))
+      (let* ((user-path (jfh-app-core:find-user-path (find-web-user-info authenticated-user) (jfh-app-core:application-configuration *web-configuration*)))
+             (new-file-name "kindle-notes")
+             (new-path (make-pathname :name new-file-name
+                                      :type "txt"
+                                      :defaults (truename user-path))))
         ;; strip directory info sent by Windows browsers
         (when (search "Windows" (tbnl:user-agent) :test 'char-equal)
           (setq file-name (cl-ppcre:regex-replace ".*\\\\" file-name "")))
         (rename-file path (ensure-directories-exist new-path))
-        (list new-path file-name content-type)))))
+        (list new-path new-file-name content-type)))))
 
 (defun get-uploads ()
-  (list 1))
+  ())
 
-(defun upload ()
+(defun upload (authenticated-user)
   "html page to facilitate uploads."
   (let ((file-uploaded nil))
-    (when (tbnl:post-parameter "file1")
-      (setf file-uploaded (handle-file (tbnl:post-parameter "file1"))))
+    (when (tbnl:post-parameter "upload-file")
+      (setf file-uploaded (process-upload-file (tbnl:post-parameter "upload-file") authenticated-user)))
     (tbnl:no-cache)
     (who:with-html-output-to-string (*standard-output* nil :prologue t)
       (:html
@@ -31,10 +33,11 @@
        (:body
         (:h2 "File Upload Test")
         (:form :method :post :enctype "multipart/form-data"
-               (:p "File: "
-                   (:input :type :file :name "file1"))
+               (:p "Select a file with your notes"
+                   (:p
+                    (:input :type :file :name "upload-file")))
                (:p
-                (:input :type :submit)))
+                (:input :type :submit :value "Upload")))
         (when file-uploaded
           (destructuring-bind (path file-name content-type) file-uploaded
             (who:htm

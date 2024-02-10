@@ -15,4 +15,5 @@
    #:logout-page
    #:signup-page
    #:validate-signup-parameters
-   #:establish-user-session))
+   #:establish-user-session
+   #:get-authenticated-user))

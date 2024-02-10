@@ -20,4 +20,5 @@
    #:save-user
    #:save-new-application-user
    #:save-application-user
-   #:find-user-info))
+   #:find-user-info
+   #:find-user-path))

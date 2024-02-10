@@ -13,9 +13,9 @@
   "Add new user."
   (jfh-app-core:save-new-application-user (make-web-app-user user-name user-login user-password) (jfh-app-core:application-configuration *web-configuration*)))
 
-(defun make-web-app-user (user-name user-login user-password)
+(defun make-web-app-user (user-name user-login user-password &optional (user-id ""))
   "Constructor for web-app-user."
-  (make-instance 'web-app-user :user-name user-name :user-login user-login :user-password user-password))
+  (make-instance 'web-app-user :user-name user-name :user-login user-login :user-password user-password :user-id user-id))
 
 (defmethod jfh-app-core:save-application-user ((web-app-user web-app-user) (application-configuration jfh-app-core:application-configuration))
   "Input: web-app-user and app-configuration. Output: serialized web-app-user (sub-class specific fields only) . Persist application user info."
@@ -28,5 +28,6 @@
 (defun find-web-user-info (user-login)
   "Derive web-user info from app-user."
   (let* ((application-user (jfh-app-core:find-user-info user-login))
-         (web-user-info (jfh-app-core:read-user-info (jfh-app-core:user-id application-user) "web-app-user.sexp")))
-    (make-web-app-user (getf web-user-info :user-name) user-login "")))
+         (user-id (jfh-app-core:user-id application-user))
+         (web-user-info (jfh-app-core:read-user-info user-id "web-app-user.sexp")))
+    (make-web-app-user (getf web-user-info :user-name) user-login "" user-id)))
