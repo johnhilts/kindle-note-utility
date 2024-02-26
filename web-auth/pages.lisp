@@ -1,8 +1,8 @@
 ;;;; functions to handle auth related concerns. Depends on hunchentoot.
 (cl:in-package #:jfh-web-auth)
 
-(tbnl:define-easy-handler (authenticate-handler :uri "/auth") (user password redirect-back-to)
-  (let ((user-info (funcall (find-user-info *web-auth-pages*) user))) ;; TODO - rename "user" -> "user-login"
+(tbnl:define-easy-handler (authenticate-handler :uri "/auth") (user-login password redirect-back-to)
+  (let ((user-info (funcall (find-secure-user-info *web-auth-pages*) user-login)))
     (if
      (and user-info
           (string=

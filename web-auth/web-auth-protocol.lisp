@@ -7,7 +7,10 @@
 		       :initform (error "Registering a function for show-auth-failure is required."))
    (%find-user-info :reader find-user-info
 		    :initarg :find-user-info
-		    :initform (error "Registering a function for find-user-info is required.")) 
+		    :initform (error "Registering a function for find-user-info is required."))
+   (%find-secure-user-info :reader find-secure-user-info
+			   :initarg :find-secure-user-info
+			   :initform (error "Registering a function for find-secure-user-info is required.")) 
    (%login-page :reader login-page
 		:initarg :login-page
 		:initform  (error "Registering a function for login-page is required."))        

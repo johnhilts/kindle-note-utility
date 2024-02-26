@@ -72,11 +72,27 @@
 - [X] Protocol for User settings.
   - Encryption.
   - Data paths.
-** TODO jfh-web-core [7/10]
-- [X] add a COMMON-HEADER function to web-app and use it on all pages.
-  - [X] Get it out of web-app/auth.lisp
-  - [X] Add it to web-app/pages.lisp
-- [X] All pages need to require auth'd user.
+** Existing flows
+*** signup
+**** DONE existence check
+- signup-page -> validate-signup-parameters -> find-user-info (user-login)
+- This works as-is!
+**** DONE save new user
+- [X] Need to test!
+- signup-page -> add-user -> save-new-application-user (web-app-user) -> save-application-user (web-app-user) -> save-application-user (app-user) -> save-user (app-user) -> save-user (web-app-userc)
+**** DONE login
+- login page
+  - -> JFH-APP-CORE:find-user-info (user-login) -> JFH-APP-CORE::find-user-index-entry (user-login) -> JFH-APP-CORE:find-user-path (application-user)
+    - [X] This one needs to be updated to use =application-secure-user=.
+      - Right now, it's using =meta=.
+  - -> establish-user-session -> [haven't finished tracing yet]
+**** DONE backtrace when trying to login (no applicable method)
+4: (ERROR SB-PCL::NO-APPLICABLE-METHOD-ERROR :GENERIC-FUNCTION #<STANDARD-GENERIC-FUNCTION JFH-APP-CORE:USER-PASSWORD (1)> :ARGS (#<APPLICATION-META-USER User ID: 3236372-43609-3201024-77404, User Login: "rimy@mcrafy.com", Created: 3917736623, Disabled: false>))
+5: ((:METHOD NO-APPLICABLE-METHOD (T)) #<STANDARD-GENERIC-FUNCTION JFH-APP-CORE:USER-PASSWORD (1)> #<APPLICATION-META-USER User ID: 3236372-43609-3201024-77404, User Login: "rimy@mcrafy.com", Created: 3917736623, Disabled: false>) [fast-method]
+6: ((LAMBDA (SB-PCL::.ARG0. SB-INT:&MORE SB-PCL::.DFUN-MORE-CONTEXT. SB-PCL::.DFUN-MORE-COUNT.) :IN "/home/jfh/.cache/common-lisp/sbcl-1.4.5.debian-linux-x64/home/jfh/quicklisp/dists/quicklisp/software/cl-json-20220707-git/src/objects.fasl") #<STANDARD-GENERIC-FUNCTION JFH-APP-CORE:USER-PASSWORD (1)> #<APPLICATION-META-USER User ID: 3236372-43609-3201024-77404, User Login: "rimy@mcrafy.com", Created: 3917736623, Disabled: false>)
+7: (SB-PCL::CALL-NO-APPLICABLE-METHOD #<STANDARD-GENERIC-FUNCTION JFH-APP-CORE:USER-PASSWORD (1)> (#<APPLICATION-META-USER User ID: 3236372-43609-3201024-77404, User Login: "rimy@mcrafy.com", Created: 3917736623, Disabled: false>))
+8: (JFH-WEB-AUTH::AUTHENTICATE-HANDLER :USER NIL :PASSWORD NIL :REDIRECT-BACK-TO NIL)
+** TODO jfh-web-core [9/11]
 - [ ] Forgot your password?
   - [ ] Reset password.
   - [ ] Email link.
@@ -86,10 +102,21 @@
   - [ ] Create a page to list uploaded files.
     - [ ] Redirect to the =/upload-list= page
     - [ ] Can also display the list of titles derived from the file.
-- [ ] Come up with more object oriented way to retrieve web-user info.
-  - [ ] Use a different class just for registration / authentication.
+- [X] Come up with more object oriented way to retrieve web-user info.
+  - [X] Use a different class just for registration / authentication.
     - We don't want to read in the password unnecessarily!
-  - [ ] Need to think some more how exactly to design this.
+  - [X] Need to think some more how exactly to design this.
+- [X] add a COMMON-HEADER function to web-app and use it on all pages.
+  - [X] Get it out of web-app/auth.lisp
+  - [X] Add it to web-app/pages.lisp
+- [X] Split off user password.
+  - [X] Also split off user-id and user-login so that the password class can inherit it.
+  - [X] Put password in its own class with its own specialized method to save it when adding a new user.
+    - [X] Generate user-id and password hash as part of the initialize-instance for the password class.
+  - [X] Add code to save password.
+  - [X] Add code to read password.
+  - [X] To do auth, use the password class.
+- [X] All pages need to require auth'd user.
 - [X] Expose web-configuration
   - [X] Add global to main
     - =jfh-kindle-notes-main::*web-configuration*=

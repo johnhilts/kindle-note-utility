@@ -11,6 +11,7 @@
                (:file configure)
                (:file web-app-protocol)
                (:file user)
+               (:file page-include)
 	       (:file auth)
                (:file upload)
                (:file pages)

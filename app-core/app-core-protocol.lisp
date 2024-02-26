@@ -24,17 +24,23 @@
 	     :initarg :user-id
 	     :initform "")
    (%user-login :reader user-login
-	       :initarg :user-login)
-   (%user-password :reader user-password
+	       :initarg :user-login))
+  (:documentation "Application user info - the very bare minimum."))
+
+(defclass application-secure-user (application-user)
+  ((%user-password :reader user-password
 		   :initarg :user-password
-                   :initform "")
-   (%create-date :reader create-date
+                   :initform ""))
+  (:documentation "Application user secure info."))
+
+(defclass application-meta-user (application-user)
+  ((%create-date :reader create-date
 		 :initarg :create-date
 		 :initform (get-universal-time))
    (%disable :reader disable
 	     :initarg :disable
              :initform nil))
-  (:documentation "Application user info."))
+  (:documentation "Application user info with meta-data."))
 
 (defclass user-index-entry ()
   ((%user-login :reader user-login

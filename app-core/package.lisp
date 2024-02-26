@@ -12,6 +12,8 @@
    #:settings-file-path
    #:user-path-root
    #:application-user
+   #:application-meta-user
+   #:application-secure-user
    #:user-id
    #:user-login
    #:user-password
@@ -21,4 +23,5 @@
    #:save-new-application-user
    #:save-application-user
    #:find-user-info
+   #:find-secure-user-info
    #:find-user-path))

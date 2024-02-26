@@ -21,7 +21,7 @@
       (:form :method "post" :action "auth"
              (:input :type "hidden" :name "redirect-back-to" :value (or redirect-back-to "/daily-tip"))
              (:div :id "login-input-div"
-              (:div (:input :name "user" :type "email" :placeholder "Login" :class "login-input" :autofocus "autofocus"))
+              (:div (:input :name "user-login" :type "email" :placeholder "Login" :class "login-input" :autofocus "autofocus"))
               (:div (:input :name "password" :type "password" :placeholder "Password" :class "login-input"))
               (:div (:button "Login") (:span "&nbsp;") (:button :id "sign-up-button" :type "button" :onclick "javascript:location.href=\"/signup\";" "Sign-Up"))))))))
 

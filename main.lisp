@@ -6,6 +6,7 @@
 		 :signup-page 'web-app:signup-page
 		 :login-page 'web-app:login-page
 		 :find-user-info 'jfh-app-core:find-user-info
+		 :find-secure-user-info 'jfh-app-core:find-secure-user-info
 		 :show-auth-failure 'web-app:show-auth-failure))
 
 (defun application-shell ()
