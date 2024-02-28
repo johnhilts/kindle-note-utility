@@ -4,6 +4,7 @@
   (:use #:common-lisp)
   (:export
    #:kindle-entry
+   #:refresh-note-headers
    #:show-tip-of-the-day
    #:format-object
    #:print-object))

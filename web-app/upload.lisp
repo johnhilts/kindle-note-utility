@@ -16,7 +16,12 @@
         (when (search "Windows" (tbnl:user-agent) :test 'char-equal)
           (setq file-name (cl-ppcre:regex-replace ".*\\\\" file-name "")))
         (rename-file path (ensure-directories-exist new-path))
+	(read-user-notes new-path)
         (list new-path new-file-name content-type)))))
+
+(defun read-user-notes (user-notes-path)
+  "Derive web-user info from app-user."
+  (jfh-kindle-notes:refresh-note-headers user-notes-path))
 
 (defun get-uploads ()
   ())

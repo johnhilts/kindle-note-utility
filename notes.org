@@ -92,16 +92,24 @@
 6: ((LAMBDA (SB-PCL::.ARG0. SB-INT:&MORE SB-PCL::.DFUN-MORE-CONTEXT. SB-PCL::.DFUN-MORE-COUNT.) :IN "/home/jfh/.cache/common-lisp/sbcl-1.4.5.debian-linux-x64/home/jfh/quicklisp/dists/quicklisp/software/cl-json-20220707-git/src/objects.fasl") #<STANDARD-GENERIC-FUNCTION JFH-APP-CORE:USER-PASSWORD (1)> #<APPLICATION-META-USER User ID: 3236372-43609-3201024-77404, User Login: "rimy@mcrafy.com", Created: 3917736623, Disabled: false>)
 7: (SB-PCL::CALL-NO-APPLICABLE-METHOD #<STANDARD-GENERIC-FUNCTION JFH-APP-CORE:USER-PASSWORD (1)> (#<APPLICATION-META-USER User ID: 3236372-43609-3201024-77404, User Login: "rimy@mcrafy.com", Created: 3917736623, Disabled: false>))
 8: (JFH-WEB-AUTH::AUTHENTICATE-HANDLER :USER NIL :PASSWORD NIL :REDIRECT-BACK-TO NIL)
-** TODO jfh-web-core [9/11]
-- [ ] Forgot your password?
-  - [ ] Reset password.
-  - [ ] Email link.
+** TODO jfh-web-core [9/12]
+- [-] Grab the user specific notes.
+  - [-] Refresh notes when uploaded.
+    - [X] Logic.
+    - [ ] Test.
+  - [ ] Handle multiple users.
+    - [ ] Create a hash table to get current user's notes.
+    - [ ] Delete the entry when user logs out.
 - [-] Upload page for kindle notes file.
-  - [X] Save uploaded file to user folder.
-    - [X] Need to be able to populate the web-app-user user-id slot!!
+  - [ ] Parse the uploded file and read it into memory.
   - [ ] Create a page to list uploaded files.
     - [ ] Redirect to the =/upload-list= page
     - [ ] Can also display the list of titles derived from the file.
+  - [X] Save uploaded file to user folder.
+    - [X] Need to be able to populate the web-app-user user-id slot!!
+- [ ] Forgot your password?
+  - [ ] Reset password.
+  - [ ] Email link.
 - [X] Come up with more object oriented way to retrieve web-user info.
   - [X] Use a different class just for registration / authentication.
     - We don't want to read in the password unnecessarily!

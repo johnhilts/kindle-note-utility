@@ -1,10 +1,10 @@
 (in-package #:jfh-kindle-notes)
 
-(defparameter *location-marker-1* "位置No. ")
+(defparameter *location-marker-1* "位置No. ") ;; TODO this needs to be more dynamic
 
-(defparameter *location-marker-2* "位置 No. ")
+(defparameter *location-marker-2* "位置 No. ") ;; TODO this needs to be more dynamic
 
-(defparameter *page-marker* "ページ")
+(defparameter *page-marker* "ページ") ;; TODO this needs to be more dynamic
 
 (defmethod format-object ((kindle-entry kindle-entry))
   "Format a kindle entry"
@@ -57,7 +57,7 @@
 	   (page-number (if location nil (get-page line-with-location))))
       (make-instance 'kindle-entry :text (clean kindle-entry-text) :title (clean title) :location location :page-number page-number))))
 
-(defun get-note-headers (&optional (path "../kindle-notes.txt"))
+(defun get-note-headers (&optional (path "../kindle-notes.txt")) ;; TODO use current user's path
   (flet ((read-from-file (path)
 	   (with-open-file (stream path)
 	     (let ((kindle-entries (make-array 0 :element-type 'kindle-entry :fill-pointer 0 :adjustable t))
@@ -84,12 +84,12 @@
   "Remove any entries without any text."
   (remove-if-not #'empty-entry-p kindle-entries))
 
-(defparameter *note-headers* (remove-empty-entries (get-note-headers))
+(defparameter *note-headers* (remove-empty-entries (get-note-headers)) ;; TODO this has to be per-user and probably "Note Type"
   "A sequence of note headers.")
 
-(defun refresh-note-headers ()
+(defun refresh-note-headers (&optional (path "../kindle-notes.txt"))
   "Refresh notes content."
-  (setf *note-headers* (remove-empty-entries (get-note-headers))))
+  (setf *note-headers* (remove-empty-entries (get-note-headers path))))
 
 (defun show-tip-of-the-day (&optional (note-headers *note-headers*))
   (aref note-headers (random (length note-headers))))
