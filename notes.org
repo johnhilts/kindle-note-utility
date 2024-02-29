@@ -97,8 +97,13 @@
   - [-] Refresh notes when uploaded.
     - [X] Logic.
     - [ ] Test.
-  - [ ] Handle multiple users.
-    - [ ] Create a hash table to get current user's notes.
+  - [-] Handle multiple users.
+    - [-] Create a hash table to get current user's notes.
+      - [-] Upload
+	- [X] Code
+	- [ ] Test
+      - [ ] Fetch on Login
+	- Same way it's fetched after being uploaded.
     - [ ] Delete the entry when user logs out.
 - [-] Upload page for kindle notes file.
   - [ ] Parse the uploded file and read it into memory.

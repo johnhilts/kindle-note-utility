@@ -91,6 +91,10 @@
   "Refresh notes content."
   (setf *note-headers* (remove-empty-entries (get-note-headers path))))
 
+(defun fetch-notes (&optional (path "../kindle-notes.txt"))
+  "Read and parse notes. This operation should have no side-effects."
+   (remove-empty-entries (get-note-headers path)))
+
 (defun show-tip-of-the-day (&optional (note-headers *note-headers*))
   (aref note-headers (random (length note-headers))))
 

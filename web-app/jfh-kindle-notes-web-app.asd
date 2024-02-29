@@ -13,6 +13,7 @@
                (:file user)
                (:file page-include)
 	       (:file auth)
+	       (:file notes)
                (:file upload)
                (:file pages)
                (:file kindle-entry-api)))

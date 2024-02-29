@@ -7,7 +7,8 @@
              (listp post-parameter))
     (destructuring-bind (path file-name content-type)
         post-parameter
-      (let* ((user-path (jfh-app-core:find-user-path (find-web-user-info authenticated-user) (jfh-app-core:application-configuration *web-configuration*)))
+      (let* ((web-app-user (find-web-user-info authenticated-user))
+	     (user-path (jfh-app-core:find-user-path web-app-user (jfh-app-core:application-configuration *web-configuration*)))
              (new-file-name "kindle-notes")
              (new-path (make-pathname :name new-file-name
                                       :type "txt"
@@ -16,12 +17,8 @@
         (when (search "Windows" (tbnl:user-agent) :test 'char-equal)
           (setq file-name (cl-ppcre:regex-replace ".*\\\\" file-name "")))
         (rename-file path (ensure-directories-exist new-path))
-	(read-user-notes new-path)
+	(read-user-notes (jfh-app-core:user-id web-app-user) new-path)
         (list new-path new-file-name content-type)))))
-
-(defun read-user-notes (user-notes-path)
-  "Derive web-user info from app-user."
-  (jfh-kindle-notes:refresh-note-headers user-notes-path))
 
 (defun get-uploads ()
   ())
