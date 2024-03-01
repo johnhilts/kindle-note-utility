@@ -1,33 +1,30 @@
 ;;;; Web pages for kindle entries (uploads)
 (cl:in-package #:jfh-kindle-notes-web-app)
 
-(defun process-upload-file (post-parameter authenticated-user)
+(defun process-upload-file (post-parameter authenticated-user-id)
   "Handles file uploads."
   (when (and post-parameter
              (listp post-parameter))
     (destructuring-bind (path file-name content-type)
         post-parameter
-      (let* ((web-app-user (find-web-user-info authenticated-user))
-	     (user-path (jfh-app-core:find-user-path web-app-user (jfh-app-core:application-configuration *web-configuration*)))
-             (new-file-name "kindle-notes")
-             (new-path (make-pathname :name new-file-name
-                                      :type "txt"
-                                      :defaults (truename user-path))))
-        ;; strip directory info sent by Windows browsers
-        (when (search "Windows" (tbnl:user-agent) :test 'char-equal)
-          (setq file-name (cl-ppcre:regex-replace ".*\\\\" file-name "")))
-        (rename-file path (ensure-directories-exist new-path))
-	(read-user-notes (jfh-app-core:user-id web-app-user) new-path)
-        (list new-path new-file-name content-type)))))
+      ;; strip directory info sent by Windows browsers
+      (when (search "Windows" (tbnl:user-agent) :test 'char-equal)
+        (setq file-name (cl-ppcre:regex-replace ".*\\\\" file-name "")))
+      (multiple-value-bind
+	    (new-path new-file-name)
+	  (get-notes-path authenticated-user-id)
+	(rename-file path (ensure-directories-exist new-path))
+	(read-user-notes authenticated-user-id new-path)
+	(list new-path new-file-name content-type)))))
 
 (defun get-uploads ()
   ())
 
-(defun upload (authenticated-user)
+(defun upload (authenticated-user-id)
   "html page to facilitate uploads."
   (let ((file-uploaded nil))
     (when (tbnl:post-parameter "upload-file")
-      (setf file-uploaded (process-upload-file (tbnl:post-parameter "upload-file") authenticated-user)))
+      (setf file-uploaded (process-upload-file (tbnl:post-parameter "upload-file") authenticated-user-id)))
     (tbnl:no-cache)
     (who:with-html-output-to-string (*standard-output* nil :prologue t)
       (:html

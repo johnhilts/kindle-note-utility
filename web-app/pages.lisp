@@ -36,7 +36,7 @@
      (who:str (common-header "Daily Tip from your Kindle Notes"))
      (:body
       (:div
-       (who:str (jfh-kindle-notes:format-object (jfh-kindle-notes:show-tip-of-the-day))))))))
+       (who:str (jfh-kindle-notes:format-object (jfh-kindle-notes:show-tip-of-the-day (gethash auth:authenticated-user *notes*)))))))))
 
 (auth:define-protected-page (daily-tip-simple "/daily-tip-simple") ()
   "daily tip page (simple string only version no markup)"

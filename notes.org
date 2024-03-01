@@ -98,11 +98,11 @@
     - [X] Logic.
     - [ ] Test.
   - [-] Handle multiple users.
-    - [-] Create a hash table to get current user's notes.
-      - [-] Upload
+    - [X] Create a hash table to get current user's notes.
+      - [X] Upload
 	- [X] Code
-	- [ ] Test
-      - [ ] Fetch on Login
+	- [X] Test
+      - [X] Fetch on Login
 	- Same way it's fetched after being uploaded.
     - [ ] Delete the entry when user logs out.
 - [-] Upload page for kindle notes file.
