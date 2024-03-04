@@ -19,7 +19,7 @@
       ;; (format nil "~@[x = ~a ~]~@[y = ~a~]" nil 20)
       (format stream "~a" (format-object kindle-entry)))))
 
-(defun parse-kindle-entry (stream kindle-entry-text) ;; re-do with regex?
+(defun parse-kindle-entry (stream line) ;; re-do with regex?
   (flet ((get-location-start-position (line-with-location)
 	   (let ((marker-1-position (search *location-marker-1* line-with-location))
 		 (marker-2-position (search *location-marker-2* line-with-location)))
@@ -45,7 +45,7 @@
 		 nil)))
 	 (clean (string)
 	   (delete #\Return string)))
-    (let* ((title (read-line stream nil nil))
+    (let* ((title line)
 	   (line-with-location (read-line stream nil nil))
 	   (location-start-position (get-location-start-position line-with-location))
 	   (location (if location-start-position
@@ -54,23 +54,19 @@
 			  location-start-position
 			  (+ location-start-position (position-if-not #'digit-char-p (subseq line-with-location location-start-position))))
 			 nil))
-	   (page-number (if location nil (get-page line-with-location))))
+	   (page-number (if location nil (get-page line-with-location)))
+	   (kindle-entry-text (prog2 (read-line stream nil nil) (read-line stream nil nil) (read-line stream nil nil))))
       (make-instance 'kindle-entry :text (clean kindle-entry-text) :title (clean title) :location location :page-number page-number))))
 
 (defun get-note-headers (&optional (path "../kindle-notes.txt")) ;; TODO use current user's path
   (flet ((read-from-file (path)
 	   (with-open-file (stream path)
-	     (let ((kindle-entries (make-array 0 :element-type 'kindle-entry :fill-pointer 0 :adjustable t))
-		   (previous-line nil))
+	     (let ((kindle-entries (make-array 0 :element-type 'kindle-entry :fill-pointer 0 :adjustable t)))
 	       (loop
 		 for line = (read-line stream nil nil)
 		 while line
 		 do
-		    (when (null previous-line)
-		      (setf previous-line line))
-		    (when (string= "==========" line)
-		      (vector-push-extend (parse-kindle-entry stream previous-line) kindle-entries))
-		    (setf previous-line line))
+		    (vector-push-extend (parse-kindle-entry stream line) kindle-entries))
 	       kindle-entries))))
     (read-from-file path)))
 

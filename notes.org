@@ -92,7 +92,17 @@
 6: ((LAMBDA (SB-PCL::.ARG0. SB-INT:&MORE SB-PCL::.DFUN-MORE-CONTEXT. SB-PCL::.DFUN-MORE-COUNT.) :IN "/home/jfh/.cache/common-lisp/sbcl-1.4.5.debian-linux-x64/home/jfh/quicklisp/dists/quicklisp/software/cl-json-20220707-git/src/objects.fasl") #<STANDARD-GENERIC-FUNCTION JFH-APP-CORE:USER-PASSWORD (1)> #<APPLICATION-META-USER User ID: 3236372-43609-3201024-77404, User Login: "rimy@mcrafy.com", Created: 3917736623, Disabled: false>)
 7: (SB-PCL::CALL-NO-APPLICABLE-METHOD #<STANDARD-GENERIC-FUNCTION JFH-APP-CORE:USER-PASSWORD (1)> (#<APPLICATION-META-USER User ID: 3236372-43609-3201024-77404, User Login: "rimy@mcrafy.com", Created: 3917736623, Disabled: false>))
 8: (JFH-WEB-AUTH::AUTHENTICATE-HANDLER :USER NIL :PASSWORD NIL :REDIRECT-BACK-TO NIL)
-** TODO jfh-web-core [10/13]
+** TODO jfh-web-core [10/14]
+- [ ] Track which notes came from which file.
+  - [ ] Add uploaded-file class to represent uploaded file-names.
+    - [ ] file-id
+    - [ ] file-name
+  - [ ] Persist uploaded-file as list to user folder.
+  - [ ] Add field to notes class for file-id.
+    - [ ] Populate it when parsing and filling the array.
+    - [ ] Use later when refreshing the dictionary entry.
+      - [ ] Remove all matches.
+      - [ ] Re-add based on file-id.
 - [-] Grab the user specific notes.
   - [X] Refresh notes when uploaded.
     - [X] Logic.
@@ -152,11 +162,11 @@
   - Settings such as port numbers, etc
 - [X] Macros, etc, for pages, web APIs, etc
   - Such as pages requiring authentication.
-** TODO bugs
-- [ ] The titles of the first and last entries wrong.
-  - [ ] First entry gets the second's title.
-  - [ ] Last entry gets NIL
-  - [ ] What about entries on the border line?
+** DONE bugs
+- [X] The titles of the first and last entries wrong.
+  - [X] First entry gets the second's title.
+  - [X] Last entry gets NIL
+  - [X] What about entries on the border line?
   - Removing the empty entries might be obscuring the problem.
 ** DONE jfh-kindle-notes-main
 - [X] See notes above.
