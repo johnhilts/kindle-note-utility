@@ -69,6 +69,3 @@
 
 (auth:define-protected-page (upload-handler "/upload") ()
   (upload auth:authenticated-user))
-
-(tbnl:define-easy-handler (upload-test-handler :uri "/upload-test") ()
-  (upload-test))
