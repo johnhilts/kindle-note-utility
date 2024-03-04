@@ -1,18 +1,20 @@
 (in-package #:jfh-kindle-notes-util)
 
-(defun list-titles (&optional search)
+(defun list-titles (&optional search (notes jfh-kindle-notes::*note-headers*) is-html)
   "Output a list of titles."
-  (format nil "~{~A~^~%~}"
-          (sort
-           (copy-list
-            (remove-duplicates
-             (map 'list
-                  (lambda (note) (jfh-kindle-notes::title note))
-                  (if search
-                      (remove-if-not (lambda (note) (search search (jfh-kindle-notes::title note) :test #'string-equal)) jfh-kindle-notes::*note-headers*)
-                      jfh-kindle-notes::*note-headers*))
-             :test #'string-equal))
-           #'string<)))
+  (let ((titles (sort
+		 (copy-list
+		  (remove-duplicates
+		   (map 'list
+			(lambda (note) (jfh-kindle-notes::title note))
+			(if search
+			    (remove-if-not (lambda (note) (search search (jfh-kindle-notes::title note) :test #'string-equal)) notes)
+			    notes))
+		   :test #'string-equal))
+		 #'string<)))
+    (if is-html
+	titles
+	(format nil "~{~A~^~%~}" titles))))
 
 (defun search-for (search &key in)
   "Search for matching text. Inputs: search string to match text, and option :in to match a title. Sub-string matches are acceptable."

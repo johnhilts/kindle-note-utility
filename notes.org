@@ -92,7 +92,7 @@
 6: ((LAMBDA (SB-PCL::.ARG0. SB-INT:&MORE SB-PCL::.DFUN-MORE-CONTEXT. SB-PCL::.DFUN-MORE-COUNT.) :IN "/home/jfh/.cache/common-lisp/sbcl-1.4.5.debian-linux-x64/home/jfh/quicklisp/dists/quicklisp/software/cl-json-20220707-git/src/objects.fasl") #<STANDARD-GENERIC-FUNCTION JFH-APP-CORE:USER-PASSWORD (1)> #<APPLICATION-META-USER User ID: 3236372-43609-3201024-77404, User Login: "rimy@mcrafy.com", Created: 3917736623, Disabled: false>)
 7: (SB-PCL::CALL-NO-APPLICABLE-METHOD #<STANDARD-GENERIC-FUNCTION JFH-APP-CORE:USER-PASSWORD (1)> (#<APPLICATION-META-USER User ID: 3236372-43609-3201024-77404, User Login: "rimy@mcrafy.com", Created: 3917736623, Disabled: false>))
 8: (JFH-WEB-AUTH::AUTHENTICATE-HANDLER :USER NIL :PASSWORD NIL :REDIRECT-BACK-TO NIL)
-** TODO jfh-web-core [9/13]
+** TODO jfh-web-core [10/13]
 - [-] Grab the user specific notes.
   - [X] Refresh notes when uploaded.
     - [X] Logic.
@@ -105,14 +105,14 @@
       - [X] Fetch on Login
 	- Same way it's fetched after being uploaded.
     - [ ] Delete the entry when user logs out.
-- [-] Upload page for kindle notes file.
-  - [-] Create a page to list uploaded files.
-    - [-] Redirect to the =/upload-list= page
+- [X] Upload page for kindle notes file.
+  - [X] Create a page to list uploaded files.
+    - [X] Can also display the list of titles derived from the file.
+    - [X] Redirect to the =/upload-list= page
       - [X] test from upload page.
-      - [ ] Test from "/".
-    - [ ] Can also display the list of titles derived from the file.
-    - [ ] Get other uploaded files.
-      - [ ] Need to test from the home page.
+      - [X] Test from "/".
+    - [X] Get other uploaded files.
+      - [X] Need to test from the home page.
     - [X] Add a link to the daily tip page.
   - [X] Parse the uploded file and read it into memory.
   - [X] Save uploaded file to user folder.

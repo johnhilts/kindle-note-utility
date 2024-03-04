@@ -13,20 +13,23 @@
       (:div
        "Welcome to the kindle notes utility!")
       (:div "&nbsp;")
-      (if (get-uploads)
-          (who:htm
-           (:div "Get Started")
-           (:div
-            (:a :href "/upload-list" "Your Uploads"))
-           (:div
-            (:a :href "/upload" "Upload More"))
-           (:div
-            (:a :href "/daily-tip" "Daily Tip from your Kindle Notes.")))
-          (who:htm
-           (:div
-            (:a :href "/upload" "Get Started"))
-           (:div "Your Uploads")
-           (:div "Daily Tip from your Kindle Notes.")))))))
+      (multiple-value-bind (authenticated-user-id present-p)
+          (auth:get-authenticated-user)
+	(if (and present-p
+		 (get-uploaded-file-index authenticated-user-id))
+            (who:htm
+             (:div "Get Started")
+             (:div
+              (:a :href "/upload-list" "Your Uploads"))
+             (:div
+              (:a :href "/upload" "Upload More"))
+             (:div
+              (:a :href "/daily-tip" "Daily Tip from your Kindle Notes.")))
+            (who:htm
+             (:div
+              (:a :href "/upload" "Get Started"))
+             (:div "Your Uploads")
+             (:div "Daily Tip from your Kindle Notes."))))))))
 
 (auth:define-protected-page (daily-tip "/daily-tip") ()
   "daily tip page"
@@ -65,7 +68,16 @@
       (:div (who:str(get-version)))))))
 
 (auth:define-protected-page (upload-list-handler "/upload-list") ()
-  (upload-list))
+  (who:with-html-output-to-string
+      (*standard-output* nil :prologue t :indent t)
+    (:html
+     (who:str (common-header "Daily Tip from your Kindle Notes"))
+     (:body
+      (:div
+       (who:str (upload-list auth:authenticated-user)))))))
+
+(auth:define-protected-page (uploaded-titles-handler "/uploaded-titles") ()
+  (uploaded-titles auth:authenticated-user))
 
 (auth:define-protected-page (upload-handler "/upload") ()
   (upload auth:authenticated-user))

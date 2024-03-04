@@ -1,6 +1,34 @@
 ;;;; Web pages for kindle entries (uploads)
 (cl:in-package #:jfh-kindle-notes-web-app)
 
+(defun get-uploaded-file-index-path (authenticated-user-id)
+  "Get the path for the uploaded file index. Input: authenticated-user-id. Output: file path."
+  (let* ((configuration (jfh-app-core:application-configuration *web-configuration*))
+	 (user-path (jfh-app-core:find-user-path (jfh-app-core:make-application-user authenticated-user-id) configuration)))
+    (format nil "~A/uploaded-file-index.sexp" user-path)))
+
+(defun get-uploaded-file-index (authenticated-user-id)
+  "Read in the the uploaded files index. Input: User ID. Output: (list new-path new-file-name content-type)"
+  (jfh-utility:fetch-or-create-data (get-uploaded-file-index-path authenticated-user-id)))
+
+(defun save-file-upload-index (authenticated-user-id uploaded-file-index-entry) ;; todo make uploaded-file-index-entry a class; this will become a method
+  "Input: authenticated-user-id, uploaded file index entry. Output: latest file upload index. Persist user's uploaded file index."
+  (let ((uploaded-file-index-path (get-uploaded-file-index-path authenticated-user-id)))
+    (flet ((callback (uploaded-file-index)
+             (push uploaded-file-index-entry uploaded-file-index)
+             (jfh-utility:write-complete-file uploaded-file-index-path
+					      (remove-duplicates uploaded-file-index
+								 :test (lambda (e1 e2)
+									 ((and
+									  (string-equal
+									   (namestring (car e1))
+									   (namestring (car e2)))
+									  (string-equal
+									   (cadr e1)
+									   (cadr e2)))))))))
+      (ensure-directories-exist uploaded-file-index-path)
+      (jfh-utility:fetch-or-create-data uploaded-file-index-path #'callback))))
+
 (defun process-upload-file (post-parameter authenticated-user-id)
   "Handles file uploads."
   (when (and post-parameter
@@ -15,10 +43,9 @@
 	  (get-notes-path authenticated-user-id)
 	(rename-file path (ensure-directories-exist new-path))
 	(read-user-notes authenticated-user-id new-path)
-	(list new-path new-file-name content-type)))))
-
-(defun get-uploads ()
-  ())
+	(let ((uploaded-file-index-entry (list new-path new-file-name content-type)))
+	  (save-file-upload-index authenticated-user-id uploaded-file-index-entry)
+	  uploaded-file-index-entry)))))
 
 (defun upload (authenticated-user-id)
   "html page to facilitate uploads."
@@ -39,36 +66,46 @@
                 (:input :type :submit :value "Upload")))
         (when file-uploaded
 	  (who:str
-	   (upload-list file-uploaded))))))))
+	   (upload-list authenticated-user-id file-uploaded))))))))
 
-(defun upload-list (&optional file-uploaded)
+(defun upload-list (authenticated-user-id &optional file-uploaded) ;; todo make this a method once uploaded-file-index-entry is a class
   "html page to list and manage uploads."
   (who:with-html-output-to-string (*standard-output* nil :prologue nil)
     (who:htm
      (:p
-      (:table :border 1 :cellpadding 2 :cellspacing 0
-              (:tr (:td :colspan 2 (:b "Uploaded files")))
-	      (when file-uploaded
-		(destructuring-bind (path file-name content-type) file-uploaded
-		  (who:htm
-		   (:tr
-                    (:td (:a :href (format nil "files/~A?path=~A" (tbnl:url-encode file-name) (tbnl:url-encode (namestring path)))
-                             (who:esc file-name)))
-                    (:td :align "right"
-			 (who:str (ignore-errors
-				   (with-open-file (in path)
-                                     (file-length in))))
-			 (who:str (format nil "&nbsp;Bytes (type: ~A)" content-type)))))))
-	      (let ((uploaded-files ())) ;; todo get uploaded-files from a user file that keeps (list new-path file-name content-type) for each uploaded file
+      (:table :border 1 :cellpadding 5 :cellspacing 0
+              (:tr (:td :colspan 3 (:b "Uploaded files")))
+	      (let ((uploaded-files (get-uploaded-file-index authenticated-user-id))
+		    (new-file-name (if file-uploaded (cadr file-uploaded) "")))
 		(loop for (path file-name content-type) in uploaded-files
+		      for is-new = (string= new-file-name file-name)
 		      do
 			 (who:htm
 			  (:tr 
-			   (:td (:a :href (format nil "files/~A?path=~A" (tbnl:url-encode file-name) (tbnl:url-encode (namestring path)))
-				    (who:esc file-name)))
+			   (:td
+			    (when is-new (who:htm (:b "NEW&nbsp;")))
+			    (:a :href (format nil "files/~A?path=~A" (tbnl:url-encode file-name) (tbnl:url-encode (namestring path)))
+				(who:esc file-name)))
+			   (:td (:a :href "/uploaded-titles" "Titles"))
 			   (:td :align "right"
 				(who:str (ignore-errors
 					  (with-open-file (in path)
 					    (file-length in))))
-				(who:str (format nil "&nbsp;Bytes (type: ~A)" content-type)))))))
-	                    (:tr (:td :colspan 2 (:b (:a :href "/daily-tip" "See Daily Tip")))))))))
+				(who:str (format
+					  nil "&nbsp;Bytes (type: ~A)"
+					  content-type)))))))))
+     (:tr (:td :colspan 3 (:b (:a :href "/daily-tip" "See Daily Tip")))))))
+
+(defun uploaded-titles (authenticated-user-id)
+  "List the titles from a notes file."
+  (let ((titles (jfh-kindle-notes-util:list-titles nil (gethash authenticated-user-id *notes*) t)))
+    (who:with-html-output-to-string
+	(*standard-output* nil :prologue t :indent t)
+      (:html
+       (who:str (common-header "Daily Tip from your Kindle Notes"))
+       (:body
+	(:div
+	 (loop for title in titles
+	       do
+		  (who:htm
+		   (:div (who:str title)))))))))))
