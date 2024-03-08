@@ -66,3 +66,13 @@
                    (:div (:input :name "password" :type "password" :placeholder "Password" :class "login-input"))
                    (:div (:input :name "confirm-password" :type "password" :placeholder "Confirm Password" :class "login-input"))
                    (:div (:button "Submit"))))))))))
+
+(defun on-auth-hook ()
+  "Run this when authorization is successful."
+  (multiple-value-bind (authenticated-user-id present-p)
+      (auth:get-authenticated-user)
+    (when present-p
+      (when (eq (gethash authenticated-user-id *notes* #1='#:empty) #1#)
+        (let ((notes-path (jfh-kindle-notes-web-app::get-notes-path authenticated-user-id)))
+          (read-user-notes authenticated-user-id notes-path)))))
+  '#:auth-hook)

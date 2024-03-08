@@ -9,4 +9,5 @@
    #:signup-page
    #:login-page
    #:find-user-info
-   #:show-auth-failure))
+   #:show-auth-failure
+   #:on-auth-hook))

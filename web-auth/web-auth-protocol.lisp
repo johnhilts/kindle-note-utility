@@ -2,7 +2,9 @@
 (cl:in-package #:jfh-web-auth)
 
 (defclass web-auth-pages () ;; TODO this is a weird name ... let's change it
-  ((%show-auth-failure :reader show-auth-failure
+  ((%on-auth-hook :reader on-auth-hook
+		  :initarg :on-auth-hook)
+   (%show-auth-failure :reader show-auth-failure
 		       :initarg :show-auth-failure
 		       :initform (error "Registering a function for show-auth-failure is required."))
    (%find-user-info :reader find-user-info

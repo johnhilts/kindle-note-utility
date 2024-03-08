@@ -109,17 +109,20 @@
       - [ ] Remove all matches.
       - [ ] Re-add based on file-id.
 - [-] Grab the user specific notes.
-  - [X] Refresh notes when uploaded.
-    - [X] Logic.
-    - [X] Test.
   - [-] Handle multiple users.
+    - [ ] Delete the entry when user logs out.
     - [X] Create a hash table to get current user's notes.
       - [X] Upload
 	- [X] Code
 	- [X] Test
       - [X] Fetch on Login
 	- Same way it's fetched after being uploaded.
-    - [ ] Delete the entry when user logs out.
+  - [X] Refresh notes when uploaded.
+    - [X] Logic.
+    - [X] Test.
+- [ ] Forgot your password?
+  - [ ] Reset password.
+  - [ ] Email link.
 - [X] Upload page for kindle notes file.
   - [X] Create a page to list uploaded files.
     - [X] Can also display the list of titles derived from the file.
@@ -132,9 +135,6 @@
   - [X] Parse the uploded file and read it into memory.
   - [X] Save uploaded file to user folder.
     - [X] Need to be able to populate the web-app-user user-id slot!!
-- [ ] Forgot your password?
-  - [ ] Reset password.
-  - [ ] Email link.
 - [ ] Have an input form for misc notes to save to misc.text.
 - [X] Come up with more object oriented way to retrieve web-user info.
   - [X] Use a different class just for registration / authentication.

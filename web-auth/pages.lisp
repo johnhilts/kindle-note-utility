@@ -10,6 +10,7 @@
            (jfh-utility:hash-password password)))
      (progn
        (establish-user-session user-info)
+       (funcall (on-auth-hook *web-auth-pages*))
        (tbnl:redirect redirect-back-to))
      (funcall (show-auth-failure *web-auth-pages*)))))
 

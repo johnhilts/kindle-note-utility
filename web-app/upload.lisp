@@ -19,13 +19,13 @@
              (jfh-utility:write-complete-file uploaded-file-index-path
 					      (remove-duplicates uploaded-file-index
 								 :test (lambda (e1 e2)
-									 ((and
+									 (and
 									  (string-equal
 									   (namestring (car e1))
 									   (namestring (car e2)))
 									  (string-equal
 									   (cadr e1)
-									   (cadr e2)))))))))
+									   (cadr e2))))))))
       (ensure-directories-exist uploaded-file-index-path)
       (jfh-utility:fetch-or-create-data uploaded-file-index-path #'callback))))
 
@@ -108,4 +108,4 @@
 	 (loop for title in titles
 	       do
 		  (who:htm
-		   (:div (who:str title)))))))))))
+		   (:div (who:str title))))))))))
