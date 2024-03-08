@@ -16,7 +16,7 @@
 	titles
 	(format nil "~{~A~^~%~}" titles))))
 
-(defun search-for (search &key in)
+(defun search-for (notes search &key in)
   "Search for matching text. Inputs: search string to match text, and option :in to match a title. Sub-string matches are acceptable."
   (format nil "~{~A~^~%~}"
           (loop for kindle-entry across
@@ -24,7 +24,7 @@
                                   (lambda (note) (search search (jfh-kindle-notes::text note) :test #'string-equal))
                                   (remove-if-not
                                    (lambda (note) (if in (search in (jfh-kindle-notes::title note) :test #'string-equal) note))
-                                   jfh-kindle-notes::*note-headers*))
+                                   notes))
                 collect
                 (with-accessors ((text jfh-kindle-notes::text)
                                  (title jfh-kindle-notes::title)
