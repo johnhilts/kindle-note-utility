@@ -3,6 +3,7 @@
 (defun register-web-auth-functions ()
   "Register functions using provided class to enable web-auth features."
   (make-instance 'auth:web-auth-pages
+                 :on-auth-hook 'web-app:on-auth-hook
 		 :signup-page 'web-app:signup-page
 		 :login-page 'web-app:login-page
 		 :find-user-info 'jfh-app-core:find-user-info
