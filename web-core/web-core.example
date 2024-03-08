@@ -131,3 +131,23 @@ NOTE use of non-exported symbol."
 (defun %clear-static-routes ()
   "NOTE - Just a convenience method!"
   (setq tbnl:*dispatch-table* (last tbnl:*dispatch-table*)))
+
+;; this will cause "could not stack allocate" in old SBCL
+(defun start-hunchentoot (ssl-port http-port)
+  "start or re-start the hunchentoot web server"
+  (flet ((make-acceptor-instance ()
+           (if ssl-port
+               (make-instance 'tbnl:easy-ssl-acceptor :port ssl-port :ssl-privatekey-file #P"../certs/server.key" :ssl-certificate-file #P"../certs/server.crt")
+               (make-instance 'tbnl:easy-acceptor :port http-port))))
+    (let ((acceptor-instance (make-acceptor-instance)))
+      (prog1
+	  (restart-case (tbnl:start acceptor-instance)
+	    (skip-hunchentoot-start ()
+              :report "Skip starting Web Server (hunchentoot)."
+              'started)
+	    (use-different-port ()
+	      :report "Use a different port - will increment by 1 from the configured port number."
+	      ;; (format nil "Use a different port - change from ~d to ~d" (tbnl:acceptor-port acceptor-instance) (1+ (tbnl:acceptor-port acceptor-instance))))
+	      (start-hunchentoot (if ssl-port (1+ ssl-port) nil) (if http-port (1+ http-port) nil))))
+	    )
+        (format t "~&huncentoot started~%")))))
