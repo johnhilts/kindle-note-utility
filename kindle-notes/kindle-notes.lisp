@@ -10,7 +10,7 @@
   "Format a kindle entry"
   (with-accessors ((text text) (title title) (location location) (page-number page-number)) kindle-entry
     ;; (format nil "~s, found in: ~a~@[, location: ~d~]~@[, page number: ~d~]" text (string-trim " " title) location page-number)
-    (format nil "From ~A (~@[location: ~D~]~@[page number: ~D~]) :~%~A~%" (string-trim " " title) location page-number text)))
+    (format nil "From: ~A~%~@[location: ~D~]~@[page number: ~D~]~A~%" (string-trim " " title) location page-number text)))
 
 (defmethod print-object ((kindle-entry kindle-entry) stream)
   "Print a kindle entry"
@@ -43,6 +43,18 @@
 			   (position-if-not (lambda (c) (digit-char-p c)) line-with-location :start page-info-start)))
 		  :junk-allowed t)
 		 nil)))
+         (get-entry-text (stream)
+           (with-output-to-string (string)
+             (loop for line = (read-line stream nil nil)
+                   while line
+                   while (string/= "==========" line)
+                   do
+                      (when (and
+                             (not (zerop (length line)))
+                             (string/= (string #\Newline) line)
+                             (string/= "" line))
+                        (print line string)))
+             string))
 	 (clean (string)
 	   (delete #\Return string)))
     (let* ((title line)
@@ -55,7 +67,7 @@
 			  (+ location-start-position (position-if-not #'digit-char-p (subseq line-with-location location-start-position))))
 			 nil))
 	   (page-number (if location nil (get-page line-with-location)))
-	   (kindle-entry-text (prog2 (read-line stream nil nil) (read-line stream nil nil) (read-line stream nil nil))))
+	   (kindle-entry-text (get-entry-text stream)))
       (make-instance 'kindle-entry :text (clean kindle-entry-text) :title (clean title) :location location :page-number page-number))))
 
 (defun get-note-headers (&optional (path "../kindle-notes.txt")) ;; TODO use current user's path
