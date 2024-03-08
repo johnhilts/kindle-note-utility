@@ -52,7 +52,8 @@ Output: application-configuration object."
       (let ((*debug-io* (make-broadcast-stream)))
         (catch 'swank-start
           (let ((actual-port (start-swank-server)))
-	    (format t "Started swank at port: ~A." actual-port)))))))
+	    (format t "Started swank at port: ~A." actual-port)
+            actual-port))))))
 
 (defmethod stop-swank ((application-configuration application-configuration))
   (with-accessors ((swank-port swank-port)) application-configuration

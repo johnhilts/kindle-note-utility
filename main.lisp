@@ -9,7 +9,10 @@
 		 :find-secure-user-info 'jfh-app-core:find-secure-user-info
 		 :show-auth-failure 'web-app:show-auth-failure))
 
-(defun application-shell ()
+(defparameter *web-application* nil)
+(defparameter *actual-swank-port* nil)
+
+(defun application-start ()
   "Use this to start the application."
   (flet ((map-static-paths ()
 	   (mapc
@@ -24,9 +27,15 @@
       (setf web-app:*web-configuration* (web:web-configuration web-application))
       (auth:use-web-auth (register-web-auth-functions))
       
-      (jfh-app-core:start-swank (jfh-app-core:application-configuration (jfh-web-core:web-configuration web-application)))
+      (setf *actual-swank-port* (jfh-app-core:start-swank (jfh-app-core:application-configuration (jfh-web-core:web-configuration web-application))))
 
-      web-application)))
+      (setf *web-application* web-application))))
+
+(defun application-stop (&optional (stop-swank t) (web-application *web-application*) (actual-swank-port *actual-swank-port*))
+  "Use this to stop the application. Stopping swank is optional."
+  (jfh-web-core:stop-web-app web-application)
+  (if (and stop-swank actual-swank-port)
+      (jfh-app-core:stop-swank (jfh-app-core:application-configuration web-app:*web-configuration*))))
 
 (defun %refresh-web-auth-functions ()
   "The function pointers don't automatically updated when a function is re-compiled, so use this to update them."
