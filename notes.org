@@ -62,7 +62,7 @@
       - The actual things this app does.
       - Including web pages and APIs
         - You need to inherit the generic ones from the #:jfh-kindle-notes-web-app
-* package ideas, etc
+* TODO package ideas, etc
 ** DONE jfh-app-core
 - [X] A protocol for interfacing with swank.
   - Start / stop swank.
@@ -92,12 +92,10 @@
 6: ((LAMBDA (SB-PCL::.ARG0. SB-INT:&MORE SB-PCL::.DFUN-MORE-CONTEXT. SB-PCL::.DFUN-MORE-COUNT.) :IN "/home/jfh/.cache/common-lisp/sbcl-1.4.5.debian-linux-x64/home/jfh/quicklisp/dists/quicklisp/software/cl-json-20220707-git/src/objects.fasl") #<STANDARD-GENERIC-FUNCTION JFH-APP-CORE:USER-PASSWORD (1)> #<APPLICATION-META-USER User ID: 3236372-43609-3201024-77404, User Login: "rimy@mcrafy.com", Created: 3917736623, Disabled: false>)
 7: (SB-PCL::CALL-NO-APPLICABLE-METHOD #<STANDARD-GENERIC-FUNCTION JFH-APP-CORE:USER-PASSWORD (1)> (#<APPLICATION-META-USER User ID: 3236372-43609-3201024-77404, User Login: "rimy@mcrafy.com", Created: 3917736623, Disabled: false>))
 8: (JFH-WEB-AUTH::AUTHENTICATE-HANDLER :USER NIL :PASSWORD NIL :REDIRECT-BACK-TO NIL)
-** TODO jfh-web-core [12/16]
-- [X] Read in user's notes when logging in.
-- [X] Stop web app
-  - [X] Capture web application object so we can stop the web app cleanly after we start it.
-  - [X] Add function to stop both web app and swank (optionally)
-  - [X] Test.
+** TODO jfh-web-core [12/20]
+- [ ] Add common layout.
+- [ ] rename pages.lisp to page-handlers.lisp
+- [ ] add an api-handlers.lisp
 - [ ] Track which notes came from which file.
   - [ ] Add uploaded-file class to represent uploaded file-names.
     - [ ] file-id
@@ -123,6 +121,14 @@
 - [ ] Forgot your password?
   - [ ] Reset password.
   - [ ] Email link.
+    - [ ] Use a hash with a short expiration.
+      - Maybe 5 or 10 minutes.
+- [ ] Salt passwords.
+- [X] Read in user's notes when logging in.
+- [X] Stop web app
+  - [X] Capture web application object so we can stop the web app cleanly after we start it.
+  - [X] Add function to stop both web app and swank (optionally)
+  - [X] Test.
 - [X] Upload page for kindle notes file.
   - [X] Create a page to list uploaded files.
     - [X] Can also display the list of titles derived from the file.

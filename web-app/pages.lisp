@@ -12,6 +12,8 @@
      (:body
       (:div
        "Welcome to the kindle notes utility!")
+      (:div :style "float:right"
+	    (:a :href "/logout" "Logout"))
       (:div "&nbsp;")
       (multiple-value-bind (authenticated-user-id present-p)
           (auth:get-authenticated-user)
