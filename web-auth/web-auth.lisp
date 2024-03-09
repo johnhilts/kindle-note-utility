@@ -9,7 +9,6 @@
 
 (defun get-authenticated-user ()
   "Get the authenticated user from server session."
-  (format t "~&session value: ~a~%" (tbnl:session-value 'the-session))
   (gethash (tbnl:session-value 'the-session) (session-user-map *web-auth-pages*)))
 
 (defmethod establish-user-session ((application-user jfh-app-core:application-user))
