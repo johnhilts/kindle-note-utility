@@ -6,24 +6,24 @@
 		 (copy-list
 		  (remove-duplicates
 		   (map 'list
-			(lambda (note) (jfh-kindle-notes::title note))
+			(lambda (note) (cl-ppcre:regex-replace-all "﻿" (jfh-kindle-notes::title note) ""))
 			(if search
 			    (remove-if-not (lambda (note) (search search (jfh-kindle-notes::title note) :test #'string-equal)) notes)
 			    notes))
 		   :test #'string-equal))
-		 #'string<)))
+		 #'string-lessp)))
     (if is-html
 	titles
 	(format nil "~{~A~^~%~}" titles))))
 
-(defun search-for (notes search &key in)
-  "Search for matching text. Inputs: search string to match text, and option :in to match a title. Sub-string matches are acceptable."
+(defun search-notes (notes search &key in)
+  "Search for matching text. Inputs: search string to match text, and option :in to match titles in a list. Sub-string matches are acceptable for both inputs."
   (format nil "~{~A~^~%~}"
           (loop for kindle-entry across
                                  (remove-if-not
                                   (lambda (note) (search search (jfh-kindle-notes::text note) :test #'string-equal))
                                   (remove-if-not
-                                   (lambda (note) (if in (search in (jfh-kindle-notes::title note) :test #'string-equal) note))
+                                   (lambda (note) (if in (some (lambda (in-entry) (search in-entry (jfh-kindle-notes::title note) :test #'string-equal)) in) note))
                                    notes))
                 collect
                 (with-accessors ((text jfh-kindle-notes::text)

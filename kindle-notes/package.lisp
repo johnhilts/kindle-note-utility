@@ -13,4 +13,4 @@
   (:use #:common-lisp)
   (:export
    #:list-titles
-   #:search-for))
+   #:search-notes))

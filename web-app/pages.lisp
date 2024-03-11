@@ -26,7 +26,9 @@
              (:div
               (:a :href "/upload" "Upload More"))
              (:div
-              (:a :href "/daily-tip" "Daily Tip from your Kindle Notes.")))
+              (:a :href "/daily-tip" "Daily Tip from your Kindle Notes."))
+	     (:div
+              (:a :href "/search" "Search.")))
             (who:htm
              (:div
               (:a :href "/upload" "Get Started"))
@@ -50,6 +52,46 @@
 (auth:define-protected-page (daily-tip-simple "/daily-tip-simple") ()
   "daily tip page (simple string only version no markup)"
   (jfh-kindle-notes:format-object (jfh-kindle-notes:show-tip-of-the-day)))
+
+(auth:define-protected-page (search-handler "/search") ()
+  "search page"
+  (let((title-id-prefix "title"))
+    (flet ((get-title-checked-from-request ()
+             (remove-if-not
+              (lambda (e)
+                (jfh-utility:string-starts-with title-id-prefix (car e)))
+              (tbnl:post-parameters tbnl:*request*))))
+      (let ((query (tbnl:post-parameter "query")))
+        (who:with-html-output-to-string
+	    (*standard-output* nil :prologue t :indent t)
+          (:html
+           (who:str (common-header "Search your Kindle Notes"))
+           (:body
+	    (:div
+	     (:form :method "post" :action "search"
+		    (:div
+		     (:div (:textarea :id "query" :name "query" :placeholder "Write text to search on here" :autofocus "autofocus" (who:str (if query query ""))))
+		     (:div (:button "Search"))
+		     (when query
+		       (let* ((in (mapcar 'cdr (get-title-checked-from-request)))
+			      (results (jfh-kindle-notes-util:search-notes (gethash auth:authenticated-user *notes*) query :in in)))
+		         (when results
+		           (who:htm
+			    (:span (who:str results)))))))
+		    (let ((titles (jfh-kindle-notes-util:list-titles nil (gethash auth:authenticated-user *notes*) t))
+		          (checked (mapcar 'car (get-title-checked-from-request))))
+		      (who:htm
+		       (:div
+		        (loop for title in titles
+			      for i = 1 then (incf i)
+			      for title-id = (format nil "~A~D" title-id-prefix i)
+			      do
+			         (who:htm
+			          (:div
+			           (if  (find title-id checked :test #'string=) ;; todo this sucks see if we can use something like `class="check"` instead ...
+			                (who:htm (:input :type "checkbox" :id title-id :name title-id :value (who:str title) :checked "checked"))
+			                (who:htm (:input :type "checkbox" :id title-id :name title-id :value (who:str title))))
+			           (:label :for title-id (who:str title))))))))))))))))))
 
 (auth:define-protected-page (admin-page "/admin") ()
   (let ((web-user (find-web-user-info auth:authenticated-user)))

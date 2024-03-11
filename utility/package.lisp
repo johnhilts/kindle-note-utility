@@ -8,4 +8,5 @@
    #:write-complete-file
    #:generate-unique-token
    #:hash-password
-   #:serialize-to-json))
+   #:serialize-to-json
+   #:string-starts-with))
