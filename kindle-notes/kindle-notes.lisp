@@ -56,7 +56,7 @@
                         (print line string)))
              string))
 	 (clean (string)
-	   (delete #\Return string)))
+	   (string-trim '(#\Space) (delete #\Return string))))
     (let* ((title line)
 	   (line-with-location (read-line stream nil nil))
 	   (location-start-position (get-location-start-position line-with-location))

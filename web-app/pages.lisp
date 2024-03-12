@@ -74,7 +74,7 @@
 		     (:div (:button "Search"))
 		     (when query
 		       (let* ((in (mapcar 'cdr (get-title-checked-from-request)))
-			      (results (jfh-kindle-notes-util:search-notes (gethash auth:authenticated-user *notes*) query :in in)))
+			      (results (jfh-kindle-notes-util:search-notes (gethash auth:authenticated-user *notes*) query :in in :formatter #'format-for-web :format "~{~A<hr />~}")))
 		         (when results
 		           (who:htm
 			    (:span (who:str results)))))))
@@ -88,9 +88,9 @@
 			      do
 			         (who:htm
 			          (:div
-			           (if  (find title-id checked :test #'string=) ;; todo this sucks see if we can use something like `class="check"` instead ...
-			                (who:htm (:input :type "checkbox" :id title-id :name title-id :value (who:str title) :checked "checked"))
-			                (who:htm (:input :type "checkbox" :id title-id :name title-id :value (who:str title))))
+			           (who:htm
+                                    (:input :type "checkbox" :id title-id :name title-id :value (who:str title)
+                                            :checked (if (find title-id checked :test #'string=) t nil)))
 			           (:label :for title-id (who:str title))))))))))))))))))
 
 (auth:define-protected-page (admin-page "/admin") ()

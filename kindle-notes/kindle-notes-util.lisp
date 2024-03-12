@@ -16,9 +16,9 @@
 	titles
 	(format nil "~{~A~^~%~}" titles))))
 
-(defun search-notes (notes search &key in)
+(defun search-notes (notes search &key in (formatter #'identity) (format "~{~A~^~%~}"))
   "Search for matching text. Inputs: search string to match text, and option :in to match titles in a list. Sub-string matches are acceptable for both inputs."
-  (format nil "~{~A~^~%~}"
+  (format nil format
           (loop for kindle-entry across
                                  (remove-if-not
                                   (lambda (note) (search search (jfh-kindle-notes::text note) :test #'string-equal))
@@ -26,12 +26,7 @@
                                    (lambda (note) (if in (some (lambda (in-entry) (search in-entry (jfh-kindle-notes::title note) :test #'string-equal)) in) note))
                                    notes))
                 collect
-                (with-accessors ((text jfh-kindle-notes::text)
-                                 (title jfh-kindle-notes::title)
-                                 (location jfh-kindle-notes::location)
-                                 (page-number jfh-kindle-notes::page-number))
-                    kindle-entry
-                  (format nil "From _~A_ (~@[location: ~D~]~@[page number: ~D~]):~%~A~%" (string-trim " " title) location page-number text)))))
+                (funcall formatter (jfh-kindle-notes::format-object kindle-entry)))))
 
 (defun print-formatted-date (&optional (universal-time (get-universal-time)) (stream (make-string-output-stream)))
   (multiple-value-bind (second minute hour date month year day daylight-p zone)
