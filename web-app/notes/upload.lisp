@@ -1,6 +1,33 @@
 ;;;; Web pages for kindle entries (uploads)
 (cl:in-package #:jfh-kindle-notes-web-app)
 
+;;;; this section not used yet ;;;
+(defun is-text-file (file)
+  (with-open-file (stream file)
+      (loop for line = (read-line stream nil)
+                while line
+                          always (every #'is-printable-ascii line))))
+
+(defun is-printable-ascii (char)
+  (let ((char-code (char-code char)))
+    (and (>= char-code 32) (<= char-code 126))))
+
+(defun is-text-file-w (file)
+  (with-open-file (stream file)
+      (loop for line = (read-line stream nil)
+                while line
+                          always (every #'is-printable-unicode line))))
+
+(defun is-printable-unicode (char)
+  (let ((char-code (char-code char)))
+    (or (= char-code 10)
+        (= char-code 13)
+        (= char-code 9)
+        (and (>= char-code 32) (<= char-code 126))  ; ASCII
+        (and (>= char-code 161) (<= char-code 255)) ; Latin-1 supplement
+        (>= char-code 256))))                       ; Other Unicode characters
+;;;; this section not used yet (end section) ;;;
+
 (defun get-uploaded-file-index-path (authenticated-user-id)
   "Get the path for the uploaded file index. Input: authenticated-user-id. Output: file path."
   (let* ((configuration (jfh-app-core:application-configuration *web-configuration*))
