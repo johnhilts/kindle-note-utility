@@ -1,19 +1,19 @@
 (in-package #:jfh-kindle-notes)
 
 (defclass kindle-entry ()
-  ((text
+  ((%text
     :initarg :text
     :accessor text
     :documentation "The text of a kindle entry - I think it works like (OR memo highlighted-text)")
-   (title
+   (%title
     :initarg :title
     :accessor title
     :documentation "The title of the book where the highlighting took place.")
-   (location
+   (%location
     :initarg :location
     :accessor location
     :documentation "The kindle location info of the book where the highlighting took place. I retrieve like this (OR location-info page-number); If this is nil, page-number should be populated.")
-   (page-number
+   (%page-number
     :initarg :page-number
     :accessor page-number
     :documentation "The kindle page number of the book where the highlighting took place. I retrieve like this (OR location-info page-number). This will be nil if location is populated."))

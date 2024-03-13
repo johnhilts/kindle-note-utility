@@ -2,21 +2,27 @@
 (cl:in-package #:jfh-web-core)
 
 (defclass web-configuration ()
-  ((%http-port :reader http-port
-	       :initarg :http-port)
-   (%ssl-port :reader ssl-port
-	      :initarg :ssl-port)
-   (%static-root :reader static-root
-		 :initarg :static-root)
-   (%application-configuration :reader jfh-app-core:application-configuration
-	                       :initarg :application-configuration))
+  ((%http-port
+    :reader http-port
+    :initarg :http-port)
+   (%ssl-port
+    :reader ssl-port
+    :initarg :ssl-port)
+   (%static-root
+    :reader static-root
+    :initarg :static-root)
+   (%application-configuration
+    :reader jfh-app-core:application-configuration
+    :initarg :application-configuration))
   (:documentation "Application configurations."))
 
 (defclass web-application ()
-  ((%hunchentoot-acceptor :reader hunchentoot-acceptor
-			  :initarg :hunchentoot-acceptor)
-   (%web-configuration :reader web-configuration
-			       :initarg :web-configuration))
+  ((%hunchentoot-acceptor
+    :reader hunchentoot-acceptor
+    :initarg :hunchentoot-acceptor)
+   (%web-configuration
+    :reader web-configuration
+    :initarg :web-configuration))
   (:documentation "Web application."))
 
 (defgeneric start-hunchentoot (web-configuration)
