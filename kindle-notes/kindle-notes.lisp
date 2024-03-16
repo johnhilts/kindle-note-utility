@@ -15,7 +15,7 @@
 (defmethod print-object ((kindle-entry kindle-entry) stream)
   "Print a kindle entry"
   (print-unreadable-object (kindle-entry stream :type t)
-    (with-slots (text title location page-number) kindle-entry
+    (with-accessors ((text text) (title title) (location location) (page-number page-number)) kindle-entry
       ;; (format nil "~@[x = ~a ~]~@[y = ~a~]" nil 20)
       (format stream "~a" (format-object kindle-entry)))))
 
@@ -84,7 +84,7 @@
 
 (defmethod empty-entry-p ((kindle-entry kindle-entry))
   "Is this an empty entry?"
-  (with-slots (text) kindle-entry
+  (with-accessors ((text text)) kindle-entry
     (and text (not (zerop (length text))))))
 ;; how to find: (find-method #'make-book-with-quantity-1 nil (list (find-class 'book)))
 
@@ -116,7 +116,7 @@
 
 (defmethod print-org-table-row ((kindle-entry kindle-entry) stream abbreviated)
   "Print kindle-entry as an org table row."
-  (with-slots (text title location page-number) kindle-entry
+  (with-accessors ((text text) (title title) (location location) (page-number page-number)) kindle-entry
     (let ((formatted-text (if abbreviated (subseq text 0 (min (length text) 15)) text)))
       (format stream " | ~a | ~a | ~a | ~a |~%" formatted-text title (if location location "") (if page-number page-number "")))))
 ;; how to find: (find-method #'print-org-table-row nil (list (find-class 'kindle-entry)))
