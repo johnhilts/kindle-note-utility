@@ -30,4 +30,5 @@
   (asdf:load-system "jfh-kindle-notes-main")
   (print "main loaded")
   ;; (in-package #:jfh-kindle-notes-main)
+  (load "internal.lisp")
   )

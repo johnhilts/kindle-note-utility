@@ -116,19 +116,3 @@ Output: web-configuration object."
   "Use this to start the web application."
   (let* ((web-configuration (make-web-configuration)))
     (setf *web-application* (start-web-app web-configuration))))
-
-(defun %web-app-running-p ()
-  "Check if the web app - actually hunchentoot server - is running.
-This is meant to be a convenience function;
-NOTE use of non-exported symbol."
-  (handler-case 
-      (null (tbnl::acceptor-shutdown-p (hunchentoot-acceptor *web-application*)))
-    (unbound-variable (condition)
-      (let ((name (symbol-name (cell-error-name condition))))
-        (if (string-equal (symbol-name '*web-application*) name)
-            (format nil "Web App not started; ~(~a~) is undefined." name)
-            (format nil "Unbound variable! ~S." condition))))))
-
-(defun %clear-static-routes ()
-  "NOTE - Just a convenience method!"
-  (setq tbnl:*dispatch-table* (last tbnl:*dispatch-table*)))

@@ -8,5 +8,6 @@
   :serial t
   :components ((:file package)
                (:file kindle-note-protocol)
+               (:file kindle-notes-util)
                (:file kindle-notes)))
 

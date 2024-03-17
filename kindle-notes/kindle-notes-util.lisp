@@ -27,19 +27,3 @@
                                    notes))
                 collect
                 (funcall formatter (jfh-kindle-notes::format-object kindle-entry)))))
-
-(defun print-formatted-date (&optional (universal-time (get-universal-time)) (stream (make-string-output-stream)))
-  (multiple-value-bind (second minute hour date month year day daylight-p zone)
-      (decode-universal-time universal-time)
-    (format stream
-	    "~D, ~D/~D/~D ~D:~D:~D UTC ~D (ds: ~A)"
-	    (case day (0 "Monday") (6 "Sunday"))
-	    month
-	    date
-	    year
-	    hour
-	    minute
-	    second
-	    (* -1 zone)
-	    (if daylight-p "true" "false"))
-    (get-output-stream-string stream)))
