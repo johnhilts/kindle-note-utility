@@ -27,7 +27,7 @@
 	       (format string "~{~A~%~}" (sort (copy-list list) #'string<))))
     string))
 
-(defun %list-all-external-symbols (&optional (package-list (list 'jfh-kindle-notes-main 'jfh-kindle-notes 'jfh-kindle-notes-web-app 'jfh-web-core 'jfh-app-core 'jfh-utility)))
+(defun %list-all-external-symbols (&optional (package-list (list 'jfh-kindle-notes-main 'jfh-kindle-notes 'jfh-kindle-notes-web-app 'jfh-web-auth 'jfh-web-core 'jfh-app-core 'jfh-utility)))
   "List external symbols for given packages. Input: list of packages. Output: tree."
   (let ((list (list)))
     (loop for package-name in package-list

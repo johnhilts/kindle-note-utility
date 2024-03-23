@@ -92,8 +92,12 @@
 6: ((LAMBDA (SB-PCL::.ARG0. SB-INT:&MORE SB-PCL::.DFUN-MORE-CONTEXT. SB-PCL::.DFUN-MORE-COUNT.) :IN "/home/jfh/.cache/common-lisp/sbcl-1.4.5.debian-linux-x64/home/jfh/quicklisp/dists/quicklisp/software/cl-json-20220707-git/src/objects.fasl") #<STANDARD-GENERIC-FUNCTION JFH-APP-CORE:USER-PASSWORD (1)> #<APPLICATION-META-USER User ID: 3236372-43609-3201024-77404, User Login: "rimy@mcrafy.com", Created: 3917736623, Disabled: false>)
 7: (SB-PCL::CALL-NO-APPLICABLE-METHOD #<STANDARD-GENERIC-FUNCTION JFH-APP-CORE:USER-PASSWORD (1)> (#<APPLICATION-META-USER User ID: 3236372-43609-3201024-77404, User Login: "rimy@mcrafy.com", Created: 3917736623, Disabled: false>))
 8: (JFH-WEB-AUTH::AUTHENTICATE-HANDLER :USER NIL :PASSWORD NIL :REDIRECT-BACK-TO NIL)
-** TODO jfh-web-core [15/22]
+** TODO jfh-web-core [0/8]
 - [ ] Need to test loading system.
+- [ ] Make writing to the user index thread safe.
+  - [ ] Add write ops to a queue in a critical section.
+  - [ ] Every 500ms or so, run the ops from the queue in order.
+    - [ ] The 500ms comes from configuration.
 - [ ] Add common layout.
 - [ ] Track which notes came from which file.
   - [ ] Add uploaded-file class to represent uploaded file-names.
@@ -124,6 +128,7 @@
   - [X] Refresh notes when uploaded.
     - [X] Logic.
     - [X] Test.
+*** Done
 - [X] Put internal utils in =internal.lisp=
   - [X] make the symbol list also produce an actual nested list ... easier to inspect in SLIME
   - [X] create the file and update it.
@@ -177,6 +182,34 @@
   - Settings such as port numbers, etc
 - [X] Macros, etc, for pages, web APIs, etc
   - Such as pages requiring authentication.
+** TODO Index thoughts
+*** The index Structure
+**** Key
+- This should probably be a number.
+  - But we can also try using the user-login.
+**** Position
+- This turns into an argument to FILE-POSITION.
+  - How do we calculate this?
+    - We could use fixed length, which would require a limit on the email size.
+  - What if the user login (email) changes?
+    - It will change the position, necessitating a re-index.
+*** Sorting
+- Each time there's a new signup, need to update the index.
+  - Before the addition, need to lock the file.
+  - Make the update.
+  - Unlock.
+  - What if someone else makes a lock at the same time?
+    - Session-Lock = Lock ID + random number
+      - Before update, check for other locks.
+	- If another lock already present, compare the random number.
+	- If "you" have the lowest random number, you can proceed.
+	- If not, check again after 10 ms.
+**** Doing the sort.
+***** All
+- Quicksort the entire file.
+***** Incremental
+ - Binary search for the correct position.
+ - Do Insert.
 ** DONE bugs
 - [X] The titles of the first and last entries wrong.
   - [X] First entry gets the second's title.
