@@ -6,6 +6,7 @@
   :license  "MIT"
   :version "0.0.1"
   :serial t
+  :depends-on (#:cl-ppcre)
   :components ((:file package)
                (:file kindle-note-protocol)
                (:file kindle-notes-util)

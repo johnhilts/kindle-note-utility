@@ -7,7 +7,8 @@
   :version "0.0.1"
   :serial t
   :depends-on (#:cl-json #:ironclad)
-  :components ((:file package)
+  :components ((:file string)
+               (:file package)
                (:file crypto)
                (:file guid)
                (:file io)

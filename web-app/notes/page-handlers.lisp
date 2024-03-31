@@ -53,7 +53,7 @@
 			           (who:htm
                                     (:input :type "checkbox" :id title-id :name title-id :value (who:str title)
                                             :checked (if (find title-id checked :test #'string=) t nil)))
-			           (:label :for title-id (who:str title))))))))))))))))))
+			           (:label :for title-id (who:str title)))))))))))))))))
 
 (auth:define-protected-page (upload-list-handler "/upload-list") ()
   (who:with-html-output-to-string
