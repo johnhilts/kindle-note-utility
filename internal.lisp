@@ -63,10 +63,9 @@
 
 (defun %web-app-running-p ()
   "Check if the web app - actually hunchentoot server - is running.
-This is meant to be a convenience function;
-NOTE use of non-exported symbol."
+This is meant to be a convenience function."
   (handler-case 
-      (null (tbnl::acceptor-shutdown-p (web::hunchentoot-acceptor web::*web-application*)))
+      (tbnl:started-p (web::hunchentoot-acceptor web::*web-application*))
     (unbound-variable (condition)
       (let ((name (symbol-name (cell-error-name condition))))
         (if (string-equal (symbol-name 'web::*web-application*) name)
