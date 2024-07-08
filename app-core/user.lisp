@@ -136,3 +136,31 @@
          (user-index-file-path (get-user-index-file-path user-path-root))
 	 (user-index (jfh-utility:fetch-or-create-data user-index-file-path)))
     (find-if (lambda (entry) (string= (getf entry :user-login) user-login)) user-index)))
+
+(defgeneric get-user-data-store-location (id application-configuration))
+
+(defmethod get-user-data-store-location (user-id (application-configuration application-configuration))
+  "Input: ID and app-configuration. Output: file path."
+  (with-accessors ((user-path-root user-path-root)) application-configuration
+    (format nil "~A~A/" user-path-root user-id)))
+;; example: (jfh-app-core::get-user-data-store-location "abc-123" (jfh-app-core:application-configuration (jfh-web-core:web-configuration *WEB-APPLICATION*)))
+
+(defun find-and-replace-missing-values (initargs fill-in-values)
+  "Input: 1st plist, where some values are '?, 2nd plist which has fill-in values for '? in the 1st plist. Ouptput: the 1st plist modified to replace '? with a fill-in-value."
+  (loop for initarg in initargs
+        when (and
+              (symbolp (getf initargs initarg))
+              (string= "?" (symbol-name (getf initargs initarg))))
+          do
+             (setf (getf initargs initarg) (getf fill-in-values initarg)))
+  initargs)
+
+(defparameter *application-configuration* nil)
+
+(defun make-instance-from-data-store (class-name initargs id &optional (configuration *application-configuration*) (get-data-store-location #'get-user-data-store-location))
+  "Input: class and its initarg names+values and an ID. Output: object using make-instance `class-name` with data from parameters + data store."
+  (let* ((file-name (format nil "~(~A~).sexp" class-name))
+         (file-path (funcall get-data-store-location id configuration))
+         (entry (jfh-utility:read-complete-file (format nil "~A~A" file-path file-name)))
+         (initargs-no-missing-values (find-and-replace-missing-values initargs entry)))
+    (apply #'make-instance class-name initargs-no-missing-values)))
