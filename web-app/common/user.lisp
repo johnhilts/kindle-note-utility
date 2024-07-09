@@ -25,7 +25,7 @@
                          :user-name (user-name web-app-user))))
     (jfh-app-core:save-user file-name user-info-list web-app-user application-configuration)))
 
-(defun find-web-user-info (user-login)
+(defun find-web-user-info-old (user-login)
   "Derive web-user info from app-user."
   (let* ((application-user (jfh-app-core:find-user-info user-login))
          (user-id (jfh-app-core:user-id application-user))
@@ -33,14 +33,11 @@
 	 (secure-user-info (jfh-app-core:read-user-info user-id "hash.sexp"))) ;; TODO make the file name an exported string
     (make-web-app-user (getf web-user-info :user-name) user-login (getf secure-user-info :user-password) user-id)))
 
-(defun %find-web-user-info (user-login)
+(defun find-web-user-info (user-login)
   "Derive web-user info from app-user."
   (let* ((application-user (jfh-app-core:find-user-info user-login))
          (user-id (jfh-app-core:user-id application-user))
-         ;; (web-user-info (jfh-app-core:read-user-info user-id "web-app-user.sexp"))
 	 (secure-user-info (jfh-app-core:find-secure-user-info user-login)))
-    (jfh-app-core::make-instance-from-data-store 'web-app-user (list :user-name '? :user-login user-login :user-password (jfh-app-core:user-password secure-user-info) :user-id user-id) user-id)
-;; (make-web-app-user (getf web-user-info :user-name) user-login (jfh-app-core:user-password secure-user-info) user-id)
-    ))
+    (jfh-app-core::make-instance-from-data-store 'web-app-user (list :user-name '? :user-login user-login :user-password (jfh-app-core:user-password secure-user-info) :user-id user-id) user-id)))
 
 
